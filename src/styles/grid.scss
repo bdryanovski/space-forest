@@ -1,0 +1,93 @@
+$grid-spacing: 2%;
+$grid-columns: 12;
+$grid-width: 960px;
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $grid-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+// Basic Grid made with width and margin
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.row {
+  @include clearfix;
+}
+
+[class^="col-"] {
+	float: left;
+	margin-right: $grid-spacing;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+	&:last-child {
+    margin-right: 0;
+	}
+}
+
+@function grid-width($cols, $has-gutter: true) {
+  @if $has-gutter {
+    @return calc(((100% / #{$grid-columns}) * #{$cols}) - #{$grid-spacing});
+  }
+  @else {
+    @return calc((100% / #{$grid-columns}) * #{$cols});
+  }
+ }
+
+ @for $i from 1 through $grid-columns {
+   .col-#{$i} { width: grid-width($i) }
+   .col-#{$i}:last-child { width: grid-width($i, false) }
+ }
+
+ @for $i from 1 through $grid-columns - 1 {
+   .col-#{$i}-offset { margin-left: grid-width($i) }
+ }
+
+ // FlexBox
+
+ .flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+ }
+
+ .flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin-right: $grid-spacing;
+  width: calc(100% - #{$grid-spacing});
+ }
+
+ .flex-column:last-child {
+   margin-right: 0;
+ }
+
+ @for $i from 1 through $grid-columns {
+   .flex-size-#{$i} { flex: $i; }
+ }
+
+ // CSS Grid
+
+ .grid-container {
+   display: grid;
+   grid-auto-flow: column;
+   grid-column-gap: $grid-spacing;
+
+ }
+
+ .grid-column {
+  display: flex;
+ }

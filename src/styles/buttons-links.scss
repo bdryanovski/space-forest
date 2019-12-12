@@ -1,0 +1,65 @@
+.btn {
+  border-radius: .25rem;
+  padding: 5px 10px 5px 10px;
+
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: .375rem .75rem;
+  cursor: pointer;
+  color: $color-white;
+
+  background-color: $color-light;
+
+  &.primary {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  &.success {
+    color: $color-white;
+    background-color: $color-success;
+  }
+
+  &.warning {
+    color: $color-white;
+    background-color: $color-warning;
+  }
+
+  &.danger {
+    color: $color-white;
+    background-color: $color-danger;
+  }
+}
+
+a:hover {
+  color: $color-link-hover;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &.primary {
+    color: $color-primary;
+  }
+
+  &.success {
+    color: $color-success;
+  }
+
+  &.warning {
+    color: $color-warning;
+  }
+
+  &.danger {
+    color: $color-danger;
+  }
+}
+
+a.active {
+  color: $color-success
+}

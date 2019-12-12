@@ -1,0 +1,12 @@
+.demo-column {
+  display: block;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 0px 5px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
