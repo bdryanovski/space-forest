@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Context from "./context";
+import PlaygroundContext from "./playground-context";
 
 import { generateElement, renderElementAsync } from "./transpile";
 
@@ -8,6 +8,10 @@ export default class Playground extends Component {
     code: "",
     noInline: false,
     language: "javascript"
+  };
+
+  static state = {
+    code: ""
   };
 
   // eslint-disable-next-line camelcase
@@ -23,7 +27,6 @@ export default class Playground extends Component {
     transformCode: prevTransformCode
   }) {
     const { code, scope, noInline, transformCode } = this.props;
-    console.log("componentDidUpdate", code, prevCode);
     if (
       code !== prevCode ||
       scope !== prevScope ||
@@ -35,7 +38,6 @@ export default class Playground extends Component {
   }
 
   onChange = code => {
-    console.log("I gonna send my on change", code);
     const { scope, transformCode, noInline } = this.props;
     this.transpile({ code, scope, transformCode, noInline });
   };
@@ -45,12 +47,19 @@ export default class Playground extends Component {
   };
 
   transpile = ({ code, scope, transformCode, noInline = false }) => {
-    console.log("transpile", code, scope, transformCode);
     // Transpilation arguments
     const input = {
       code: transformCode ? transformCode(code) : code,
       scope
     };
+
+    // Keep internal state of the code.
+    this.setState({ code });
+
+    // no code no work
+    if (code === "" || code === undefined) {
+      return;
+    }
 
     const errorCallback = err =>
       this.setState({ element: undefined, error: err.toString() });
@@ -64,32 +73,28 @@ export default class Playground extends Component {
         this.setState({ ...state, element: null }); // Reset output for async (no inline) evaluation
         renderElementAsync(input, renderElement, errorCallback);
       } else {
-        console.log("Render element", input);
         renderElement(generateElement(input, errorCallback));
       }
     } catch (error) {
-      console.log("Error ", error);
       this.setState({ ...state, error: error.toString() });
     }
   };
 
   render() {
-    const { children, code, language } = this.props;
-    console.log("Playground Contex Provider render", code, this.state.code);
-    debugger;
+    const { children, language } = this.props;
 
     return (
-      <Context.Provider
+      <PlaygroundContext.Provider
         value={{
           ...this.state,
-          code,
+          code: this.state.code,
           language,
           onError: this.onError,
           onChange: this.onChange
         }}
       >
         {children}
-      </Context.Provider>
+      </PlaygroundContext.Provider>
     );
   }
 }

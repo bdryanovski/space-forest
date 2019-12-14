@@ -1,5 +1,5 @@
-import React from 'react'
-import Example from '../components/example'
+import React from "react";
+import WrapperPlayground from "../playground/wrapper-playground";
 
 const HEADER_EXAMPLE = `
 <>
@@ -10,7 +10,7 @@ const HEADER_EXAMPLE = `
 <h5>H5 headline</h5>
 <h6>H6 headline</h6>
 </>
-`
+`.trim();
 
 const HEADER_P_EXAMPLE = `
 <>
@@ -21,7 +21,7 @@ const HEADER_P_EXAMPLE = `
 <p className="h5">H5 headline with class</p>
 <p className="h6">H6 headline with class</p>
 </>
-`
+`.trim();
 
 const RANDOM_EXAMPLE = `
 <>
@@ -31,21 +31,22 @@ const RANDOM_EXAMPLE = `
 <a href="#">Colored</a> <br />
 <u>Underlined</u>
 </>
-`
+`.trim();
+
 export default class TypographyDemo extends React.Component {
   render() {
     return (
       <>
         <div className="spacer">
-          <Example code={HEADER_EXAMPLE} />
+          <WrapperPlayground code={HEADER_EXAMPLE} language="html" />
         </div>
         <div className="spacer">
-          <Example code={HEADER_P_EXAMPLE} />
+          <WrapperPlayground code={HEADER_P_EXAMPLE} language="html" />
         </div>
         <div className="spacer">
-          <Example code={RANDOM_EXAMPLE} />
+          <WrapperPlayground code={RANDOM_EXAMPLE} language="html" />
         </div>
       </>
-    )
+    );
   }
 }

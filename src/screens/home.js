@@ -1,5 +1,5 @@
 import React from "react";
-import WrapperPlayground from "./playground/index";
+
 export default class Home extends React.Component {
   render() {
     return (
@@ -9,11 +9,6 @@ export default class Home extends React.Component {
           <p>Static Styles, React & React Native components</p>
         </div>
 
-        <div className="row">
-          <div className="col-12" style={{ height: "500px" }}>
-            <WrapperPlayground />
-          </div>
-        </div>
         <div className="row">
           <div className="col-4">
             <h5>Static Styles</h5>

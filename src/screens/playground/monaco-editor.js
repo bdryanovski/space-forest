@@ -10,9 +10,35 @@ export function processSize(size) {
 export function noop() {}
 
 export default class MonacoEditor extends React.Component {
+  prevLineCount = -1;
+  _subscription = [];
+
   constructor(props) {
     super(props);
     this.containerElement = undefined;
+  }
+
+  calculateOptions(options) {
+    return {
+      automaticLayout: true,
+      minimap: { enabled: false },
+      scrollBeyondLastLine: false,
+      autoClosingBrackets: "always",
+      autoClosingOvertype: "always",
+      autoClosingQuotes: "always",
+      copyWithSyntaxHighlighting: false,
+      fontLigatures: true,
+      autoIndent: true,
+      formatOnPaste: true,
+      formatOnType: true,
+      readOnly: false,
+      renderLineHighlight: "line",
+      scrollbar: {
+        vertical: "hidden",
+        horizontal: "hidden"
+      },
+      ...options
+    };
   }
 
   componentDidMount() {
@@ -20,13 +46,11 @@ export default class MonacoEditor extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { value, language, theme, height, options, width } = this.props;
-    console.log("Monaco component didUpdate", value);
-
+    const { value, language, theme, height, width } = this.props;
     const { editor } = this;
     const model = editor.getModel();
 
-    if (this.props.value != null && this.props.value !== model.getValue()) {
+    if (this.props.value !== null && this.props.value !== model.getValue()) {
       this.__prevent_trigger_change_event = true;
       this.editor.pushUndoStop();
       model.pushEditOperations(
@@ -50,9 +74,6 @@ export default class MonacoEditor extends React.Component {
     if (editor && (width !== prevProps.width || height !== prevProps.height)) {
       editor.layout();
     }
-    if (prevProps.options !== options) {
-      editor.updateOptions(options);
-    }
   }
 
   componentWillUnmount() {
@@ -72,27 +93,30 @@ export default class MonacoEditor extends React.Component {
       }
     }
     if (this._subscription) {
-      this._subscription.dispose();
+      this._subscription.forEach(sub => {
+        sub.dispose();
+      });
+    }
+    if (window) {
+      window.removeEventListener("resize", this.setEditorHeight);
     }
   }
 
   initMonaco() {
     const value =
       this.props.value != null ? this.props.value : this.props.defaultValue;
-    const { language, theme, options, overrideServices } = this.props;
+    const { language, theme, options } = this.props;
     if (this.containerElement) {
       // Before initializing monaco editor
       Object.assign(options, this.editorWillMount());
-      this.editor = monaco.editor.create(
-        this.containerElement,
-        {
-          value,
-          language,
-          ...options,
-          ...(theme ? { theme } : {})
-        },
-        overrideServices
-      );
+
+      const monacoConfig = {
+        value,
+        language,
+        ...(theme ? { theme } : {}),
+        ...this.calculateOptions({})
+      };
+      this.editor = monaco.editor.create(this.containerElement, monacoConfig);
       // After initializing monaco editor
       this.editorDidMount(this.editor);
     }
@@ -107,12 +131,39 @@ export default class MonacoEditor extends React.Component {
   editorDidMount(editor) {
     this.props.editorDidMount(editor, monaco);
 
-    this._subscription = editor.onDidChangeModelContent(event => {
-      if (!this.__prevent_trigger_change_event) {
-        this.props.onChange(editor.getValue(), event);
-      }
-    });
+    this._subscription.push(
+      editor.onDidChangeModelContent(event => {
+        if (!this.__prevent_trigger_change_event) {
+          this.props.onChange(editor.getValue(), event);
+        }
+      })
+    );
+
+    // Resize start
+    setTimeout(this.setEditorHeight, 0);
+
+    if (window) {
+      window.addEventListener("resize", this.setEditorHeight);
+    }
+
+    this._subscription.push(
+      editor.onDidChangeModelDecorations(() => {
+        setTimeout(this.setEditorHeight, 0);
+      })
+    );
+    // Resize
   }
+
+  // Bind to this
+  setEditorHeight = () => {
+    if (!this.editor) {
+      return;
+    }
+    const currentLines = this.editor.getModel().getLineCount();
+    this.editor.getDomNode().style.height = `${currentLines * 19}px`;
+    this.editor.layout();
+    return;
+  };
 
   render() {
     const { width, height } = this.props;
@@ -138,10 +189,7 @@ MonacoEditor.defaultProps = {
   defaultValue: "",
   language: "javascript",
   theme: null,
-  options: {
-    minimap: false
-  },
-  overrideServices: {},
+  options: {},
   editorDidMount: noop,
   editorWillMount: noop,
   onChange: noop

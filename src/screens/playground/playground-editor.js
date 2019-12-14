@@ -1,24 +1,23 @@
 import React, { Component } from "react";
-import MonacoEditor from "./monaco/";
-import Context from "./context";
+import MonacoEditor from "./monaco-editor";
+import PlaygroundContext from "./playground-context";
 
-const NO_CODE = "let foo = 'bar';";
+const NO_CODE = "let a = 'foo'";
 const DEFAULT_LANGUAGE = "javascript";
 
 export default class Editor extends Component {
   editorDidMount(editor, monaco) {
-    console.log("editorDidMount", editor);
-    editor.focus();
+    // don't focus right now
+    //editor.focus();
   }
 
   render() {
     return (
-      <Context.Consumer>
+      <PlaygroundContext.Consumer>
         {({ code, language, onChange }) => {
-          console.log("IM geting this code ", code);
           return (
             <MonacoEditor
-              height="500px"
+              height="100%"
               language={language || DEFAULT_LANGUAGE}
               value={code || NO_CODE}
               theme={"vs-dark"}
@@ -31,7 +30,7 @@ export default class Editor extends Component {
             />
           );
         }}
-      </Context.Consumer>
+      </PlaygroundContext.Consumer>
     );
   }
 }
