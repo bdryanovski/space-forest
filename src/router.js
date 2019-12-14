@@ -43,12 +43,7 @@ export class SiteNavigation extends React.Component {
     return (
       <nav className="nav">
         {routes.map((route, index) => (
-          <Link
-            activeClassName="active"
-            key={index}
-            to={route.path}
-            className="nav-link"
-          >
+          <Link key={index} to={route.path} className="nav-link">
             {route.name}
           </Link>
         ))}
@@ -65,9 +60,7 @@ export function SideNavigation({ routes }) {
     <ul className="list-group">
       {routes.map((route, index) => (
         <li key={index} className="list-group-item">
-          <Link activeClassName="active" to={route.path}>
-            {route.name}
-          </Link>
+          <Link to={route.path}>{route.name}</Link>
         </li>
       ))}
     </ul>

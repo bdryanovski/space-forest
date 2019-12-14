@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default class LinksButtonsDemo extends React.Component {
   render() {
@@ -6,22 +6,30 @@ export default class LinksButtonsDemo extends React.Component {
       <>
         <h5>Links & Buttons</h5>
 
-        <h6>Links</h6>
+        <h6 id="links">Links</h6>
         <div className="grid-container">
           <div className="grid-column">
-            <a href="#">Standart</a>
+            <a href="#links">Standart</a>
           </div>
           <div className="grid-column">
-            <a href="#" className="primary">Primary</a>
+            <a href="#links" className="primary">
+              Primary
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="success">Success</a>
+            <a href="#links" className="success">
+              Success
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="warning">Warning</a>
+            <a href="#links" className="warning">
+              Warning
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="danger">Danger</a>
+            <a href="#links" className="danger">
+              Danger
+            </a>
           </div>
         </div>
         <h6>Button HTML attribute</h6>
@@ -45,22 +53,32 @@ export default class LinksButtonsDemo extends React.Component {
         <h6>A HTML attribute</h6>
         <div className="grid-container">
           <div className="grid-column">
-            <a href="#" className="btn">Standart</a>
+            <a href="#links" className="btn">
+              Standart
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="btn primary">Primary</a>
+            <a href="#links" className="btn primary">
+              Primary
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="btn success">Success</a>
+            <a href="#links" className="btn success">
+              Success
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="btn warning">Warning</a>
+            <a href="#links" className="btn warning">
+              Warning
+            </a>
           </div>
           <div className="grid-column">
-            <a href="#" className="btn danger">Danger</a>
+            <a href="#links" className="btn danger">
+              Danger
+            </a>
           </div>
         </div>
       </>
-    )
+    );
   }
 }
