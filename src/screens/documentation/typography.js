@@ -1,5 +1,6 @@
 import React from "react";
 import WrapperPlayground from "../playground/wrapper-playground";
+import DemoPlayground from "../playground/demo-playground";
 
 const HEADER_EXAMPLE = `
 <>
@@ -38,7 +39,7 @@ export default class TypographyDemo extends React.Component {
     return (
       <>
         <div className="spacer">
-          <WrapperPlayground code={HEADER_EXAMPLE} language="html" />
+          <DemoPlayground code={HEADER_EXAMPLE} language="html" />
         </div>
         <div className="spacer">
           <WrapperPlayground code={HEADER_P_EXAMPLE} language="html" />
