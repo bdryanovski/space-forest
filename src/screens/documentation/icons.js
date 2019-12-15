@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
 import Code from '../components/prism'
-import Example from '../components/example'
 import Icon from '../../react/icon'
 
-const EXAMPLE_CODE = '<Icon name="camera" size="lg"/>'
+import DemoPlayground from '../playground/demo-playground'
+
+
+const EXAMPLE_CODE = `
+<div className="grid-container">
+  <div className="grid-column">
+    <Icon name="camera" size="sm"/>
+  </div>
+  <div className="grid-column">
+    <Icon name="box" size="2x"/>
+  </div>
+  <div className="grid-column">
+    <Icon name="home" size="3x"/>
+  </div>
+  <div className="grid-column">
+    <Icon name="dog" size="5x"/>
+  </div>
+</div>
+`.trim()
+
 export default class IconsDemo extends Component {
   render() {
     return (
@@ -33,10 +51,8 @@ export default class IconsDemo extends Component {
         <h5>React component</h5>
         <p>There is React component to assist you with that</p>
 
-        <Example code={EXAMPLE_CODE} scope={{ Icon }} />
+        <DemoPlayground code={EXAMPLE_CODE} scope={{ Icon }} language="html"/>
 
-        <h5>Angular Component</h5>
-        <p>Need to do this</p>
       </div>
     )
   }

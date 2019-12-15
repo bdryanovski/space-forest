@@ -16,7 +16,10 @@ export default class Playground extends Component {
 
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillMount() {
-    const { code, scope, transformCode, noInline } = this.props
+    let { code, scope, transformCode, noInline, language } = this.props
+    if (language === 'html') {
+      code = `<>\n${code}\n</>`
+    }
     this.transpile({ code, scope, transformCode, noInline })
   }
 
