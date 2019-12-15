@@ -4,9 +4,9 @@ import DemoPlayground from '../playground/demo-playground'
 
 const EXAMPLE_CARD = `
 <Card>
-  <h1 className="title">Example card</h1>
+  <h1 className="card-title">Example card</h1>
   <div className="card-line"></div>
-  <p className="body">
+  <p className="card-body">
     Content
   </p>
   <div className="card-line"></div>

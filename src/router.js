@@ -9,6 +9,7 @@ import TypographyDemo from './screens/documentation/typography'
 import LinksButtonsDemo from './screens/documentation/links-buttons'
 import IconsDemo from './screens/documentation/icons'
 import CardsDemo from './screens/documentation/cards'
+import ArticlesDemo from './screens/documentation/article'
 
 export const routes = [
   { name: 'Home', path: '/', exact: true, component: Home },
@@ -35,7 +36,9 @@ export const routes = [
         component: LinksButtonsDemo
       },
       { name: 'Icons', path: '/documentation/icons', component: IconsDemo },
-      { name: 'Cards', path: '/documentation/cards', component: CardsDemo }
+      { name: 'Cards', path: '/documentation/cards', component: CardsDemo },
+      { name: 'Article', path: '/documentation/article', component: ArticlesDemo }
+
     ]
   }
 ]

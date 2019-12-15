@@ -46,6 +46,10 @@ export default class GridDemo extends React.Component {
           `}
         </Code>
 
+        <p>
+            Adding &apos;.full-width&apos; will make the content expand the how view port
+        </p>
+
         {grid.map((columns, rowIndex) => {
           return (
             <div key={rowIndex} className="row">
@@ -60,6 +64,18 @@ export default class GridDemo extends React.Component {
             </div>
           )
         })}
+
+        <div className="row">
+          <div className="col demo-column">Full width</div>
+        </div>
+
+        <div className="row">
+          <div className="col-half demo-column">Half of screen</div>
+          <div className="col-half demo-column">Other half</div>
+
+        </div>
+
+
         <h5>Grid offset</h5>
         <Code language="html">
           {`
