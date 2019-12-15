@@ -1,6 +1,7 @@
 .btn {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   padding: 5px 10px 5px 10px;
+  margin-right: 0.5rem;
 
   display: inline-block;
   font-weight: 400;
@@ -8,7 +9,7 @@
   vertical-align: center;
   font-size: 1rem;
   line-height: 1.5;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   cursor: pointer;
   color: $color-white;
 
@@ -61,5 +62,5 @@ a {
 }
 
 a.active {
-  color: $color-success
+  color: $color-success;
 }

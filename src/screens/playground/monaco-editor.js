@@ -156,13 +156,11 @@ export default class MonacoEditor extends React.Component {
 
   // Bind to this
   setEditorHeight = () => {
-    if (!this.editor) {
-      return
+    if (this.editor && this.editor.getModel()) {
+      const currentLines = this.editor.getModel().getLineCount()
+      this.editor.getDomNode().style.height = `${currentLines * 19}px`
+      this.editor.layout()
     }
-    const currentLines = this.editor.getModel().getLineCount()
-    this.editor.getDomNode().style.height = `${currentLines * 19}px`
-    this.editor.layout()
-    return
   };
 
   render() {
