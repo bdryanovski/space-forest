@@ -34,7 +34,7 @@ module.exports = {
         "react/prop-types": 0,
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
