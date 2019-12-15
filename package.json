@@ -8,12 +8,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@typescript-eslint/eslint-plugin": "^2.8.0",
-    "@typescript-eslint/parser": "^2.8.0",
     "@uiw/react-monacoeditor": "^2.0.2",
-    "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
-    "babel-loader": "8.0.6",
     "babel-plugin-named-asset-import": "^0.3.5",
     "babel-preset-react-app": "^9.1.0",
     "buble": "^0.19.8",
@@ -24,14 +20,8 @@
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.1.0",
-    "eslint-loader": "3.0.2",
     "eslint-plugin-flowtype": "3.13.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "^1.6.1",
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "hookrouter": "^1.2.3",
@@ -82,10 +72,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "compile:styles": "sass ./src/styles/index.scss ./dist/forest-tree.css"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "compile:styles": "sass ./src/styles/index.scss ./dist/forest-tree.css",
+    "lint": "eslint './src/**/*.js'",
+    "lint:fix": "eslint './src/**/*.js' --fix"
   },
   "browserslist": {
     "production": [
@@ -179,12 +168,27 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "src/**/*.{css,scss,md}": [
       "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
       "git add"
     ]
   },
   "devDependencies": {
-    "babel-plugin-prismjs": "^1.1.1"
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-prismjs": "^1.1.1",
+    "confusing-browser-globals": "^1.0.9",
+    "eslint": "^6.7.2",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "typescript": "^3.7.3"
   }
 }
