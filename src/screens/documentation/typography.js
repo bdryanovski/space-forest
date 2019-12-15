@@ -35,19 +35,19 @@ const RANDOM_EXAMPLE = `
 `.trim()
 
 export default class TypographyDemo extends React.Component {
-    render() {
-        return (
-            <>
-                <div className="spacer">
-                    <DemoPlayground code={HEADER_EXAMPLE} language="html" />
-                </div>
-                <div className="spacer">
-                    <WrapperPlayground code={HEADER_P_EXAMPLE} language="html" />
-                </div>
-                <div className="spacer">
-                    <WrapperPlayground code={RANDOM_EXAMPLE} language="html" />
-                </div>
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <div className="spacer">
+          <DemoPlayground code={HEADER_EXAMPLE} language="html" />
+        </div>
+        <div className="spacer">
+          <WrapperPlayground code={HEADER_P_EXAMPLE} language="html" />
+        </div>
+        <div className="spacer">
+          <WrapperPlayground code={RANDOM_EXAMPLE} language="html" />
+        </div>
+      </>
+    )
+  }
 }
