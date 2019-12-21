@@ -75,7 +75,8 @@
     "test": "node scripts/test.js",
     "compile:styles": "sass ./src/styles/index.scss ./dist/forest-tree.css",
     "lint": "eslint './src/**/*.js'",
-    "lint:fix": "eslint './src/**/*.js' --fix"
+    "lint:fix": "eslint './src/**/*.js' --fix",
+    "preversion": "npm run compile:styles"
   },
   "browserslist": {
     "production": [
