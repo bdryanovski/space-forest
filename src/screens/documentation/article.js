@@ -87,7 +87,7 @@ export default class ArticlesDemo extends Component {
   render() {
     return (
       <div>
-        <h5>Article</h5>
+        <h1>Article</h1>
         <p>Basic article template for Gatsby blog article.</p>
         <Code language='html'>{'<div class="article"><!-- content --></div>'}</Code>
         <DemoPlayground code={ARTICLE_DEMO} language="html" />

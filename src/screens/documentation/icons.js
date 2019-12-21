@@ -26,13 +26,13 @@ export default class IconsDemo extends Component {
   render() {
     return (
       <div>
-        <h2>Icons</h2>
+        <h1>Icons</h1>
         <p>
           Icons are power by <a href="https://fontawesome.com/">Font Awesome</a>
           with the current version of <span>5.12.0</span>
         </p>
 
-        <h5>Static use</h5>
+        <h2>Static use</h2>
         <p>
           Use it without any component - just like you will use it documentated
           at Font Awesome website{' '}
@@ -48,7 +48,7 @@ export default class IconsDemo extends Component {
             `}
         </Code>
 
-        <h5>React component</h5>
+        <h2>React component</h2>
         <p>There is React component to assist you with that</p>
 
         <DemoPlayground code={EXAMPLE_CODE} scope={{ Icon }} language="html"/>

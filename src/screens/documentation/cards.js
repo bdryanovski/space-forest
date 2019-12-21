@@ -21,7 +21,7 @@ export default class CardsDocumentation extends Component {
   render() {
     return (
       <div>
-        <h4>Cards</h4>
+        <h1>Cards</h1>
         <p>Cards are simple way to group content</p>
 
         <DemoPlayground code={ EXAMPLE_CARD } scope={{ Card }} language="html"/>

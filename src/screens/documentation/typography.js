@@ -42,18 +42,19 @@ export default class TypographyDemo extends React.Component {
   render() {
     return (
       <>
-        <h5>Headers</h5>
+        <h1>Typography</h1>
+        <h2>Headers</h2>
         <div className="spacer">
           <DemoPlayground code={HEADER_EXAMPLE} language="html" />
         </div>
         <div className="spacer">
           <DemoPlayground code={HEADER_P_EXAMPLE} language="html" />
         </div>
-        <h5>Text tags</h5>
+        <h2>Text tags</h2>
         <div className="spacer">
           <DemoPlayground code={RANDOM_EXAMPLE} language="html" />
         </div>
-        <h5>React</h5>
+        <h2>React</h2>
         <p>
           There React component to wrap arround headers to provide semantic markup
         </p>

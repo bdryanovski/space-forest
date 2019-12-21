@@ -4,9 +4,9 @@ export default class LinksButtonsDemo extends React.Component {
   render() {
     return (
       <>
-        <h5>Links & Buttons</h5>
+        <h1>Links & Buttons</h1>
 
-        <h6 id="links">Links</h6>
+        <h2 id="links">Links</h2>
         <div className="grid-container">
           <div className="grid-column">
             <a href="#links">Standart</a>
@@ -32,7 +32,7 @@ export default class LinksButtonsDemo extends React.Component {
             </a>
           </div>
         </div>
-        <h6>Button HTML attribute</h6>
+        <h2>Button HTML attribute</h2>
         <div className="grid-container">
           <div className="grid-column">
             <button className="btn">Standart</button>
@@ -50,7 +50,7 @@ export default class LinksButtonsDemo extends React.Component {
             <button className="btn danger">Danger</button>
           </div>
         </div>
-        <h6>A HTML attribute</h6>
+        <h2>A HTML attribute</h2>
         <div className="grid-container">
           <div className="grid-column">
             <a href="#links" className="btn">

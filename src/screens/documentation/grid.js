@@ -36,7 +36,8 @@ export default class GridDemo extends React.Component {
   render() {
     return (
       <>
-        <h4>Basic Grid</h4>
+        <h1>Grid</h1>
+        <h2>Basic Grid</h2>
         <Code language="html">
           {`
 <div class="row">
@@ -76,7 +77,7 @@ export default class GridDemo extends React.Component {
         </div>
 
 
-        <h5>Grid offset</h5>
+        <h2>Grid offset</h2>
         <Code language="html">
           {`
 <div class="row">
@@ -98,7 +99,7 @@ export default class GridDemo extends React.Component {
             </div>
           )
         })}
-        <h4>Flex Grid</h4>
+        <h2>Flex Grid</h2>
         <Code language="html">
           {`
 <div class="flex-row">
@@ -130,7 +131,7 @@ export default class GridDemo extends React.Component {
           </div>
         </div>
 
-        <h4>CSS Grid</h4>
+        <h2>CSS Grid</h2>
         <Code language="html">
           {`
 <div class="grid-container">
