@@ -2,6 +2,7 @@
   "name": "framework",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/react/index.js",
   "dependencies": {
     "@babel/core": "7.7.4",
     "@svgr/webpack": "4.3.3",

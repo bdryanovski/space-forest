@@ -8,10 +8,10 @@ $grid-width: 960px;
   max-width: $grid-width;
   margin: 0 auto;
   box-sizing: border-box;
+}
 
-  .full-width {
-    max-width: 100%;
-  }
+.full-width {
+  max-width: 100% !important;
 }
 
 @media (min-width: 576px) {

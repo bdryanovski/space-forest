@@ -41,14 +41,19 @@ export default class DemoPlayground extends Component {
     const { code, language, scope } = this.props
 
     return (
-      <Playground code={code} language={language} scope={ scope }>
-        <div className="flex-row">
-          <div className="flex-column" onClick={this.onToggle}>
-            <Preview />
+      <Playground code={code} language={language} scope={scope}>
+        <div className="spacer">
+          <div className="flex-row">
+            <div className="flex-column">
+              <div className="sp-1"><Preview /></div>
+              <span className="btn primary" onClick={this.onToggle}>
+                {this.state.display ? 'Hide editor' : 'Show editor'}
+              </span>
+            </div>
           </div>
-        </div>
 
-        {this.displayEditor()}
+          {this.displayEditor()}
+        </div>
       </Playground>
     )
   }
