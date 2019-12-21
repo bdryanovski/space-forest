@@ -1,4 +1,5 @@
 import React from 'react'
+import {Header1, Header2, Header3, Header4, Header5, Header6} from '../../react'
 import DemoPlayground from '../playground/demo-playground'
 
 const HEADER_EXAMPLE = `
@@ -27,6 +28,16 @@ const RANDOM_EXAMPLE = `
 <u>Underlined</u>
 `.trim()
 
+const REACT_HEADER = `
+<Header1>H1 headline</Header1>
+<Header2>H2 headline</Header2>
+<Header3>H3 headline</Header3>
+<Header4>H4 headline</Header4>
+<Header5>H5 headline</Header5>
+<Header6>H6 headline</Header6>
+`.trim()
+const REACT_HEADER_SCOPE = {Header1, Header2, Header3, Header4, Header5, Header6}
+
 export default class TypographyDemo extends React.Component {
   render() {
     return (
@@ -41,6 +52,13 @@ export default class TypographyDemo extends React.Component {
         <h5>Text tags</h5>
         <div className="spacer">
           <DemoPlayground code={RANDOM_EXAMPLE} language="html" />
+        </div>
+        <h5>React</h5>
+        <p>
+          There React component to wrap arround headers to provide semantic markup
+        </p>
+        <div className="spacer">
+          <DemoPlayground code={REACT_HEADER} scope={REACT_HEADER_SCOPE} language="html" />
         </div>
       </>
     )
