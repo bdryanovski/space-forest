@@ -47,7 +47,7 @@ export default class DemoPlayground extends Component {
             <div className="flex-column">
               <div className="sp-1"><Preview /></div>
               <span className="btn primary" onClick={this.onToggle}>
-                {this.state.display ? 'Hide editor' : 'Show editor'}
+                {this.state.display ? 'Hide Code' : 'Show Code'}
               </span>
             </div>
           </div>
