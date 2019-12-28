@@ -5,16 +5,16 @@
 
   // like h4
   .card-title {
-    line-height: 1.35;
-    letter-spacing: -0.08rem;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.35;
   }
 
   .card-body {
   }
 
   .card-line {
-    border: 0.05rem dotted #c4c4c4;
+    border: 0.03rem solid #c4c4c4;
     margin-left: -0.5rem;
     width: calc(100% + 0.75rem);
     margin-bottom: 1rem;
