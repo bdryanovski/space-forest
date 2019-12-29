@@ -2,34 +2,34 @@ import React from 'react'
 import Code from '../components/prism'
 
 const grid = [
-  ['col-1', 'col-11'],
-  ['col-2', 'col-10'],
-  ['col-3', 'col-9'],
-  ['col-4', 'col-8'],
-  ['col-6', 'col-6'],
-  ['col-7', 'col-5'],
-  ['col-8', 'col-4'],
-  ['col-9', 'col-3'],
-  ['col-10', 'col-2'],
-  ['col-11', 'col-1'],
-  ['col-12'],
-  ['col-3', 'col-3', 'col-3', 'col-3'],
-  ['col-5', 'col-2', 'col-5']
+  ['cols-1', 'cols-11'],
+  ['cols-2', 'cols-10'],
+  ['cols-3', 'cols-9'],
+  ['cols-4', 'cols-8'],
+  ['cols-6', 'cols-6'],
+  ['cols-7', 'cols-5'],
+  ['cols-8', 'cols-4'],
+  ['cols-9', 'cols-3'],
+  ['cols-10', 'cols-2'],
+  ['cols-11', 'cols-1'],
+  ['cols-12'],
+  ['cols-3', 'cols-3', 'cols-3', 'cols-3'],
+  ['cols-5', 'cols-2', 'cols-5']
 ]
 
 const grid_offset = [
-  ['col-1 col-1-offset'],
-  ['col-1 col-2-offset'],
-  ['col-1 col-3-offset'],
-  ['col-1 col-4-offset'],
-  ['col-1 col-5-offset'],
-  ['col-1 col-6-offset'],
-  ['col-1 col-7-offset'],
-  ['col-1 col-8-offset'],
-  ['col-1 col-9-offset'],
-  ['col-1 col-10-offset'],
-  ['col-1 col-11-offset'],
-  ['col-1 col-12-offset']
+  ['cols-1 cols-1-offset'],
+  ['cols-1 cols-2-offset'],
+  ['cols-1 cols-3-offset'],
+  ['cols-1 cols-4-offset'],
+  ['cols-1 cols-5-offset'],
+  ['cols-1 cols-6-offset'],
+  ['cols-1 cols-7-offset'],
+  ['cols-1 cols-8-offset'],
+  ['cols-1 cols-9-offset'],
+  ['cols-1 cols-10-offset'],
+  ['cols-1 cols-11-offset'],
+  ['cols-1 cols-12-offset']
 ]
 
 export default class GridDemo extends React.Component {
@@ -41,8 +41,8 @@ export default class GridDemo extends React.Component {
         <Code language="html">
           {`
 <div class="row">
-  <div class="col-2">Column Size 2</div>
-  <div class="col-10">Column Size 10</div>
+  <div class="cols-2">Column Size 2</div>
+  <div class="cols-10">Column Size 10</div>
 </div>
           `}
         </Code>
@@ -67,12 +67,12 @@ export default class GridDemo extends React.Component {
         })}
 
         <div className="row">
-          <div className="col demo-column">Full width</div>
+          <div className="cols demo-column">Full width</div>
         </div>
 
         <div className="row">
-          <div className="col-half demo-column">Half of screen</div>
-          <div className="col-half demo-column">Other half</div>
+          <div className="cols-half demo-column">Half of screen</div>
+          <div className="cols-half demo-column">Other half</div>
 
         </div>
 
@@ -81,7 +81,7 @@ export default class GridDemo extends React.Component {
         <Code language="html">
           {`
 <div class="row">
-  <div class="col-2 col-2-offset">Column</div>
+  <div class="cols-2 cols-2-offset">Column</div>
 </div>
             `}
         </Code>
@@ -145,6 +145,54 @@ export default class GridDemo extends React.Component {
           <div className="grid-column demo-column ">Column One</div>
           <div className="grid-column demo-column ">Column Two</div>
           <div className="grid-column demo-column ">Column Three</div>
+        </div>
+
+
+        <h2>Grid 2</h2>
+        <p>
+          When useing .grid without setting one of the .col-(n) every child in this container
+          will act as row.
+        </p>
+        <Code language="html">
+          {`
+<div className="grid grid-gap-xs">
+  <div className="demo-column">Act as Row</div>
+  <div className="demo-column">Act as anoter Row</div>
+</div>
+          `}</Code>
+        <div className="grid grid-gap-xs">
+          <div className="demo-column">Act as Row</div>
+          <div className="demo-column">Act as anoter Row</div>
+        </div>
+        <Code language="html">
+          {`
+<div className="grid grid-gap-xs">
+  <div className="col-6 demo-column">Column one</div>
+  <div className="col-6 demo-column">Column two</div>
+</div>
+          `}</Code>
+        <div className="grid grid-gap-xs">
+          <div className="col-6 demo-column">Column one</div>
+          <div className="col-6 demo-column">Column two</div>
+        </div>
+
+        <p>Auto calculate width</p>
+        <Code language="html">
+          {`
+<div className="grid-auto-cols grid-gap-xs">
+  <div className="demo-column">Column</div>
+  <div className="demo-column">Column</div>
+  <div className="demo-column">Column</div>
+  <div className="demo-column">Column</div>
+  <div className="demo-column">Column</div>
+</div>
+          `}</Code>
+        <div className="grid-auto-cols grid-gap-xs">
+          <div className="demo-column">Column</div>
+          <div className="demo-column">Column</div>
+          <div className="demo-column">Column</div>
+          <div className="demo-column">Column</div>
+          <div className="demo-column">Column</div>
         </div>
       </>
     )

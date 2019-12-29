@@ -10,7 +10,7 @@ export default class Home extends React.Component {
         </div>
 
         <div className="row">
-          <div className="col-4">
+          <div className="cols-4">
             <h5>Static Styles</h5>
             <p>
               Static styles that you could use to build your own components,
@@ -19,7 +19,7 @@ export default class Home extends React.Component {
             </p>
           </div>
 
-          <div className="col-4">
+          <div className="cols-4">
             <h5>React Component</h5>
             <p>
               Easy to use customizable and small React components to be used
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
             </p>
           </div>
 
-          <div className="col-4">
+          <div className="cols-4">
             <h5>React Native Styles</h5>
             <p>
               Collections of style that you could use to build your own mobile

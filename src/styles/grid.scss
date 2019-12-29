@@ -51,7 +51,7 @@ $grid-width: 960px;
   @include clearfix;
 }
 
-[class^="col-"] {
+[class^="cols-"] {
   position: relative;
   flex-basis: 0;
   flex-grow: 1;
@@ -68,14 +68,14 @@ $grid-width: 960px;
   }
 }
 
-.col {
+.cols {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
   flex: 0 0 100%;
 }
 
-.col-half {
+.cols-half {
   flex-grow: 1;
   flex: 0 0 50%;
   max-width: 50%;
@@ -92,17 +92,17 @@ $grid-width: 960px;
 }
 
 @for $i from 1 through $grid-columns {
-  .col-#{$i} {
+  .cols-#{$i} {
     max-width: grid-width($i);
     flex: 0 0 percentage((100/12 * $i/100));
   }
-  .col-#{$i}:last-child {
+  .cols-#{$i}:last-child {
     max-width: grid-width($i, false);
   }
 }
 
 @for $i from 1 through $grid-columns - 1 {
-  .col-#{$i}-offset {
+  .cols-#{$i}-offset {
     margin-left: grid-width($i);
   }
 }
