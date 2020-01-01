@@ -1,14 +1,60 @@
-.nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
+// https://www.w3schools.com/css/css_navbar.asp
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
-.nav-link {
-  display: block;
-  padding: .5rem 1rem;
+  li a {
+    display: block;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .vertical {
+  }
+
+  .horizontal {
+    li {
+      display: inline;
+      float: left;
+    }
+    a {
+      display: block;
+      padding: 0.5rem 1.75rem;
+    }
+
+    .fix-top {
+      ul {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .fix-bottom {
+      ul {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .sticky {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+    }
+
+    .active {
+      background-color: #4caf50;
+    }
+
+    .right {
+      float: right;
+    }
+  }
 }
