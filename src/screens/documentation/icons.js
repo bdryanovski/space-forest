@@ -4,21 +4,16 @@ import Icon from '../../react/icon'
 
 import DemoPlayground from '../playground/demo-playground'
 
-
 const EXAMPLE_CODE = `
-<div className="grid-container">
-  <div className="grid-column">
+<div className="grid-auto-cols">
+    <Icon name="camera" size="xs"/>
     <Icon name="camera" size="sm"/>
-  </div>
-  <div className="grid-column">
-    <Icon name="box" size="2x"/>
-  </div>
-  <div className="grid-column">
-    <Icon name="home" size="3x"/>
-  </div>
-  <div className="grid-column">
-    <Icon name="dog" size="5x"/>
-  </div>
+    <Icon name="camera" size="lg"/>
+    <Icon name="camera" size="2x"/>
+    <Icon name="camera" size="3x"/>
+    <Icon name="camera" size="5x"/>
+    <Icon name="camera" size="7x"/>
+    <Icon name="camera" size="10x"/>
 </div>
 `.trim()
 
@@ -28,8 +23,7 @@ export default class IconsDemo extends Component {
       <div>
         <h1>Icons</h1>
         <p>
-          Icons are power by <a href="https://fontawesome.com/">Font Awesome</a>
-          with the current version of <span>5.12.0</span>
+          Icons are power by <a href="https://fontawesome.com/">Font Awesome</a> with the current version of <span>5.12.0</span>
         </p>
 
         <h2>Static use</h2>
