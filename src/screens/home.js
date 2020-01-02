@@ -6,11 +6,11 @@ export default class Home extends React.Component {
       <>
         <div className="banner">
           <h2>Simple UI Framwork</h2>
-          <p>Static Styles, React & React Native components</p>
+          <p>Static Styles & React Wrappers</p>
         </div>
 
-        <div className="row">
-          <div className="cols-4">
+        <div className="grid-auto-cols">
+          <div>
             <h5>Static Styles</h5>
             <p>
               Static styles that you could use to build your own components,
@@ -19,20 +19,12 @@ export default class Home extends React.Component {
             </p>
           </div>
 
-          <div className="cols-4">
+          <div>
             <h5>React Component</h5>
             <p>
               Easy to use customizable and small React components to be used
               into your next project. Simplifying the need to know every class
               out there.
-            </p>
-          </div>
-
-          <div className="cols-4">
-            <h5>React Native Styles</h5>
-            <p>
-              Collections of style that you could use to build your own mobile
-              or desktop app.
             </p>
           </div>
         </div>
