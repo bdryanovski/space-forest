@@ -1,7 +1,9 @@
 import React from 'react'
 import Code from './components/prism'
 
-const pkg_name = 'space-forest'
+import PKG from '../../package.json'
+
+const pkg_name = PKG.name
 
 export default class GettingStarted extends React.Component {
   render() {
@@ -28,6 +30,15 @@ export default class GettingStarted extends React.Component {
           @import "node_modules/${pkg_name}/dist/${pkg_name}.css";
           `}
         </Code>
+        <h2>Dependencies</h2>
+        <ul>
+          {Object.keys(PKG.dependencies).sort().map((dep, index) => {
+            return (
+              <li key={index}>
+                <a href={`https://www.npmjs.com/package/${dep}`}>{dep}</a> : <strong>{PKG.dependencies[dep]}</strong></li>
+            )
+          })}
+        </ul>
       </>
     )
   }

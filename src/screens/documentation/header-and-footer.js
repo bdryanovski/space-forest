@@ -9,11 +9,11 @@ const FOOTER_SCOPE = {Footer}
 
 const NAV_HORIZONTAL = `
 <Navigation>
-  <NavigationItem>Home</NavigationItem>
-  <NavigationItem>Posts</NavigationItem>
-  <NavigationItem className="active">Pages</NavigationItem>
-  <NavigationItem>Categories</NavigationItem>
-  <NavigationItem className="right">Settings</NavigationItem>
+  <NavigationItem><a>Home</a></NavigationItem>
+  <NavigationItem><a>Posts</a></NavigationItem>
+  <NavigationItem className="active"><a>Pages</a></NavigationItem>
+  <NavigationItem><a>Categories</a></NavigationItem>
+  <NavigationItem className="right"><a>Settings</a></NavigationItem>
 </Navigation>
 `
 const FOOTER = '<Footer>Copyright { (new Date().getFullYear()) }</Footer>'
