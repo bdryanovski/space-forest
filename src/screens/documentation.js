@@ -1,7 +1,5 @@
 import React from 'react'
 import {RenderSwitchSubRoutes, SideNavigation} from '../router'
-import Footer from '../react/footer'
-import PKG from '../../package.json'
 
 export default class Documentation extends React.Component {
   render() {
@@ -16,11 +14,6 @@ export default class Documentation extends React.Component {
 
           <div className="col-10">
             <RenderSwitchSubRoutes routes={ subroutes } />
-          </div>
-          <div className="col-12">
-            <Footer>
-              {PKG.name} v{PKG.version} Copyright 2019-{(new Date().getFullYear())}
-            </Footer>
           </div>
         </div>
       </>
