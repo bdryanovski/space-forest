@@ -1,5 +1,41 @@
 @charset "UTF-8";
 @import-normalize;
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 4%);
+  --color-body-background: hsl(215, 24%, 90%);
+  --color-light: #dddddd;
+  --color-dark: hsl(0, 0%, 21%);
+  --color-gray: #aaaaaa;
+  --color-primary: #001f3f;
+  --color-info: #7fdbff;
+  --color-success: #2ecc40;
+  --color-warning: #ffdc00;
+  --color-danger: #85144b;
+  --color-link: #0074d9;
+  --color-link-hover: #39cccc;
+  --color-link-active: #3d9970;
+  --color-border: var(--color-gray);
+}
+
+[data-theme=dark] {
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 4%);
+  --color-body-background: hsl(0, 0%, 21%);
+  --color-light: #dddddd;
+  --color-dark: hsl(0, 0%, 100%);
+  --color-gray: #aaaaaa;
+  --color-primary: #001f3f;
+  --color-info: #7fdbff;
+  --color-success: #2ecc40;
+  --color-warning: #ffdc00;
+  --color-danger: #85144b;
+  --color-link: #0074d9;
+  --color-link-hover: #39cccc;
+  --color-link-active: #3d9970;
+  --color-border: var(--color-gray);
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -1556,6 +1592,10 @@
     grid-column-end: auto;
   }
 }
+.grid-align-center {
+  align-items: center;
+}
+
 /* NOTE
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
@@ -1569,7 +1609,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
-  color: #363636;
+  color: var(--color-dark);
+  background-color: var(--color-body-background);
 }
 
 h1,
@@ -1641,7 +1682,7 @@ p {
   padding: 0.375rem 0.75rem;
   cursor: pointer;
   color: white;
-  background-color: #DDDDDD;
+  background-color: #dddddd;
 }
 .btn.primary {
   color: white;
@@ -1649,11 +1690,11 @@ p {
 }
 .btn.success {
   color: white;
-  background-color: #2ECC40;
+  background-color: #2ecc40;
 }
 .btn.warning {
   color: white;
-  background-color: #FFDC00;
+  background-color: #ffdc00;
 }
 .btn.danger {
   color: white;
@@ -1661,33 +1702,33 @@ p {
 }
 
 a:hover {
-  color: #39CCCC;
+  color: #39cccc;
 }
 
 a {
-  color: #0074D9;
+  color: #0074d9;
   text-decoration: none;
 }
 a.primary {
   color: #001f3f;
 }
 a.success {
-  color: #2ECC40;
+  color: #2ecc40;
 }
 a.warning {
-  color: #FFDC00;
+  color: #ffdc00;
 }
 a.danger {
   color: #85144b;
 }
 
 a.active {
-  color: #2ECC40;
+  color: #2ecc40;
 }
 
 .card {
   border-radius: 0.65rem;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #aaaaaa;
   padding: 0.75rem;
 }
 .card .card-title {
@@ -1711,19 +1752,60 @@ a.active {
   font-weight: 300;
 }
 
-.nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
-.nav-link {
+nav li {
   display: block;
-  padding: 0.5rem 1rem;
+  width: auto;
+  text-decoration: none;
+}
+nav li a:hover {
+  background-color: #555;
+  color: white;
+}
+nav .vertical ul {
+  min-width: 10rem;
+  text-align: left;
+}
+nav .vertical li a {
+  display: block;
+  padding: 0.2rem 1.75rem;
+}
+nav .horizontal li {
+  display: inline;
+  float: left;
+  text-align: center;
+}
+nav .horizontal li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 1.75rem;
+}
+nav .horizontal .fix-top ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav .horizontal .fix-bottom ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+nav .horizontal .sticky {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+}
+nav .horizontal .active {
+  background-color: #4caf50;
+}
+nav .horizontal .right {
+  float: right;
 }
 
 .spacer {
@@ -1835,6 +1917,10 @@ ul {
   min-height: 1rem;
   background-color: #e0e5ec;
   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5) !important;
+}
+
+.pagination .pagination-item:last-child {
+  text-align: right;
 }
 
 /*!
