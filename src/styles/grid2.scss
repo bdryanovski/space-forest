@@ -318,3 +318,8 @@ $breakpoints: (
     grid-column-end: auto;
   }
 }
+
+// Helper classes
+.grid-align-center {
+  align-items: center;
+}

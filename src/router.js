@@ -12,6 +12,8 @@ import CardsDemo from './screens/documentation/cards'
 import ArticlesDemo from './screens/documentation/article'
 import Neumorphism from './screens/documentation/neumorphism'
 import HeaderFooter from './screens/documentation/header-and-footer'
+import Pagination from './screens/documentation/pagination'
+import ThemeDemo from './screens/documentation/theme'
 
 export const routes = [
   { name: 'Home', path: '/', exact: true, component: Home },
@@ -26,6 +28,8 @@ export const routes = [
         path: '/documentation',
         component: GettingStarted
       },
+      {name: 'Theme', path: '/documentation/theme', component: ThemeDemo},
+
       { name: 'Grid', path: '/documentation/grid', component: GridDemo },
       {
         name: 'Typography',
@@ -41,7 +45,8 @@ export const routes = [
       { name: 'Cards', path: '/documentation/cards', component: CardsDemo },
       { name: 'Article', path: '/documentation/article', component: ArticlesDemo },
       {name: 'Neumorphism', path: '/documentation/neumorphism', component: Neumorphism},
-      {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter}
+      {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},
+      {name: 'Pagination', path: '/documentation/pagination', component: Pagination},
 
     ]
   }
