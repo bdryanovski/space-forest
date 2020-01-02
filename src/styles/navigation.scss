@@ -7,23 +7,39 @@ nav {
     overflow: hidden;
   }
 
-  li a {
+  li {
     display: block;
     width: auto;
-    text-align: center;
     text-decoration: none;
   }
 
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }
+
   .vertical {
+    ul {
+      min-width: 10rem;
+      text-align: left;
+    }
+
+    li a {
+      display: block;
+      padding: 0.2rem 1.75rem;
+    }
   }
 
   .horizontal {
     li {
       display: inline;
       float: left;
+      text-align: center;
     }
-    a {
+
+    li a {
       display: block;
+      text-decoration: none;
       padding: 0.5rem 1.75rem;
     }
 

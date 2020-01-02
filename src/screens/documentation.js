@@ -5,14 +5,13 @@ export default class Documentation extends React.Component {
     const subroutes = this.props.routes
     return (
       <>
-        <h3>Documentation</h3>
-
-        <div className="row">
-          <div className="cols-2">
+        <div className="grid grid-gap-xs">
+          <div className="col-2">
+            <h1>Topics</h1>
             <SideNavigation routes={ subroutes } />
           </div>
 
-          <div className="cols-10">
+          <div className="col-10">
             <RenderSwitchSubRoutes routes={ subroutes } />
           </div>
         </div>

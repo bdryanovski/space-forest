@@ -10,7 +10,6 @@ function App() {
     <div className="container full-width">
       <Router>
         <SiteNavigation />
-        <hr />
         <RenderSwitchSubRoutes routes={routes} />
       </Router>
     </div>

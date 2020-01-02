@@ -1,5 +1,9 @@
 import React from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
+import {Route, Link, Switch} from 'react-router-dom'
+
+import Navigation from './react/navigation'
+import NavigationItem from './react/navigation-item'
+import ThemeSwitcher from './react/theme/theme-switcher'
 
 import Home from './screens/home.js'
 import GettingStarted from './screens/getting-started'
@@ -55,13 +59,18 @@ export const routes = [
 export class SiteNavigation extends React.Component {
   render() {
     return (
-      <nav className="nav">
+      <Navigation>
         {routes.map((route, index) => (
-          <Link key={index} to={route.path} className="nav-link">
-            {route.name}
-          </Link>
+          <NavigationItem key={index}>
+            <Link to={route.path}>
+              {route.name}
+            </Link>
+          </NavigationItem>
         ))}
-      </nav>
+        <NavigationItem className="right">
+          <ThemeSwitcher />
+        </NavigationItem>
+      </Navigation>
     )
   }
 }
@@ -71,13 +80,13 @@ export function SideNavigation({ routes }) {
     return <></>
   }
   return (
-    <ul className="list-group">
+    <Navigation type="vertical">
       {routes.map((route, index) => (
-        <li key={index} className="list-group-item">
+        <NavigationItem key={index}>
           <Link to={route.path}>{route.name}</Link>
-        </li>
+        </NavigationItem>
       ))}
-    </ul>
+    </Navigation>
   )
 }
 
