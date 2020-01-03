@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 @import-normalize;
 :root {
   --color-white: hsl(0, 0%, 100%);
@@ -1727,7 +1728,7 @@ a.active {
 }
 
 .card {
-  border-radius: 0.65rem;
+  border-radius: 0.35rem;
   border: 1px solid #aaaaaa;
   padding: 0.75rem;
 }
@@ -1921,6 +1922,110 @@ ul {
 
 .pagination .pagination-item:last-child {
   text-align: right;
+}
+
+.window {
+  width: 100%;
+  background: GhostWhite;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: block;
+}
+.window .window-header {
+  height: 37px;
+  background: Gainsboro;
+  position: relative;
+}
+.window .window-header .action-buttons {
+  position: absolute;
+  top: 40%;
+  left: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: Crimson;
+  border-radius: 50%;
+  box-shadow: 1rem 0 0 Orange, 2rem 0 0 LimeGreen;
+}
+.window .window-header .title {
+  position: absolute;
+  top: 20%;
+  left: 5rem;
+}
+.window .window-header .language {
+  display: inline-block;
+  position: absolute;
+  right: 2rem;
+  top: 15%;
+  text-align: right;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: Lato, sans-serif;
+  color: DimGrey;
+}
+.window .window-body {
+  position: relative;
+  height: 100%;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: none;
+}
+
+pre[class*=language-] {
+  padding: 1rem;
+  margin: 0 0;
+  overflow: auto;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  min-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffffff;
+}
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
 }
 
 /*!
