@@ -19,6 +19,7 @@ import HeaderFooter from './screens/documentation/header-and-footer'
 import Pagination from './screens/documentation/pagination'
 import ThemeDemo from './screens/documentation/theme'
 import ModalDemo from './screens/documentation/modal-demo'
+import PlaceholderDemo from './screens/documentation/placeholder-demo'
 
 export const routes = [
   { name: 'Home', path: '/', exact: true, component: Home },
@@ -53,6 +54,7 @@ export const routes = [
       {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},
       {name: 'Pagination', path: '/documentation/pagination', component: Pagination},
       {name: 'Modal', path: '/documentation/modal', component: ModalDemo},
+      {name: 'Placeholder', path: '/documentation/placeholder', component: PlaceholderDemo}
     ]
   }
 ]

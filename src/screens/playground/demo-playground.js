@@ -8,6 +8,8 @@ import Editor from './playground-editor'
 import Preview from './playground-preview'
 import PlaygroundError from './playground-error'
 
+export const MAX_WIDTH = '800px'
+
 export default class DemoPlayground extends Component {
 
   state = {
@@ -47,7 +49,7 @@ export default class DemoPlayground extends Component {
       <Playground code={code} language={language} scope={scope}>
         <div className="spacer">
           <div className="flex-row">
-            <div className="flex-column">
+            <div className="flex-column" style={{'maxWidth': MAX_WIDTH}}>
               <div className="sp-1"><Preview /></div>
               {this.displayEditor()}
               <span onClick={this.onToggle}>

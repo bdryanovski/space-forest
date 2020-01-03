@@ -20,6 +20,9 @@ export default class Playground extends Component {
     if (language === 'html') {
       code = `<>\n${code}\n</>`
     }
+    // Trim the code so the input could be less messy
+    code = code.trim()
+
     this.transpile({ code, scope, transformCode, noInline })
   }
 
@@ -50,8 +53,7 @@ export default class Playground extends Component {
   };
 
   transpile = ({code, scope, transformCode, noInline = false}) => {
-    // Trim the code so the input could be less messy
-    code = code.trim()
+
     // Transpilation arguments
     const input = {
       code: transformCode ? transformCode(code) : code,
