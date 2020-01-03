@@ -49,9 +49,9 @@ export default class DemoPlayground extends Component {
       <Playground code={code} language={language} scope={scope}>
         <div className="spacer">
           <div className="flex-row">
-            <div className="flex-column" style={{'maxWidth': MAX_WIDTH}}>
+            <div className="flex-column">
               <div className="sp-1"><Preview /></div>
-              {this.displayEditor()}
+              <div style={{'maxWidth': MAX_WIDTH}}>{this.displayEditor()}</div>
               <span onClick={this.onToggle}>
                 <Icon name="code"/> {this.state.display ? 'Hide Code' : 'Show Code'}
               </span>
