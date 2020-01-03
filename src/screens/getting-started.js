@@ -1,5 +1,5 @@
 import React from 'react'
-import Code from './components/prism'
+import Code from './components/code'
 
 import PKG from '../../package.json'
 

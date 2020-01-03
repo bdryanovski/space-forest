@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DemoPlayground from '../playground/demo-playground'
-import Code from '../components/prism'
+import Code from '../components/code'
 
 const ARTICLE_DEMO = `
 <div class="article">

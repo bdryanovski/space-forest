@@ -49,7 +49,9 @@ export default class Playground extends Component {
     this.setState({ error: error.toString() })
   };
 
-  transpile = ({ code, scope, transformCode, noInline = false }) => {
+  transpile = ({code, scope, transformCode, noInline = false}) => {
+    // Trim the code so the input could be less messy
+    code = code.trim()
     // Transpilation arguments
     const input = {
       code: transformCode ? transformCode(code) : code,

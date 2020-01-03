@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+
+import OSXWindow from '../components/osx-window'
+import Icon from '../../react/icon'
 
 import Playground from './playground'
 import Editor from './playground-editor'
@@ -21,7 +24,7 @@ export default class DemoPlayground extends Component {
     }
 
     return (
-      <>
+      <OSXWindow language={this.props.language}>
         <div className="flex-row" style={{ minHeight: '100px' }}>
           <div className="flex-column">
             <Editor />
@@ -33,7 +36,7 @@ export default class DemoPlayground extends Component {
             <PlaygroundError />
           </div>
         </div>
-      </>
+      </OSXWindow>
     )
   }
 
@@ -46,13 +49,13 @@ export default class DemoPlayground extends Component {
           <div className="flex-row">
             <div className="flex-column">
               <div className="sp-1"><Preview /></div>
-              <span className="btn primary" onClick={this.onToggle}>
-                {this.state.display ? 'Hide Code' : 'Show Code'}
+              {this.displayEditor()}
+              <span onClick={this.onToggle}>
+                <Icon name="code"/> {this.state.display ? 'Hide Code' : 'Show Code'}
               </span>
             </div>
           </div>
 
-          {this.displayEditor()}
         </div>
       </Playground>
     )

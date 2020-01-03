@@ -18,6 +18,7 @@ import Neumorphism from './screens/documentation/neumorphism'
 import HeaderFooter from './screens/documentation/header-and-footer'
 import Pagination from './screens/documentation/pagination'
 import ThemeDemo from './screens/documentation/theme'
+import ModalDemo from './screens/documentation/modal-demo'
 
 export const routes = [
   { name: 'Home', path: '/', exact: true, component: Home },
@@ -51,7 +52,7 @@ export const routes = [
       {name: 'Neumorphism', path: '/documentation/neumorphism', component: Neumorphism},
       {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},
       {name: 'Pagination', path: '/documentation/pagination', component: Pagination},
-
+      {name: 'Modal', path: '/documentation/modal', component: ModalDemo},
     ]
   }
 ]

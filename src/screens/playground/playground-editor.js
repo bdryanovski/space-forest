@@ -4,6 +4,7 @@ import PlaygroundContext from './playground-context'
 
 const NO_CODE = 'let a = \'foo\''
 const DEFAULT_LANGUAGE = 'javascript'
+const THEME = 'vs-light'
 
 export default class Editor extends Component {
   editorDidMount(editor, monaco) {
@@ -20,7 +21,7 @@ export default class Editor extends Component {
               height="100%"
               language={language || DEFAULT_LANGUAGE}
               value={code || NO_CODE}
-              theme={'vs-dark'}
+              theme={THEME}
               onChange={onChange}
               editorDidMount={this.editorDidMount}
               options={{
