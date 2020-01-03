@@ -8,7 +8,7 @@ import {SiteNavigation, RenderSwitchSubRoutes, routes} from './router.js'
 
 function App() {
   return (
-    <div className="container full-width">
+    <div className="container">
       <Router>
         <SiteNavigation />
         <RenderSwitchSubRoutes routes={routes} />
