@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Modal, Article} from '../../react'
+import {Modal, Article} from '../../react-components'
 
 import DemoPlayground from '../playground/demo-playground'
 

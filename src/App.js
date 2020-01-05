@@ -2,7 +2,7 @@ import React from 'react'
 import {
   BrowserRouter as Router,
 } from 'react-router-dom'
-import Footer from './react/footer'
+import Footer from './react-components/footer'
 import PKG from '../package.json'
 import {SiteNavigation, RenderSwitchSubRoutes, routes} from './router.js'
 

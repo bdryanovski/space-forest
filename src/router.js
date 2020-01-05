@@ -1,9 +1,9 @@
 import React from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
 
-import Navigation from './react/navigation'
-import NavigationItem from './react/navigation-item'
-import ThemeSwitcher from './react/theme/theme-switcher'
+import Navigation from './react-components/navigation'
+import NavigationItem from './react-components/navigation-item'
+import ThemeSwitcher from './react-components/theme/theme-switcher'
 
 import Home from './screens/home.js'
 import GettingStarted from './screens/getting-started'
@@ -14,7 +14,6 @@ import LinksButtonsDemo from './screens/documentation/links-buttons'
 import IconsDemo from './screens/documentation/icons'
 import CardsDemo from './screens/documentation/cards'
 import ArticlesDemo from './screens/documentation/article'
-import Neumorphism from './screens/documentation/neumorphism'
 import HeaderFooter from './screens/documentation/header-and-footer'
 import Pagination from './screens/documentation/pagination'
 import ThemeDemo from './screens/documentation/theme'
@@ -51,7 +50,6 @@ export const routes = [
       {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
       {name: 'Cards', path: '/documentation/cards', component: CardsDemo},
       {name: 'Article', path: '/documentation/article', component: ArticlesDemo},
-      {name: 'Neumorphism', path: '/documentation/neumorphism', component: Neumorphism},
       {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},
       {name: 'Pagination', path: '/documentation/pagination', component: Pagination},
       {name: 'Modal', path: '/documentation/modal', component: ModalDemo},

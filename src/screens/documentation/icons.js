@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Code from '../components/code'
-import {Icon} from '../../react'
+import {Icon} from '../../react-components'
 
 import DemoPlayground from '../playground/demo-playground'
 

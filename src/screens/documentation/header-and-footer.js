@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Navigation, NavigationItem, Footer} from '../../react'
+import {Navigation, NavigationItem, Footer} from '../../react-components'
 import DemoPlayground from '../playground/demo-playground'
 
 const NAV_SCOPE = {Navigation, NavigationItem}

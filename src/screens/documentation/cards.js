@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Card} from '../../react'
+import {Card} from '../../react-components'
 import DemoPlayground from '../playground/demo-playground'
 
 const EXAMPLE_CARD = `

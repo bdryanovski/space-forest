@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DemoPlayground from '../playground/demo-playground'
-import {Pagination, PaginationItem} from './../../react'
+import {Pagination, PaginationItem} from '../../react-components'
 
 const PAGINATION_SCOPE = {Pagination, PaginationItem }
 const PAGINATION_BASIC = `

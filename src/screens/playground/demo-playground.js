@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import OSXWindow from '../components/osx-window'
-import Icon from '../../react/icon'
+import Icon from '../../react-components/icon'
 
 import Playground from './playground'
 import Editor from './playground-editor'
