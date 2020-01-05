@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import ThemeSwitcher from '../../react/theme/theme-switcher'
+import {ThemeSwitcher} from '../../react'
 import DemoPlayground from '../playground/demo-playground'
 
 const SCOPE = {ThemeSwitcher}

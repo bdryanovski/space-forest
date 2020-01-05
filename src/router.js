@@ -20,9 +20,10 @@ import Pagination from './screens/documentation/pagination'
 import ThemeDemo from './screens/documentation/theme'
 import ModalDemo from './screens/documentation/modal-demo'
 import PlaceholderDemo from './screens/documentation/placeholder-demo'
+import LayoutDemo from './screens/documentation/layouts/layouts-demo'
 
 export const routes = [
-  { name: 'Home', path: '/', exact: true, component: Home },
+  {name: 'Home', path: '/', exact: true, component: Home},
   {
     name: 'Documentation',
     path: '/documentation',
@@ -35,8 +36,8 @@ export const routes = [
         component: GettingStarted
       },
       {name: 'Theme', path: '/documentation/theme', component: ThemeDemo},
-
-      { name: 'Grid', path: '/documentation/grid', component: GridDemo },
+      {name: 'Layout', path: '/documentation/layout', component: LayoutDemo},
+      {name: 'Grid', path: '/documentation/grid', component: GridDemo},
       {
         name: 'Typography',
         path: '/documentation/typography',
@@ -47,9 +48,9 @@ export const routes = [
         path: '/documentation/links-buttons',
         component: LinksButtonsDemo
       },
-      { name: 'Icons', path: '/documentation/icons', component: IconsDemo },
-      { name: 'Cards', path: '/documentation/cards', component: CardsDemo },
-      { name: 'Article', path: '/documentation/article', component: ArticlesDemo },
+      {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
+      {name: 'Cards', path: '/documentation/cards', component: CardsDemo},
+      {name: 'Article', path: '/documentation/article', component: ArticlesDemo},
       {name: 'Neumorphism', path: '/documentation/neumorphism', component: Neumorphism},
       {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},
       {name: 'Pagination', path: '/documentation/pagination', component: Pagination},
@@ -78,7 +79,7 @@ export class SiteNavigation extends React.Component {
   }
 }
 
-export function SideNavigation({ routes }) {
+export function SideNavigation({routes}) {
   if (routes === undefined) {
     return <></>
   }
@@ -104,7 +105,7 @@ export function RouteWithSubRoutes(route) {
 }
 
 // Import this ro render subs
-export function RenderSwitchSubRoutes({ routes }) {
+export function RenderSwitchSubRoutes({routes}) {
   if (routes === undefined) {
     return <></>
   }

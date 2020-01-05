@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import Modal from '../../react/modal/modal'
-import Article from '../../react/article'
+import {Modal, Article} from '../../react'
 
 import DemoPlayground from '../playground/demo-playground'
-
 
 const MODAL_DEMO = `
 <>

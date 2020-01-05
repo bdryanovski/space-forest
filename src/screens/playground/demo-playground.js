@@ -20,13 +20,13 @@ export default class DemoPlayground extends Component {
     this.setState({ display: !this.state.display })
   };
 
-  displayEditor() {
+  displayEditor(language) {
     if (!this.state.display) {
       return null
     }
 
     return (
-      <OSXWindow language={this.props.language}>
+      <OSXWindow language={language}>
         <div className="flex-row" style={{ minHeight: '100px' }}>
           <div className="flex-column">
             <Editor />
@@ -51,7 +51,7 @@ export default class DemoPlayground extends Component {
           <div className="flex-row">
             <div className="flex-column">
               <div className="sp-1"><Preview /></div>
-              <div style={{'maxWidth': MAX_WIDTH}}>{this.displayEditor()}</div>
+              <div style={{'maxWidth': MAX_WIDTH}}>{this.displayEditor(this.props.language || 'jsx')}</div>
               <span onClick={this.onToggle}>
                 <Icon name="code"/> {this.state.display ? 'Hide Code' : 'Show Code'}
               </span>

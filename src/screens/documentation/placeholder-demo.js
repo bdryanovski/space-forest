@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import DemoPlayground from '../playground/demo-playground'
-import PlaceholderPost from '../../react/placeholder/placeholder-post'
+import {PlaceholderPost} from '../../react'
 
 const PLACEHOLDER_SCOPE = {PlaceholderPost}
 const PLACEHOLDER_DEMO = '<PlaceholderPost />'

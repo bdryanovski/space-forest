@@ -1,5 +1,5 @@
 {
-  "name": "framework",
+  "name": "spaceforest",
   "version": "0.1.7",
   "private": true,
   "main": "./src/react/index.js",

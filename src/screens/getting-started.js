@@ -10,6 +10,8 @@ export default class GettingStarted extends React.Component {
     return (
       <>
         <h1>Getting started</h1>
+
+        <h2>{PKG.name} current version {PKG.version}</h2>
         <Code language="bash">
           {`npm install --save ${pkg_name}`}
         </Code>
