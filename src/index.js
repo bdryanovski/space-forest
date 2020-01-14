@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker'
 // CSS Framework
 import './styles/index.scss'
 
+// Icons are no longer part of the main styles
+import './styles/icons.scss'
+
 // Custom styles
 import './styles/demo.css'
 

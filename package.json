@@ -85,7 +85,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js; npm run compile:styles;",
     "test": "node scripts/test.js",
-    "compile:styles": "sass ./src/styles/index.scss ./dist/forest-tree.css",
+    "compile:styles": "sass ./src/styles/index.scss ./dist/style.css",
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint './src/**/*.js' --fix",
     "preversion": "npm run build; git add .; git commit -m 'build: adding SCSS styles' -s -S"
