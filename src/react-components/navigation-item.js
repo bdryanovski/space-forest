@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class NavigationItem extends Component {
   render() {
@@ -6,6 +6,6 @@ export default class NavigationItem extends Component {
       <li className={ this.props.className }>
         {this.props.children}
       </li>
-    )
+    );
   }
 }

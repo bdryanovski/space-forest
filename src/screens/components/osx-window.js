@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 export default class OSXWindow extends React.Component {
   render() {
-    const {language, title} = this.props
+    const {language, title} = this.props;
 
     return (
       <div className="window">
@@ -15,6 +15,6 @@ export default class OSXWindow extends React.Component {
           {this.props.children}
         </div>
       </div>
-    )
+    );
   }
 }

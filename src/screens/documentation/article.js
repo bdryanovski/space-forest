@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import DemoPlayground from '../playground/demo-playground'
-import Code from '../components/code'
+import React, { Component } from 'react';
+import DemoPlayground from '../playground/demo-playground';
+import Code from '../components/code';
 
 const ARTICLE_DEMO = `
 <div class="article">
@@ -81,7 +81,7 @@ const ARTICLE_DEMO = `
   </p>
 
 </div >
-`.trim()
+`.trim();
 
 export default class ArticlesDemo extends Component {
   render() {
@@ -101,6 +101,6 @@ export default class ArticlesDemo extends Component {
         </div>
 
       </div>
-    )
+    );
   }
 }

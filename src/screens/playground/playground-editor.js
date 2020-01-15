@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import MonacoEditor from './monaco-editor'
-import PlaygroundContext from './playground-context'
+import React, { Component } from 'react';
+import MonacoEditor from './monaco-editor';
+import PlaygroundContext from './playground-context';
 
-const NO_CODE = 'let a = \'foo\''
-const DEFAULT_LANGUAGE = 'javascript'
-const THEME = 'vs-light'
+const NO_CODE = 'let a = \'foo\'';
+const DEFAULT_LANGUAGE = 'javascript';
+const THEME = 'vs-light';
 
 export default class Editor extends Component {
   editorDidMount(editor, monaco) {
@@ -29,9 +29,9 @@ export default class Editor extends Component {
                 minimap: false
               }}
             />
-          )
+          );
         }}
       </PlaygroundContext.Consumer>
-    )
+    );
   }
 }

@@ -1,5 +1,7 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
+
+import { Icon } from 'icons/icon';
 
 
 export default class Home extends React.Component {
@@ -9,7 +11,7 @@ export default class Home extends React.Component {
         <div className="banner">
           <h2>Simple UI Framwork</h2>
           <p>Static Styles & React Wrappers</p>
-          <Link to="/documentation" className="btn primary">Getting Started</Link>
+          <Link to="/documentation" className="btn primary">Getting Started <Icon name="add-user" size="s" /></Link>
         </div>
 
         <div className="grid-auto-cols">
@@ -33,6 +35,6 @@ export default class Home extends React.Component {
         </div>
 
       </>
-    )
+    );
   }
 }

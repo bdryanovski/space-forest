@@ -1,14 +1,14 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
-import OSXWindow from '../components/osx-window'
-import Icon from '../../react-components/icon'
+import OSXWindow from '../components/osx-window';
+import Icon from '../../react-components/icon';
 
-import Playground from './playground'
-import Editor from './playground-editor'
-import Preview from './playground-preview'
-import PlaygroundError from './playground-error'
+import Playground from './playground';
+import Editor from './playground-editor';
+import Preview from './playground-preview';
+import PlaygroundError from './playground-error';
 
-export const MAX_WIDTH = '800px'
+export const MAX_WIDTH = '800px';
 
 export default class DemoPlayground extends Component {
 
@@ -17,12 +17,12 @@ export default class DemoPlayground extends Component {
   };
 
   onToggle = () => {
-    this.setState({ display: !this.state.display })
+    this.setState({ display: !this.state.display });
   };
 
   displayEditor(language) {
     if (!this.state.display) {
-      return null
+      return null;
     }
 
     return (
@@ -39,11 +39,11 @@ export default class DemoPlayground extends Component {
           </div>
         </div>
       </OSXWindow>
-    )
+    );
   }
 
   render() {
-    const { code, language, scope } = this.props
+    const { code, language, scope } = this.props;
 
     return (
       <Playground code={code} language={language} scope={scope}>
@@ -60,6 +60,6 @@ export default class DemoPlayground extends Component {
 
         </div>
       </Playground>
-    )
+    );
   }
 }

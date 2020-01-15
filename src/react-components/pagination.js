@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Pagination extends Component {
   render() {
@@ -6,6 +6,6 @@ export default class Pagination extends Component {
       <div className="grid-auto-cols grid-gap-xs pagination">
         { this.props.children }
       </div>
-    )
+    );
   }
 }

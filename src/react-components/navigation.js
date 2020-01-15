@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Navigation extends Component {
   getStyle = () => {
-    const {type} = this.props
-    return type || 'horizontal'
+    const {type} = this.props;
+    return type || 'horizontal';
   }
   render() {
     return (
@@ -12,6 +12,6 @@ export default class Navigation extends Component {
           { this.props.children }
         </ul>
       </nav>
-    )
+    );
   }
 }

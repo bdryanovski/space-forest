@@ -1,9 +1,9 @@
-import React from 'react'
-import Code from './components/code'
+import React from 'react';
+import Code from './components/code';
 
-import PKG from '../../package.json'
+import PKG from '../../package.json';
 
-const pkg_name = PKG.name
+const pkg_name = PKG.name;
 
 export default class GettingStarted extends React.Component {
   render() {
@@ -38,10 +38,10 @@ export default class GettingStarted extends React.Component {
             return (
               <li key={index}>
                 <a href={`https://www.npmjs.com/package/${dep}`}>{dep}</a> : <strong>{PKG.dependencies[dep]}</strong></li>
-            )
+            );
           })}
         </ul>
       </>
-    )
+    );
   }
 }

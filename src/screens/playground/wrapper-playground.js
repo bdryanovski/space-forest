@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Playground from './playground'
-import Editor from './playground-editor'
-import Preview from './playground-preview'
-import PlaygroundError from './playground-error'
+import Playground from './playground';
+import Editor from './playground-editor';
+import Preview from './playground-preview';
+import PlaygroundError from './playground-error';
 
 export default class WrapperPlayground extends Component {
   render() {
-    const { code, language, scope } = this.props
+    const { code, language, scope } = this.props;
     return (
       <Playground code={code} language={language} scope={scope}>
         <div className="flex-row" style={{ minHeight: '100px' }}>
@@ -24,6 +24,6 @@ export default class WrapperPlayground extends Component {
           </div>
         </div>
       </Playground>
-    )
+    );
   }
 }

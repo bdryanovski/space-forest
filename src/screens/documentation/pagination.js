@@ -1,20 +1,20 @@
-import React, { Component } from 'react'
-import DemoPlayground from '../playground/demo-playground'
-import {Pagination, PaginationItem} from '../../react-components'
+import React, { Component } from 'react';
+import DemoPlayground from '../playground/demo-playground';
+import {Pagination, PaginationItem} from '../../react-components';
 
-const PAGINATION_SCOPE = {Pagination, PaginationItem }
+const PAGINATION_SCOPE = {Pagination, PaginationItem };
 const PAGINATION_BASIC = `
 <Pagination>
   <PaginationItem>Previous</PaginationItem>
   <PaginationItem>Next</PaginationItem>
 </Pagination>
-`
+`;
 
 const PAGINATION_MORE = `
 <Pagination>
   <PaginationItem className="grid-align-center">More</PaginationItem>
 </Pagination>
-`
+`;
 
 export default class PaginationDemo extends Component {
   render() {
@@ -25,6 +25,6 @@ export default class PaginationDemo extends Component {
         <DemoPlayground code={PAGINATION_MORE} scope={PAGINATION_SCOPE}></DemoPlayground>
 
       </>
-    )
+    );
   }
 }

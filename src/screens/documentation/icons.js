@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
-import Code from '../components/code'
-import {Icon} from '../../react-components'
+import React, { Component } from 'react';
+import Code from '../components/code';
+import {Icon} from '../../react-components';
 
-import DemoPlayground from '../playground/demo-playground'
+import {Icon as InternalIcon, AvailableIcons, SIZES} from 'icons/icon';
+
+import DemoPlayground from '../playground/demo-playground';
 
 const EXAMPLE_CODE = `
 <div className="grid-auto-cols">
@@ -15,10 +17,12 @@ const EXAMPLE_CODE = `
     <Icon name="camera" size="7x"/>
     <Icon name="camera" size="10x"/>
 </div>
-`.trim()
+`.trim();
 
 export default class IconsDemo extends Component {
   render() {
+    const ICONS = AvailableIcons();
+
     return (
       <div>
         <h1>Icons</h1>
@@ -47,7 +51,31 @@ export default class IconsDemo extends Component {
 
         <DemoPlayground code={EXAMPLE_CODE} scope={{ Icon }} language="html"/>
 
+        <h2>Internal Icons ({ICONS.length})</h2>
+        <p>Iternal Icons accessibile only with React component</p>
+
+        <h3>Sizes</h3>
+        {
+          Object.keys(SIZES).map((size, index) => {
+            return (<InternalIcon key={index} name="app-store" size={size}/>);
+          })
+        }
+
+        <h3>Catalog</h3>
+        <div className="grid grid-gap-xs">
+          {
+            ICONS.map((name, index) => {
+              return (
+                <div key={index} className="icon-demo col-1">
+                  <InternalIcon name={name} size="m"/>
+                  <small>{name}</small>
+                </div>
+              );
+            })
+          }
+        </div>
+
       </div>
-    )
+    );
   }
 }

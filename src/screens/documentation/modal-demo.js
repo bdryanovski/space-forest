@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import {Modal, Article} from '../../react-components'
+import React, { Component } from 'react';
+import {Modal, Article} from '../../react-components';
 
-import DemoPlayground from '../playground/demo-playground'
+import DemoPlayground from '../playground/demo-playground';
 
 const MODAL_DEMO = `
 <>
@@ -13,7 +13,7 @@ const MODAL_DEMO = `
     </p>
   </Modal>
 </>
-`
+`;
 
 const MODAL_DEMO_2 = `
 <>
@@ -131,8 +131,8 @@ const MODAL_DEMO_2 = `
     </Article>
   </Modal>
 </>
-`
-const MODAL_SCOPE = {Modal, Article}
+`;
+const MODAL_SCOPE = {Modal, Article};
 
 export default class ModalDemo extends Component {
   render() {
@@ -146,6 +146,6 @@ export default class ModalDemo extends Component {
         <DemoPlayground code={MODAL_DEMO_2} scope={MODAL_SCOPE} />
 
       </>
-    )
+    );
   }
 }

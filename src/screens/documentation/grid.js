@@ -1,5 +1,5 @@
-import React from 'react'
-import Code from '../components/code'
+import React from 'react';
+import Code from '../components/code';
 
 const grid = [
   ['cols-1', 'cols-11'],
@@ -15,7 +15,7 @@ const grid = [
   ['cols-12'],
   ['cols-3', 'cols-3', 'cols-3', 'cols-3'],
   ['cols-5', 'cols-2', 'cols-5']
-]
+];
 
 const grid_offset = [
   ['cols-1 cols-1-offset'],
@@ -30,7 +30,7 @@ const grid_offset = [
   ['cols-1 cols-10-offset'],
   ['cols-1 cols-11-offset'],
   ['cols-1 cols-12-offset']
-]
+];
 
 export default class GridDemo extends React.Component {
   render() {
@@ -55,15 +55,15 @@ export default class GridDemo extends React.Component {
           return (
             <div key={rowIndex} className="row">
               {columns.map((column, index) => {
-                const classes = `${column} demo-column `
+                const classes = `${column} demo-column `;
                 return (
                   <div key={index} className={classes}>
                     {column}
                   </div>
-                )
+                );
               })}
             </div>
-          )
+          );
         })}
 
         <div className="row">
@@ -89,15 +89,15 @@ export default class GridDemo extends React.Component {
           return (
             <div key={rowIndex} className="row">
               {columns.map((column, index) => {
-                const classes = `${column} demo-column `
+                const classes = `${column} demo-column `;
                 return (
                   <div key={index} className={classes}>
                     {column}
                   </div>
-                )
+                );
               })}
             </div>
-          )
+          );
         })}
         <h2>Flex Grid</h2>
         <Code language="html">
@@ -195,6 +195,6 @@ export default class GridDemo extends React.Component {
           <div className="demo-column">Column</div>
         </div>
       </>
-    )
+    );
   }
 }

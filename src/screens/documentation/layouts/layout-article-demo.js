@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {Article, Pagination, PaginationItem, Icon, Footer} from 'react-components'
-import DemoPlaygourd from '../../playground/demo-playground'
+import React, {Component} from 'react';
+import {Article, Pagination, PaginationItem, Icon, Footer} from 'react-components';
+import DemoPlaygourd from '../../playground/demo-playground';
 
 const ARTICLE = `
 <Article>
@@ -36,14 +36,14 @@ const ARTICLE = `
 </Pagination>
 
 <Footer>Copyright { (new Date().getFullYear()) }</Footer>
-`
-const SCOPE = {Article, Pagination, PaginationItem, Icon, Footer}
+`;
+const SCOPE = {Article, Pagination, PaginationItem, Icon, Footer};
 export default class LayoutArticleDemo extends Component {
   render() {
     return (
       <>
         <DemoPlaygourd code={ARTICLE} scope={SCOPE} language="html"/>
       </>
-    )
+    );
   }
 }

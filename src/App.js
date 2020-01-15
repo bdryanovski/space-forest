@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import {
   BrowserRouter as Router,
-} from 'react-router-dom'
-import Footer from './react-components/footer'
-import PKG from '../package.json'
-import {SiteNavigation, RenderSwitchSubRoutes, routes} from './router.js'
+} from 'react-router-dom';
+import Footer from './react-components/footer';
+import PKG from '../package.json';
+import {SiteNavigation, RenderSwitchSubRoutes, routes} from './router.js';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         {PKG.name} v{PKG.version} Copyright 2019-{(new Date().getFullYear())}
       </Footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import PlaygroundContext from './playground-context'
+import React, { Component } from 'react';
+import PlaygroundContext from './playground-context';
 
-import { generateElement, renderElementAsync } from './transpile'
+import { generateElement, renderElementAsync } from './transpile';
 
 export default class Playground extends Component {
   static defaultProps = {
@@ -16,14 +16,14 @@ export default class Playground extends Component {
 
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillMount() {
-    let { code, scope, transformCode, noInline, language } = this.props
+    let { code, scope, transformCode, noInline, language } = this.props;
     if (language === 'html') {
-      code = `<>\n${code}\n</>`
+      code = `<>\n${code}\n</>`;
     }
     // Trim the code so the input could be less messy
-    code = code.trim()
+    code = code.trim();
 
-    this.transpile({ code, scope, transformCode, noInline })
+    this.transpile({ code, scope, transformCode, noInline });
   }
 
   componentDidUpdate({
@@ -32,24 +32,24 @@ export default class Playground extends Component {
     noInline: prevNoInline,
     transformCode: prevTransformCode
   }) {
-    const { code, scope, noInline, transformCode } = this.props
+    const { code, scope, noInline, transformCode } = this.props;
     if (
       code !== prevCode ||
       scope !== prevScope ||
       noInline !== prevNoInline ||
       transformCode !== prevTransformCode
     ) {
-      this.transpile({ code, scope, transformCode, noInline })
+      this.transpile({ code, scope, transformCode, noInline });
     }
   }
 
   onChange = code => {
-    const { scope, transformCode, noInline } = this.props
-    this.transpile({ code, scope, transformCode, noInline })
+    const { scope, transformCode, noInline } = this.props;
+    this.transpile({ code, scope, transformCode, noInline });
   };
 
   onError = error => {
-    this.setState({ error: error.toString() })
+    this.setState({ error: error.toString() });
   };
 
   transpile = ({code, scope, transformCode, noInline = false}) => {
@@ -58,37 +58,37 @@ export default class Playground extends Component {
     const input = {
       code: transformCode ? transformCode(code) : code,
       scope
-    }
+    };
 
     // Keep internal state of the code.
-    this.setState({ code })
+    this.setState({ code });
 
     // no code no work
     if (code === '' || code === undefined) {
-      return
+      return;
     }
 
     const errorCallback = err =>
-      this.setState({ element: undefined, error: err.toString() })
-    const renderElement = element => this.setState({ ...state, element })
+      this.setState({ element: undefined, error: err.toString() });
+    const renderElement = element => this.setState({ ...state, element });
 
     // State reset object
-    const state = { unsafeWrapperError: undefined, error: undefined }
+    const state = { unsafeWrapperError: undefined, error: undefined };
 
     try {
       if (noInline) {
-        this.setState({ ...state, element: null }) // Reset output for async (no inline) evaluation
-        renderElementAsync(input, renderElement, errorCallback)
+        this.setState({ ...state, element: null }); // Reset output for async (no inline) evaluation
+        renderElementAsync(input, renderElement, errorCallback);
       } else {
-        renderElement(generateElement(input, errorCallback))
+        renderElement(generateElement(input, errorCallback));
       }
     } catch (error) {
-      this.setState({ ...state, error: error.toString() })
+      this.setState({ ...state, error: error.toString() });
     }
   };
 
   render() {
-    const { children, language } = this.props
+    const { children, language } = this.props;
 
     return (
       <PlaygroundContext.Provider
@@ -102,6 +102,6 @@ export default class Playground extends Component {
       >
         {children}
       </PlaygroundContext.Provider>
-    )
+    );
   }
 }
