@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Article, Pagination, PaginationItem, Icon, Footer} from 'src/react'
+import {Article, Pagination, PaginationItem, Icon, Footer} from 'react-components'
 import DemoPlaygourd from '../../playground/demo-playground'
 
 const ARTICLE = `
