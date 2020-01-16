@@ -1,11 +1,11 @@
-[data-theme="dark"] {
+:root {
   // Colors https://clrs.cc/
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 4%);
-  --color-body-background: hsl(0, 0%, 21%);
+  --color-body-background: hsl(215, 24%, 90%);
 
   --color-light: #dddddd;
-  --color-dark: hsl(0, 0%, 100%);
+  --color-dark: hsl(0, 0%, 21%);
   --color-gray: #aaaaaa;
 
   --color-primary: #001f3f;

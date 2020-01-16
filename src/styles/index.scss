@@ -2,6 +2,10 @@
 
 @import "./variables.scss";
 
+// Themes
+@import "./light-theme.scss";
+@import "./dark-theme.scss";
+
 @import "./grid.scss";
 @import "./grid2.scss";
 @import "./typography.scss";
@@ -15,6 +19,3 @@
 @import "./code.scss";
 @import "./modal.scss";
 @import "./placeholder.scss";
-
-// Dark Theme
-@import "./dark-theme.scss";
