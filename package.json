@@ -2,7 +2,7 @@
   "name": "spaceforest",
   "version": "0.1.9",
   "private": true,
-  "main": "./src/react/index.js",
+  "main": "./src/react-components/index.js",
   "dependencies": {
     "buble": "0.19.8",
     "core-js": "3.5.0",
