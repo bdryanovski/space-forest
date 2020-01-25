@@ -1,5 +1,5 @@
 {
-  "name": "spaceforest",
+  "name": "spaceforestbeta",
   "version": "0.1.10",
   "main": "./src/react-components/index.js",
   "dependencies": {
