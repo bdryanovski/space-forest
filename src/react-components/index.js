@@ -12,3 +12,17 @@ export {default as PaginationItem} from './pagination-item';
 export {default as ThemeSwitcher} from './theme/theme-switcher';
 export {default as Modal} from './modal/modal';
 export {default as PlaceholderPost} from './placeholder/placeholder-post';
+
+
+// Experimental
+export {
+  Icon as ExperimentalIcon,
+  AvailableIcons,
+  SIZES as ICON_SIZES
+} from '../icons/icon';
+
+
+// Editor
+export {
+  MonacoEditor
+} from '../screens/playground/monaco-editor';
