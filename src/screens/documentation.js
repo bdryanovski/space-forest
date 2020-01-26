@@ -6,7 +6,7 @@ export default class Documentation extends React.Component {
     const subroutes = this.props.routes;
     return (
       <>
-        <div className="grid grid-gap-xs">
+        <div className="grid grid-gap-lg">
           <div className="col-2">
             <h1>Topics</h1>
             <SideNavigation routes={ subroutes } />

@@ -7,9 +7,9 @@ import 'prismjs/themes/prism.css';
 
 export default class Code extends React.Component {
   render() {
-    const { /* code, plugins, */ language } = this.props;
+    const { /* code, plugins, */ language, title } = this.props;
     return (
-      <OSXWindow language={language}>
+      <OSXWindow title={title} language={language}>
         <PrismCode component="pre" className={`language-${language}`}>
           {this.props.children.trim()}
         </PrismCode>

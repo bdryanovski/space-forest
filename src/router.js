@@ -48,7 +48,7 @@ export const routes = [
         path: '/documentation/links-buttons',
         component: LinksButtonsDemo
       },
-      {name: 'Editor & Monaco', path: '/documentation/editor', component: EditorDemo },
+      {name: 'Editor', path: '/documentation/editor', component: EditorDemo },
       {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
       {name: 'Cards', path: '/documentation/cards', component: CardsDemo},
       {name: 'Article', path: '/documentation/article', component: ArticlesDemo},
