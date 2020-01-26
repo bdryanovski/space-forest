@@ -89,7 +89,7 @@
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint './src/**/*.js' --fix",
     "build:website": "npm run build",
-    "preversion": "npm run compile:styles; git add .; git commit -m 'build: adding SCSS styles' -s -S"
+    "preversion": "npm run compile:styles"
   },
   "browserslist": {
     "production": [
