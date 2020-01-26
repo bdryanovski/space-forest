@@ -1,6 +1,6 @@
 {
   "name": "spaceforestbeta",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "main": "./src/react-components/index.js",
   "dependencies": {
     "buble": "0.19.8",
