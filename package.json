@@ -90,7 +90,7 @@
     "lint:fix": "eslint './src/**/*.js' --fix",
     "build:website": "npm run build",
     "preversion": "npm run transpile & npm run compile:styles",
-    "transpile": "babel src/react-components -d dist --copy-files",
+    "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "prepublishOnly": "npm run transpile"
   },
   "browserslist": {
