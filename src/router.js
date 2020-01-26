@@ -20,6 +20,7 @@ import ThemeDemo from './screens/documentation/theme';
 import ModalDemo from './screens/documentation/modal-demo';
 import PlaceholderDemo from './screens/documentation/placeholder-demo';
 import LayoutDemo from './screens/documentation/layouts/layouts-demo';
+import EditorDemo from './screens/documentation/editor';
 
 export const routes = [
   {name: 'Home', path: '/', exact: true, component: Home},
@@ -47,6 +48,7 @@ export const routes = [
         path: '/documentation/links-buttons',
         component: LinksButtonsDemo
       },
+      {name: 'Editor & Monaco', path: '/documentation/editor', component: EditorDemo },
       {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
       {name: 'Cards', path: '/documentation/cards', component: CardsDemo},
       {name: 'Article', path: '/documentation/article', component: ArticlesDemo},
