@@ -1,3 +1,4 @@
+
 {
   "name": "spaceforestbeta",
   "version": "0.1.12",
@@ -87,7 +88,8 @@
     "compile:styles": "sass ./src/styles/index.scss ./dist/style.css",
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint './src/**/*.js' --fix",
-    "preversion": "npm run build; git add .; git commit -m 'build: adding SCSS styles' -s -S"
+    "build:website": "npm run build",
+    "preversion": "npm run compile:styles; git add .; git commit -m 'build: adding SCSS styles' -s -S"
   },
   "browserslist": {
     "production": [
