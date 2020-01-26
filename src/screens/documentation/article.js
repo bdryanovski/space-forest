@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from 'react-components/playground/demo-playground';
 import Code from '../components/code';
 
 const ARTICLE_DEMO = `

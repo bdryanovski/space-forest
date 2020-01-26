@@ -1,6 +1,6 @@
 import React from 'react';
 import {Header1, Header2, Header3, Header4, Header5, Header6} from '../../react-components';
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from '../../react-components/playground/demo-playground';
 
 const HEADER_EXAMPLE = `
 <h1>H1 headline</h1>

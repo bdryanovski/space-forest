@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Article, Pagination, PaginationItem, Icon, Footer} from 'react-components';
-import DemoPlaygourd from '../../playground/demo-playground';
+import DemoPlaygourd from 'react-components/playground/demo-playground';
 
 const ARTICLE = `
 <Article>

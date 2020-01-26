@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from '../../react-components/playground/demo-playground';
 import {Pagination, PaginationItem} from '../../react-components';
 
 const PAGINATION_SCOPE = {Pagination, PaginationItem };

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Code from '../components/code';
-import {Icon} from '../../react-components';
 
-import {Icon as InternalIcon, AvailableIcons, SIZES} from 'icons/icon';
+import {Icon, AvailableIcons, SIZES} from 'react-components/icons/icon';
 
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from 'react-components/playground/demo-playground';
 
 const EXAMPLE_CODE = `
 <div className="grid-auto-cols">
@@ -26,25 +25,6 @@ export default class IconsDemo extends Component {
     return (
       <div>
         <h1>Icons</h1>
-        <p>
-          Icons are power by <a href="https://fontawesome.com/">Font Awesome</a> with the current version of <span>5.12.0</span>
-        </p>
-
-        <h2>Static use</h2>
-        <p>
-          Use it without any component - just like you will use it documentated
-          at Font Awesome website{' '}
-          <a href="https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use">
-            here
-          </a>
-          .
-        </p>
-
-        <Code language="html">
-          {`
-              <i class="fas fa-camera"></i>
-            `}
-        </Code>
 
         <h2>React component</h2>
         <p>There is React component to assist you with that</p>
@@ -57,7 +37,7 @@ export default class IconsDemo extends Component {
         <h3>Sizes</h3>
         {
           Object.keys(SIZES).map((size, index) => {
-            return (<InternalIcon key={index} name="app-store" size={size}/>);
+            return (<Icon key={index} name="app-store" size={size}/>);
           })
         }
 
@@ -67,7 +47,7 @@ export default class IconsDemo extends Component {
             ICONS.map((name, index) => {
               return (
                 <div key={index} className="icon-demo col-1">
-                  <InternalIcon name={name} size="m"/>
+                  <Icon name={name} size="m"/>
                   <small>{name}</small>
                 </div>
               );

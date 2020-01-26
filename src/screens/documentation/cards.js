@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Card} from '../../react-components';
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from '../../react-components/playground/demo-playground';
 
 const EXAMPLE_CARD = `
 <Card>

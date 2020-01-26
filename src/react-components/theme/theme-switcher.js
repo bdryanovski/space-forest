@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Icon from '../icon';
+import {Icon} from '../icons/icon';
 
 export default class ThemeSwitcher extends Component {
   state = {
@@ -31,7 +31,7 @@ export default class ThemeSwitcher extends Component {
         {
           !this.state.dark
             ? <div onClick={this.setDark}><Icon name="moon" size="lg"/></div>
-            : <div onClick={this.setLight}><Icon name="sun" size="lg"/></div>
+            : <div onClick={this.setLight}><Icon name="light-up" size="lg"/></div>
         }
       </>
     );

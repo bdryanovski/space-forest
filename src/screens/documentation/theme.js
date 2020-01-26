@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ThemeSwitcher} from '../../react-components';
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from '../../react-components/playground/demo-playground';
 
 const SCOPE = {ThemeSwitcher};
 const THEME_SWITCHER = '<ThemeSwitcher />';

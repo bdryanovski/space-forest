@@ -1,5 +1,4 @@
 export {default as Card} from './card';
-export {default as Icon} from './icon';
 export {default as Article} from './article';
 export {
   Header1, Header2, Header3, Header4, Header5, Header6
@@ -16,13 +15,13 @@ export {default as PlaceholderPost} from './placeholder/placeholder-post';
 
 // Experimental
 export {
-  Icon as ExperimentalIcon,
+  Icon,
   AvailableIcons,
   SIZES as ICON_SIZES
-} from '../icons/icon';
+} from './icons/icon';
 
 
 // Editor
 export {
   MonacoEditor
-} from '../screens/playground/monaco-editor';
+} from './playground/monaco-editor';

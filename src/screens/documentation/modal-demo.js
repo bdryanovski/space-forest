@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Modal, Article} from '../../react-components';
 
-import DemoPlayground from '../playground/demo-playground';
+import DemoPlayground from '../../react-components/playground/demo-playground';
 
 const MODAL_DEMO = `
 <>
