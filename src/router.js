@@ -1,27 +1,27 @@
-import React from 'react';
-import {Route, Link, Switch} from 'react-router-dom';
+import React from 'react'
+import {Route, Link, Switch} from 'react-router-dom'
 
-import Navigation from './react-components/navigation';
-import NavigationItem from './react-components/navigation-item';
-import ThemeSwitcher from './react-components/theme/theme-switcher';
+import Navigation from './react-components/navigation'
+import NavigationItem from './react-components/navigation-item'
+import ThemeSwitcher from './react-components/theme/theme-switcher'
 
-import Home from './screens/home.js';
-import GettingStarted from './screens/getting-started';
-import Documentation from './screens/documentation';
-import GridDemo from './screens/documentation/grid';
-import TypographyDemo from './screens/documentation/typography';
-import LinksButtonsDemo from './screens/documentation/links-buttons';
-import IconsDemo from './screens/documentation/icons';
-import CardsDemo from './screens/documentation/cards';
-import ArticlesDemo from './screens/documentation/article';
-import HeaderFooter from './screens/documentation/header-and-footer';
-import Pagination from './screens/documentation/pagination';
-import ThemeDemo from './screens/documentation/theme';
-import ModalDemo from './screens/documentation/modal-demo';
-import PlaceholderDemo from './screens/documentation/placeholder-demo';
-import LayoutDemo from './screens/documentation/layouts/layouts-demo';
-import EditorDemo from './screens/documentation/editor';
-import FormsDocumentation from './screens/documentation/forms';
+import Home from './screens/home.js'
+import GettingStarted from './screens/getting-started'
+import Documentation from './screens/documentation'
+import GridDemo from './screens/documentation/grid'
+import TypographyDemo from './screens/documentation/typography'
+import LinksButtonsDemo from './screens/documentation/links-buttons'
+import IconsDemo from './screens/documentation/icons'
+import CardsDemo from './screens/documentation/cards'
+import ArticlesDemo from './screens/documentation/article'
+import HeaderFooter from './screens/documentation/header-and-footer'
+import Pagination from './screens/documentation/pagination'
+import ThemeDemo from './screens/documentation/theme'
+import ModalDemo from './screens/documentation/modal-demo'
+import PlaceholderDemo from './screens/documentation/placeholder-demo'
+import LayoutDemo from './screens/documentation/layouts/layouts-demo'
+import EditorDemo from './screens/documentation/editor'
+import FormsDocumentation from './screens/documentation/forms'
 
 export const routes = [
   {name: 'Home', path: '/', exact: true, component: Home},
@@ -60,7 +60,7 @@ export const routes = [
       {name: 'Placeholder', path: '/documentation/placeholder', component: PlaceholderDemo}
     ]
   }
-];
+]
 
 export class SiteNavigation extends React.Component {
   render() {
@@ -77,13 +77,13 @@ export class SiteNavigation extends React.Component {
           <ThemeSwitcher />
         </NavigationItem>
       </Navigation>
-    );
+    )
   }
 }
 
 export function SideNavigation({routes}) {
   if (routes === undefined) {
-    return <></>;
+    return <></>
   }
   return (
     <Navigation type="vertical">
@@ -93,7 +93,7 @@ export function SideNavigation({routes}) {
         </NavigationItem>
       ))}
     </Navigation>
-  );
+  )
 }
 
 export function RouteWithSubRoutes(route) {
@@ -103,13 +103,13 @@ export function RouteWithSubRoutes(route) {
       exact={route.exact}
       render={props => <route.component {...props} routes={route.routes} />}
     />
-  );
+  )
 }
 
 // Import this ro render subs
 export function RenderSwitchSubRoutes({routes}) {
   if (routes === undefined) {
-    return <></>;
+    return <></>
   }
   return (
     <Switch>
@@ -117,5 +117,5 @@ export function RenderSwitchSubRoutes({routes}) {
         <RouteWithSubRoutes key={i} {...route} />
       ))}
     </Switch>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { REGISTER } from './icons-register';
+import React from 'react'
+import { REGISTER } from './icons-register'
 
-let iconCounter = 0;
+let iconCounter = 0
 
-const DEFAULT_SIZE = 16;
+const DEFAULT_SIZE = 16
 
 export const SIZES = {
   'xs': 8,
@@ -12,20 +12,20 @@ export const SIZES = {
   'l': 64,
   'xl': 128,
   '2xl': 256,
-};
+}
 
 export function IconWrapper(props) {
-  let id = props.id;
-  const title = props.title || '';
-  let width = props.width || DEFAULT_SIZE;
-  let height = props.height || DEFAULT_SIZE;
+  let id = props.id
+  const title = props.title || ''
+  let width = props.width || DEFAULT_SIZE
+  let height = props.height || DEFAULT_SIZE
 
   if (id === undefined) {
-    id = `icon-${++iconCounter}`;
+    id = `icon-${++iconCounter}`
   }
 
   if (props.size) {
-    width = height = SIZES[props.size] || SIZES['s'];
+    width = height = SIZES[props.size] || SIZES['s']
   }
 
   return (
@@ -40,16 +40,16 @@ export function IconWrapper(props) {
       <title id={id}>{title}</title>
       {props.children}
     </svg>
-  );
+  )
 }
 
 
 export function Icon(props) {
   if (!props.name) {
-    throw new Error('Icon require icon name to know what to render');
+    throw new Error('Icon require icon name to know what to render')
   }
   if (!isValidIconName(props.name)) {
-    throw new Error(`Unknown icon name (${props.name})used inside <Icon />`);
+    throw new Error(`Unknown icon name (${props.name})used inside <Icon />`)
   }
 
   return (
@@ -57,13 +57,13 @@ export function Icon(props) {
       {REGISTER[props.name]}
       {props.children}
     </IconWrapper>
-  );
+  )
 }
 
 export function AvailableIcons() {
-  return Object.keys(REGISTER);
+  return Object.keys(REGISTER)
 }
 
 function isValidIconName(name) {
-  return Object.keys(REGISTER).includes(name);
+  return Object.keys(REGISTER).includes(name)
 }

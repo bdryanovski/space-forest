@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import DemoPlayground from '../../react-components/playground/demo-playground';
-import {PlaceholderPost} from '../../react-components';
+import React, {Component} from 'react'
+import DemoPlayground from '../../react-components/playground/demo-playground'
+import {PlaceholderPost} from '../../react-components'
 
-const PLACEHOLDER_SCOPE = {PlaceholderPost};
-const PLACEHOLDER_DEMO = '<PlaceholderPost />';
+const PLACEHOLDER_SCOPE = {PlaceholderPost}
+const PLACEHOLDER_DEMO = '<PlaceholderPost />'
 
 export default class PlaceholderDemo extends Component {
   render() {
@@ -12,6 +12,6 @@ export default class PlaceholderDemo extends Component {
         <h1>Placeholders </h1>
         <DemoPlayground code={PLACEHOLDER_DEMO} scope={PLACEHOLDER_SCOPE} />
       </>
-    );
+    )
   }
 }

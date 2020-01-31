@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import LayoutArticleDemo from './layout-article-demo';
+import React, { Component } from 'react'
+import LayoutArticleDemo from './layout-article-demo'
 
 export default class LayoutDemo extends Component {
   render() {
@@ -12,6 +12,6 @@ export default class LayoutDemo extends Component {
         <LayoutArticleDemo />
 
       </>
-    );
+    )
   }
 }

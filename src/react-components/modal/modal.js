@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Icon} from '../icons/icon';
+import React, {Component} from 'react'
+import {Icon} from '../icons/icon'
 
 export default class Modal extends Component {
 
@@ -11,6 +11,6 @@ export default class Modal extends Component {
           { this.props.children}
         </div>
       </div>
-    );
+    )
   }
 }

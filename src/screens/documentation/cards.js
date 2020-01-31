@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import {Card} from '../../react-components';
-import DemoPlayground from '../../react-components/playground/demo-playground';
+import React, { Component } from 'react'
+import {Card} from '../../react-components'
+import DemoPlayground from '../../react-components/playground/demo-playground'
 
 const EXAMPLE_CARD = `
 <Card>
@@ -15,7 +15,7 @@ const EXAMPLE_CARD = `
     <a href="#n" className="btn primary">Cancel</a>
   </div>
 </Card>
-`.trim();
+`.trim()
 
 export default class CardsDocumentation extends Component {
   render() {
@@ -28,6 +28,6 @@ export default class CardsDocumentation extends Component {
 
 
       </div>
-    );
+    )
   }
 }

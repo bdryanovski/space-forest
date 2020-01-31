@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {Navigation, NavigationItem, Footer} from '../../react-components';
-import DemoPlayground from '../../react-components/playground/demo-playground';
+import React, {Component} from 'react'
+import {Navigation, NavigationItem, Footer} from '../../react-components'
+import DemoPlayground from '../../react-components/playground/demo-playground'
 
-const NAV_SCOPE = {Navigation, NavigationItem};
-const FOOTER_SCOPE = {Footer};
+const NAV_SCOPE = {Navigation, NavigationItem}
+const FOOTER_SCOPE = {Footer}
 
 const NAV_HORIZONTAL = `
 <Navigation>
@@ -13,8 +13,8 @@ const NAV_HORIZONTAL = `
   <NavigationItem><a>Categories</a></NavigationItem>
   <NavigationItem className="right"><a>Settings</a></NavigationItem>
 </Navigation>
-`;
-const FOOTER = '<Footer>Copyright { (new Date().getFullYear()) }</Footer>';
+`
+const FOOTER = '<Footer>Copyright { (new Date().getFullYear()) }</Footer>'
 
 export default class HeaderFooter extends Component {
   render() {
@@ -32,6 +32,6 @@ export default class HeaderFooter extends Component {
         <DemoPlayground code={FOOTER} scope={FOOTER_SCOPE} language="html"/>
 
       </>
-    );
+    )
   }
 }

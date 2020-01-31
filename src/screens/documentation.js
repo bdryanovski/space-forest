@@ -1,9 +1,9 @@
-import React from 'react';
-import {RenderSwitchSubRoutes, SideNavigation} from '../router';
+import React from 'react'
+import {RenderSwitchSubRoutes, SideNavigation} from '../router'
 
 export default class Documentation extends React.Component {
   render() {
-    const subroutes = this.props.routes;
+    const subroutes = this.props.routes
     return (
       <>
         <div className="grid grid-gap-lg">
@@ -17,6 +17,6 @@ export default class Documentation extends React.Component {
           </div>
         </div>
       </>
-    );
+    )
   }
 }

@@ -1,7 +1,7 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react'
+import {Link} from 'react-router-dom'
 
-import { Icon } from 'react-components/icons/icon';
+import { Icon } from 'react-components/icons/icon'
 
 
 export default class Home extends React.Component {
@@ -35,6 +35,6 @@ export default class Home extends React.Component {
         </div>
 
       </>
-    );
+    )
   }
 }

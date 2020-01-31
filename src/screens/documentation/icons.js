@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Code from '../components/code';
+import React, { Component } from 'react'
+import Code from '../components/code'
 
-import {Icon, AvailableIcons, SIZES} from 'react-components/icons/icon';
+import {Icon, AvailableIcons, SIZES} from 'react-components/icons/icon'
 
 export default class IconsDemo extends Component {
   render() {
-    const ICONS = AvailableIcons();
+    const ICONS = AvailableIcons()
 
     return (
       <div>
@@ -16,13 +16,13 @@ export default class IconsDemo extends Component {
         <Code language="html">
           {
             Object.keys(SIZES).map((name) => {
-              return `<Icon name="apple" size="${name}" />\n`;
+              return `<Icon name="apple" size="${name}" />\n`
             }).join('')
           }
         </Code>
         {
           Object.keys(SIZES).map((size, index) => {
-            return (<Icon key={index} name="app-store" size={size}/>);
+            return (<Icon key={index} name="app-store" size={size}/>)
           })
         }
 
@@ -35,12 +35,12 @@ export default class IconsDemo extends Component {
                   <Icon name={name} size="m"/>
                   <small>{name}</small>
                 </div>
-              );
+              )
             })
           }
         </div>
 
       </div>
-    );
+    )
   }
 }

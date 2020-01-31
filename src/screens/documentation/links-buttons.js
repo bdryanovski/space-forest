@@ -1,5 +1,5 @@
-import React from 'react';
-import DemoPlayground from '../../react-components/playground/demo-playground';
+import React from 'react'
+import DemoPlayground from '../../react-components/playground/demo-playground'
 
 const BUTTON_EXAMPLE = `
 <div className="grid-container">
@@ -10,7 +10,7 @@ const BUTTON_EXAMPLE = `
     <button className="primary">Standart Button</button>
   </div>
 </div>
-`.trim();
+`.trim()
 
 const LINKS_EXAMPLE = `
 <div className="grid-container">
@@ -38,7 +38,7 @@ const LINKS_EXAMPLE = `
     </a>
   </div>
 </div>
-`.trim();
+`.trim()
 
 const BTN_EXAMPLE = `
 <div className="grid-container">
@@ -68,7 +68,7 @@ const BTN_EXAMPLE = `
     </a>
   </div>
 </div>
-`.trim();
+`.trim()
 
 export default class LinksButtonsDemo extends React.Component {
   render() {
@@ -86,6 +86,6 @@ export default class LinksButtonsDemo extends React.Component {
         <h2>Button HTML attribute</h2>
         <DemoPlayground code={BTN_EXAMPLE} language="html"></DemoPlayground>
       </>
-    );
+    )
   }
 }

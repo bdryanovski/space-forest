@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import Code from '../components/code';
-import PKG from '../../../package.json';
+import React, {Component} from 'react'
+import Code from '../components/code'
+import PKG from '../../../package.json'
 
 export default class EditorDemo extends Component {
   render() {
@@ -60,6 +60,6 @@ plugins: [
           }
         </Code>
       </>
-    );
+    )
   }
 }

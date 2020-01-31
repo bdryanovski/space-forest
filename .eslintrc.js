@@ -29,7 +29,7 @@ module.exports = {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "single"],
-    semi: ["warn", "always"],
+    semi: ["warn", "never"],
     // From CRA
 
     "array-callback-return": "warn",

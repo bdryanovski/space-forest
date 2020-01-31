@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Icon} from '../icons/icon';
+import React, {Component} from 'react'
+import {Icon} from '../icons/icon'
 
 export default class ThemeSwitcher extends Component {
   state = {
@@ -7,22 +7,22 @@ export default class ThemeSwitcher extends Component {
   }
 
   componentDidMount() {
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    this.themeSet(currentTheme);
+    const currentTheme = localStorage.getItem('theme') || 'light'
+    this.themeSet(currentTheme)
   }
 
   themeSet(theme) {
-    localStorage.setItem('theme', theme);
-    this.setState({dark: theme === 'dark'});
-    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme)
+    this.setState({dark: theme === 'dark'})
+    document.documentElement.setAttribute('data-theme', theme)
   }
 
   setDark = () => {
-    this.themeSet('dark');
+    this.themeSet('dark')
   }
 
   setLight = () => {
-    this.themeSet('light');
+    this.themeSet('light')
   }
 
   render() {
@@ -34,6 +34,6 @@ export default class ThemeSwitcher extends Component {
             : <div onClick={this.setLight}><Icon name="light-up" size="lg"/></div>
         }
       </>
-    );
+    )
   }
 }

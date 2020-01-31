@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {ThemeSwitcher} from '../../react-components';
-import DemoPlayground from '../../react-components/playground/demo-playground';
+import React, {Component} from 'react'
+import {ThemeSwitcher} from '../../react-components'
+import DemoPlayground from '../../react-components/playground/demo-playground'
 
-const SCOPE = {ThemeSwitcher};
-const THEME_SWITCHER = '<ThemeSwitcher />';
+const SCOPE = {ThemeSwitcher}
+const THEME_SWITCHER = '<ThemeSwitcher />'
 
 export default class ThemeDemo extends Component {
   render() {
@@ -14,6 +14,6 @@ export default class ThemeDemo extends Component {
         <h2>React Switch component</h2>
         <DemoPlayground code={THEME_SWITCHER} scope={SCOPE} />
       </>
-    );
+    )
   }
 }

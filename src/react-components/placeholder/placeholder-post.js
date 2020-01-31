@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class PlaceholderPost extends Component {
   render() {
@@ -17,6 +17,6 @@ export default class PlaceholderPost extends Component {
           <div className="post-place post-text"></div>
         </div>
       </div>
-    );
+    )
   }
 }

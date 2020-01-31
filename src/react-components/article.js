@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Article extends Component {
   render() {
@@ -6,6 +6,6 @@ export default class Article extends Component {
       <div className="article">
         { this.props.children}
       </div>
-    );
+    )
   }
 }

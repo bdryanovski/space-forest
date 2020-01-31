@@ -1,24 +1,24 @@
-import React from 'react';
-import Code from './components/code';
+import React from 'react'
+import Code from './components/code'
 
-import PKG from '../../package.json';
+import PKG from '../../package.json'
 
-import * as c from '../react-components/index';
-console.log(Object.keys(c), c);
+import * as c from '../react-components/index'
+console.log(Object.keys(c), c)
 
-const pkg_name = PKG.name;
+const pkg_name = PKG.name
 const components = Object.keys(c).reduce((result, name) => {
-  const row = {name: name, type: 'Object'};
+  const row = {name: name, type: 'Object'}
 
   if (c[name] && c[name].prototype && c[name].prototype.render) {
-    row.type = 'Component';
+    row.type = 'Component'
   } else if (c[name] && c[name].prototype) {
-    row.type = 'Function';
+    row.type = 'Function'
   }
 
-  result.push(row);
-  return result;
-}, []);
+  result.push(row)
+  return result
+}, [])
 
 export default class GettingStarted extends React.Component {
   render() {
@@ -58,7 +58,7 @@ import { ${component.name} } from '${pkg_name}'
 
 <${component.name} />
                   `
-              );
+              )
             }).join('\n')
           }
         </Code>
@@ -68,10 +68,10 @@ import { ${component.name} } from '${pkg_name}'
             return (
               <li key={index}>
                 <a href={`https://www.npmjs.com/package/${dep}`}>{dep}</a> : <strong>{PKG.dependencies[dep]}</strong></li>
-            );
+            )
           })}
         </ul>
       </>
-    );
+    )
   }
 }

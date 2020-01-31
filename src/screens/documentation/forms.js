@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class FormsDocumentation extends Component {
   render() {
@@ -8,6 +8,6 @@ export default class FormsDocumentation extends Component {
         <p>Write documentation on this topic</p>
 
       </>
-    );
+    )
   }
 }

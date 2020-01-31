@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class PaginationItem extends Component {
   render() {
@@ -6,6 +6,6 @@ export default class PaginationItem extends Component {
       <div className={ `pagination-item ${this.props.className}` }>
         {this.props.children}
       </div>
-    );
+    )
   }
 }
