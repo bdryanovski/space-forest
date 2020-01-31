@@ -25,21 +25,7 @@ export default class DemoPlayground extends Component {
       return null;
     }
 
-    return (
-      <OSXWindow language={language}>
-        <div className="flex-row" style={{ minHeight: '100px' }}>
-          <div className="flex-column">
-            <Editor />
-          </div>
-        </div>
-
-        <div className="flex-row">
-          <div className="flex-column">
-            <PlaygroundError />
-          </div>
-        </div>
-      </OSXWindow>
-    );
+    return (<Editor />);
   }
 
   render() {
@@ -47,17 +33,23 @@ export default class DemoPlayground extends Component {
 
     return (
       <Playground code={code} language={language} scope={scope}>
-        <div className="spacer">
-          <div className="flex-row">
-            <div className="flex-column">
-              <div className="sp-1"><Preview /></div>
-              <div style={{'maxWidth': MAX_WIDTH}}>{this.displayEditor(this.props.language || 'jsx')}</div>
-              <span onClick={this.onToggle}>
-                <Icon name="code"/> {this.state.display ? 'Hide Code' : 'Show Code'}
-              </span>
+        <div className="grid grid-gap-null demo-playground">
+          <div className="demo-playground-title">
+            <div className="grid grid-gap-xs">
+              <div className="col-11"><h5>Example</h5></div>
+              <div className="col-1">
+                <span onClick={this.onToggle}>
+                  <Icon name="code" /> {this.state.display ? 'Close' : 'Code'}
+                </span>
+              </div>
             </div>
+
           </div>
 
+          <div className="demo-playground-preview"><Preview /></div>
+          <div className="demo-playground-editor">
+            {this.displayEditor(this.props.language || 'jsx')}
+          </div>
         </div>
       </Playground>
     );

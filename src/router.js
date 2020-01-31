@@ -21,6 +21,7 @@ import ModalDemo from './screens/documentation/modal-demo';
 import PlaceholderDemo from './screens/documentation/placeholder-demo';
 import LayoutDemo from './screens/documentation/layouts/layouts-demo';
 import EditorDemo from './screens/documentation/editor';
+import FormsDocumentation from './screens/documentation/forms';
 
 export const routes = [
   {name: 'Home', path: '/', exact: true, component: Home},
@@ -43,6 +44,7 @@ export const routes = [
         path: '/documentation/typography',
         component: TypographyDemo
       },
+      { name: 'Forms', path: '/documentation/forms', component: FormsDocumentation },
       {
         name: 'Links & Buttons',
         path: '/documentation/links-buttons',

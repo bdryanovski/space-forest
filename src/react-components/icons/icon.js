@@ -3,6 +3,8 @@ import { REGISTER } from './icons-register';
 
 let iconCounter = 0;
 
+const DEFAULT_SIZE = 16;
+
 export const SIZES = {
   'xs': 8,
   's': 16,
@@ -15,8 +17,8 @@ export const SIZES = {
 export function IconWrapper(props) {
   let id = props.id;
   const title = props.title || '';
-  let width = props.width || 16;
-  let height = props.height || 16;
+  let width = props.width || DEFAULT_SIZE;
+  let height = props.height || DEFAULT_SIZE;
 
   if (id === undefined) {
     id = `icon-${++iconCounter}`;
@@ -44,10 +46,10 @@ export function IconWrapper(props) {
 
 export function Icon(props) {
   if (!props.name) {
-    throw new Error('Icon require prop.name to know what to render');
+    throw new Error('Icon require icon name to know what to render');
   }
   if (!isValidIconName(props.name)) {
-    throw new Error('Unknown icon name used inside <Icon />');
+    throw new Error(`Unknown icon name (${props.name})used inside <Icon />`);
   }
 
   return (

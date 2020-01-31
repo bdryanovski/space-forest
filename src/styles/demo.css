@@ -38,3 +38,24 @@
 .icon-demo small {
   display: block;
 }
+
+/* playground styles */
+.demo-playground {
+  border: 1px solid Gainsboro;
+  border-radius: 10px;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.demo-playground-title {
+  background-color: Gainsboro;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0.5rem 0.75rem 0rem 0.75rem;
+}
+
+.demo-playground-preview {
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.demo-playgrund-editor {
+  border-radius: 10px;
+}

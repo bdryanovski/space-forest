@@ -26,11 +26,11 @@ const ARTICLE = `
 </Article>
 <Pagination>
   <PaginationItem>
-    <h5><Icon name="angle-left" /> Previous</h5>
+    <h5><Icon name="chevron-thin-left" /> Previous</h5>
     <a>surrounded brief hurried whatever</a>
   </PaginationItem>
   <PaginationItem>
-    <h5>Next <Icon name="angle-right" /></h5>
+    <h5>Next <Icon name="chevron-thin-right" /></h5>
     <a>salmon health mean recent someone</a>
   </PaginationItem>
 </Pagination>
