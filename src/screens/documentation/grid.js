@@ -2,19 +2,19 @@ import React from 'react'
 import Code from '../components/code'
 
 const grid = [
-  ['cols-1', 'cols-11'],
-  ['cols-2', 'cols-10'],
-  ['cols-3', 'cols-9'],
-  ['cols-4', 'cols-8'],
-  ['cols-6', 'cols-6'],
-  ['cols-7', 'cols-5'],
-  ['cols-8', 'cols-4'],
-  ['cols-9', 'cols-3'],
-  ['cols-10', 'cols-2'],
-  ['cols-11', 'cols-1'],
-  ['cols-12'],
-  ['cols-3', 'cols-3', 'cols-3', 'cols-3'],
-  ['cols-5', 'cols-2', 'cols-5']
+  ['col-1', 'col-11'],
+  ['col-2', 'col-10'],
+  ['col-3', 'col-9'],
+  ['col-4', 'col-8'],
+  ['col-6', 'col-6'],
+  ['col-7', 'col-5'],
+  ['col-8', 'col-4'],
+  ['col-9', 'col-3'],
+  ['col-10', 'col-2'],
+  ['col-11', 'col-1'],
+  ['col-12'],
+  ['col-3', 'col-3', 'col-3', 'col-3'],
+  ['col-5', 'col-2', 'col-5']
 ]
 
 export default class GridDemo extends React.Component {
@@ -27,29 +27,21 @@ export default class GridDemo extends React.Component {
         </p>
 
         <div className="grid grid-gap-xs">
-          {grid.map((columns, rowIndex) => {
-            return (
-              <div key={rowIndex} className="row">
-                {columns.map((column, index) => {
-                  const classes = `${column} demo-column `
-                  return (
-                    <div key={index} className={classes}>
-                      {column}
-                    </div>
-                  )
-                })}
-              </div>
-            )
+          {grid.map((columns) => {
+            return columns.map((column, index) => {
+              const classes = `${column} demo-column `
+              return (
+                <div key={index} className={classes}>
+                  {column}
+                </div>
+              )
+            })
           })}
 
-          <div className="row">
-            <div className="cols demo-column">Full width</div>
-          </div>
+          <div className="full-width demo-column">Full width</div>
 
-          <div className="row">
-            <div className="cols-half demo-column">Half of screen</div>
-            <div className="cols-half demo-column">Other half</div>
-          </div>
+          <div className="col-6 demo-column">Half of screen</div>
+          <div className="col-6 demo-column">Other half</div>
 
         </div>
 

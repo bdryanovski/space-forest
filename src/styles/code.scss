@@ -19,13 +19,11 @@ $color-3rd: Gainsboro;
 
     .action-buttons {
       position: absolute;
-      top: 40%;
+      display: block;
+      top: 30%;
       left: 1rem;
       width: 0.6rem;
       height: 0.6rem;
-      background: Crimson;
-      border-radius: 50%;
-      box-shadow: 1rem 0 0 Orange, 2rem 0 0 LimeGreen;
     }
 
     .title {

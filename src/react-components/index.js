@@ -1,3 +1,5 @@
+import CopyToClipboard from './utils/copyToClipboard'
+
 export {default as Card} from './card'
 export {default as Article} from './article'
 export {
@@ -25,3 +27,7 @@ export {
 export {
   MonacoEditor
 } from './playground/monaco-editor'
+
+
+// Utils
+export {default as CopyToClipboard} from './utils/copyToClipboard'

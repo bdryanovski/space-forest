@@ -1,15 +1,20 @@
 import React from 'react'
 import PrismCode from 'react-prism'
 import OSXWindow from './osx-window'
+import {CopyToClipboard} from '../../react-components'
 
 import 'prismjs'
 import 'prismjs/themes/prism.css'
 
 export default class Code extends React.Component {
+  copy = () => {
+    CopyToClipboard(this.props.children.toString().trim())
+  }
+
   render() {
     const { /* code, plugins, */ language, title } = this.props
     return (
-      <OSXWindow title={title} language={language}>
+      <OSXWindow title={title} language={language} onCopy={this.copy}>
         <PrismCode component="pre" className={`language-${language}`}>
           {this.props.children.trim()}
         </PrismCode>

@@ -6,8 +6,11 @@ import Playground from './playground'
 import Editor from './playground-editor'
 import Preview from './playground-preview'
 import PlaygroundError from './playground-error'
+import CopyToClipboard from '../utils/copyToClipboard'
 
 export const MAX_WIDTH = '800px'
+
+
 
 export default class DemoPlayground extends Component {
 
@@ -18,6 +21,10 @@ export default class DemoPlayground extends Component {
   onToggle = () => {
     this.setState({ display: !this.state.display })
   };
+
+  copy = () => {
+    CopyToClipboard(this.props.code)
+  }
 
   displayEditor(language) {
     if (!this.state.display) {
@@ -37,8 +44,11 @@ export default class DemoPlayground extends Component {
             <div className="grid grid-gap-xs">
               <div className="col-10"><h5>Example</h5></div>
               <div className="col-2 grid-justify-right">
+                <span onClick={this.copy} className="demo-playground-space-right">
+                  <Icon title="copy code" name="copy" />
+                </span>
                 <span onClick={this.onToggle}>
-                  <Icon name="code" /> {this.state.display ? 'Close' : 'Code'}
+                  <Icon title="open editor" name="code" />
                 </span>
               </div>
             </div>
