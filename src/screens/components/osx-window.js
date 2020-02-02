@@ -1,5 +1,5 @@
 import React from 'react'
-import {Icon, CopyToClipboard} from '../../react-components'
+import {Icon} from '../../react-components'
 
 export default class OSXWindow extends React.Component {
   copy = () => {

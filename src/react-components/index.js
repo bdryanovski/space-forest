@@ -1,5 +1,3 @@
-import CopyToClipboard from './utils/copyToClipboard'
-
 export {default as Card} from './card'
 export {default as Article} from './article'
 export {
