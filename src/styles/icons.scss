@@ -1,4 +1,20 @@
-$fa-font-path: "../webfonts";
-@import "./fontawesome/fontawesome.scss";
-@import "./fontawesome/solid.scss";
-@import "./fontawesome/regular.scss";
+@mixin setIconColor($icon-color) {
+  fill: $icon-color;
+  .transparent-fill-stroke {
+    stroke: $icon-color;
+  }
+}
+
+.icon {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  @include setIconColor(var(--color-icon-default));
+
+  & > svg {
+    transition: inherit;
+    title {
+      display: none;
+    }
+  }
+}

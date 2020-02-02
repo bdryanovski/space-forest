@@ -36,6 +36,7 @@ export function IconWrapper(props) {
       viewBox="0 0 20 20"
       aria-labelledby={id}
       enableBackground="new 0 0 20 20"
+      className="icon"
     >
       <title id={id}>{title}</title>
       {props.children}
@@ -49,7 +50,8 @@ export function Icon(props) {
     throw new Error('Icon require icon name to know what to render')
   }
   if (!isValidIconName(props.name)) {
-    throw new Error(`Unknown icon name (${props.name})used inside <Icon />`)
+    console.error(`Unknown icon name (${props.name}) used inside <Icon />`)
+    return (<></>)
   }
 
   return (

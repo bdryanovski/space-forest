@@ -26,6 +26,9 @@ export default class IconsDemo extends Component {
           })
         }
 
+        <h3>Colors</h3>
+        <Icon name="app-store" size="xl"/>
+
         <h3>Catalog</h3>
         <div className="grid">
           {
