@@ -7,7 +7,7 @@ export default class Modal extends Component {
     return (
       <div id={this.props.name} className="modal-window">
         <div>
-          <a href="#" title="Close" className="modal-close"><Icon name="times" size="lg"/></a>
+          <a href="#" title="Close" className="modal-close"><Icon name="circle-with-cross" size="lg"/></a>
           { this.props.children}
         </div>
       </div>

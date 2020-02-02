@@ -35,8 +35,8 @@ export default class DemoPlayground extends Component {
         <div className="grid grid-gap-null demo-playground">
           <div className="demo-playground-title">
             <div className="grid grid-gap-xs">
-              <div className="col-11"><h5>Example</h5></div>
-              <div className="col-1">
+              <div className="col-10"><h5>Example</h5></div>
+              <div className="col-2 grid-justify-right">
                 <span onClick={this.onToggle}>
                   <Icon name="code" /> {this.state.display ? 'Close' : 'Code'}
                 </span>
