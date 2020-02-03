@@ -332,12 +332,6 @@ $breakpoints: (
   }
 }
 
-@for $i from 1 through $grid-columns - 1 {
-  .#{$i}-offset {
-    margin-left: grid-width($i);
-  }
-}
-
 // Helper classes
 .grid-align-center {
   align-items: center;
