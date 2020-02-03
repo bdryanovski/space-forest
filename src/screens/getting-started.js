@@ -4,7 +4,6 @@ import Code from './components/code'
 import PKG from '../../package.json'
 
 import * as c from '../react-components/index'
-console.log(Object.keys(c), c)
 
 const pkg_name = PKG.name
 const components = Object.keys(c).reduce((result, name) => {

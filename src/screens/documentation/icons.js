@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Code from '../components/code'
 
-import {Icon, AvailableIcons, SIZES} from 'react-components/icons/icon'
+import {Icon, AvailableIcons, ICON_SIZES, BASIC_ICONS} from 'react-components'
+import PKG from '../../../package.json'
 
 export default class IconsDemo extends Component {
   render() {
@@ -15,19 +16,77 @@ export default class IconsDemo extends Component {
         <h3>Sizes</h3>
         <Code language="html">
           {
-            Object.keys(SIZES).map((name) => {
+            Object.keys(ICON_SIZES).map((name) => {
               return `<Icon name="apple" size="${name}" />\n`
             }).join('')
           }
         </Code>
         {
-          Object.keys(SIZES).map((size, index) => {
+          Object.keys(ICON_SIZES).map((size, index) => {
             return (<Icon key={index} name="app-store" size={size}/>)
           })
         }
 
         <h3>Colors</h3>
-        <Icon name="app-store" size="xl"/>
+        <p>Icon have color property to change the internal path color</p>
+
+        <Icon color="primary" name="app-store" size="xl" />
+        <Icon color="success" name="app-store" size="xl" />
+        <Icon color="info" name="app-store" size="xl" />
+        <Icon color="warning" name="app-store" size="xl" />
+        <Icon color="danger" name="app-store" size="xl" />
+
+        <Icon color="#c4c4c4" name="app-store" size="xl" />
+
+        <Code language="javascript">
+          {
+            `
+<Icon color="danger" name="app-store" size="xl" />
+
+<Icon color="#c4c4c4" name="app-store" size="xl" />
+            `
+          }
+        </Code>
+
+        <h3>Basic Icons</h3>
+        <p>Icons that are used accross components provided here</p>
+        <div className="grid">
+          {
+            BASIC_ICONS.map((name, index) => {
+              return (
+                <div key={index} className="icon-demo col-2">
+                  <Icon name={name} size="m" />
+                  <small>{name}</small>
+                </div>
+              )
+            })
+          }
+        </div>
+
+        <h3>Alias</h3>
+        <p>Icons could be renamed by calling a method. This is design for better semantic naming</p>
+        <Code language="javascript">
+          {
+            `
+import { IconAlias } from '${PKG.name}'
+
+IconAlias('address', 'address-icon')
+            `
+          }
+        </Code>
+
+        <h3>Register new Icon</h3>
+        <p>Add new SVG as part of icons</p>
+        <Code language="javascript">
+          {
+            `
+import { IconRegister } from '${PKG.name}'
+
+IconRegister('address2', '<path d="M19.799,5.165l224...,8.776,1,8.5,1z"/>')
+            `
+          }
+        </Code>
+
 
         <h3>Catalog</h3>
         <div className="grid">

@@ -1,9 +1,11 @@
 import React from 'react'
-import { REGISTER } from './icons-register'
+import { REGISTER, ALIAS } from './icons-register'
 
 let iconCounter = 0
 
 const DEFAULT_SIZE = 16
+
+const KNOWN_COLORS = ['primary', 'success', 'info', 'warning', 'danger']
 
 export const SIZES = {
   'xs': 8,
@@ -12,6 +14,28 @@ export const SIZES = {
   'l': 64,
   'xl': 128,
   '2xl': 256,
+}
+
+export function IconAlias(target, alias) {
+  if (ALIAS[alias]) {
+    console.error(`This alias is already added ${target} -> ${alias}`)
+    return
+  }
+
+  if (REGISTER[alias]) {
+    console.error(`The ${alias} is already a known icon name - this will overwrite existing icon.`)
+    return
+  }
+
+  ALIAS[alias] = target
+}
+
+export function IconRegister(name, svg) {
+  if (REGISTER[name]) {
+    console.error(`Icon with that name (${name}) already exist.`)
+    return
+  }
+  REGISTER[name] = svg
 }
 
 export function IconWrapper(props) {
@@ -28,6 +52,14 @@ export function IconWrapper(props) {
     width = height = SIZES[props.size] || SIZES['s']
   }
 
+  let classes = ['icon']
+
+  if (props.color) {
+    if (KNOWN_COLORS.includes(props.color)) {
+      classes = [...classes, props.color]
+    }
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +68,7 @@ export function IconWrapper(props) {
       viewBox="0 0 20 20"
       aria-labelledby={id}
       enableBackground="new 0 0 20 20"
-      className="icon"
+      className={ classes.join(' ') }
     >
       <title id={id}>{title}</title>
       {props.children}

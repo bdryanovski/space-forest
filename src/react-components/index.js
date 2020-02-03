@@ -13,13 +13,17 @@ export {default as Modal} from './modal/modal'
 export {default as PlaceholderPost} from './placeholder/placeholder-post'
 
 
-// Experimental
+// Experimental Icons
 export {
   Icon,
   AvailableIcons,
-  SIZES as ICON_SIZES
+  SIZES as ICON_SIZES,
 } from './icons/icon'
 
+export {
+  BASIC as BASIC_ICONS,
+  ALIAS as ALIAS_ICONS
+} from './icons/icons-register'
 
 // Editor
 export {
