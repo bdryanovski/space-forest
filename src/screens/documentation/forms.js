@@ -61,6 +61,22 @@ export default class FormsDocumentation extends Component {
 
         </div>
 
+        <h3>Textarea</h3>
+
+        <div className="form-row">
+          <label htmlFor="comment">Twitter</label>
+          <textarea id="comment" placeholder="Write message ..." cols="100" rows="5"></textarea>
+        </div>
+
+        <h3>Select and options - dropdown</h3>
+        <div className="form-row">
+          <label htmlFor="option">Select one of two option</label>
+          <select id="option">
+            <option>One</option>
+            <option>Two</option>
+          </select>
+        </div>
+
       </>
     )
   }

@@ -1,34 +1,4 @@
-.form-row {
-  label {
-    display: block;
-    padding-right: 1rem;
-    line-height: 2rem;
-    font-weight: 500;
-  }
-
-  .input-helper-text {
-    display: block;
-    line-height: 2rem;
-    padding-left: 1rem;
-    color: #c6c6c6;
-  }
-
-  .input-error-text {
-    display: block;
-    line-height: 2rem;
-    padding-left: 1rem;
-    color: red;
-  }
-}
-.form-row input {
-  display: block;
-  width: 100%;
-  padding: 8px 16px;
-  line-height: 1rem;
-  font-weight: 500;
-  font-family: inherit;
-  border-radius: 6px;
-  -webkit-appearance: none;
+@mixin form_styles {
   color: var(--input-color);
   border: 1px solid var(--input-border);
   background: var(--input-background);
@@ -46,6 +16,8 @@
   position: relative;
   display: flex;
   width: 100%;
+  margin: 0 0 1rem 0;
+
   & > span,
   input {
     white-space: nowrap;
@@ -54,15 +26,16 @@
       border-radius: 0;
     }
     &:first-child {
-      border-radius: 6px 0 0 6px;
+      border-radius: 0.2rem 0 0 0.2rem;
     }
     &:last-child {
-      border-radius: 0 6px 6px 0;
+      border-radius: 0 0.2rem 0.2rem 0;
     }
     &:not(:first-child) {
       margin-left: -1px;
     }
   }
+
   input {
     position: relative;
     z-index: 1;
@@ -73,8 +46,8 @@
   }
   & > span {
     text-align: center;
-    padding: 8px 12px;
-    line-height: 1rem;
+    padding: 0px 12px;
+    line-height: 1.75rem;
     color: var(--group-color);
     background: var(--group-background);
     border: 1px solid var(--group-border);
@@ -86,5 +59,45 @@
       background: var(--group-background-focus);
       border-color: var(--group-border-focus);
     }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 0.2rem;
+    -webkit-appearance: none;
+    @include form_styles();
+  }
+
+  textarea {
+    display: block;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    @include form_styles();
+  }
+
+  label {
+    display: block;
+    padding-right: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+
+  .input-helper-text {
+    display: block;
+    padding-left: 1rem;
+    color: #c6c6c6;
+    flex-basis: 100%;
+  }
+
+  .input-error-text {
+    display: block;
+    padding-left: 1rem;
+    color: red;
+    flex-basis: 100%;
   }
 }
