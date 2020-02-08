@@ -1,0 +1,368 @@
+/* Variables */
+$green-1: rgb(8, 87, 76);
+$green-2: rgb(4, 58, 51);
+$green-3: rgb(2, 47, 53);
+$green-4: rgb(1, 24, 21);
+$green-5: rgb(20, 223, 196);
+$green-6: rgb(31, 105, 64);
+$yellow-1: rgb(250, 153, 8);
+$yellow-2: rgb(231, 210, 21);
+$cloud: rgb(255, 255, 255);
+$fire: rgb(219, 5, 84);
+
+.onTOP {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 100;
+
+  h1 {
+    color: white;
+    font-weight: 800;
+    font-size: 5rem;
+  }
+
+  p {
+    color: white;
+    padding: 1rem 0rem;
+  }
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  background-image: linear-gradient(
+    to bottom,
+    $green-1 25%,
+    $green-2 25%,
+    $green-2 49%,
+    $green-3 10%
+  );
+  overflow: hidden;
+  transition: 3s linear;
+}
+.forest {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  transition: 2s linear;
+
+  &__item {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  &__tree {
+    position: absolute;
+    width: 60px;
+    border-bottom: 120px solid $green-4;
+    border-top: 0 solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+
+    &--1 {
+      top: 12px;
+      left: -25px;
+    }
+    &--2 {
+      left: -5px;
+    }
+    &--3 {
+      top: 25px;
+      left: 20px;
+    }
+    &--4 {
+      top: 40px;
+      left: 45px;
+    }
+  }
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 2s linear;
+  overflow: hidden;
+}
+.tent {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  width: 300px;
+  height: 170px;
+  z-index: 100;
+
+  &__side {
+    position: absolute;
+    right: 0;
+    transform: skewX(30deg);
+    width: 150px;
+    height: 100%;
+    background-color: $yellow-1;
+  }
+  &__front {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    border-bottom: 170px solid $yellow-2;
+    border-top: 0 solid transparent;
+    border-left: 101px solid transparent;
+    border-right: 101px solid transparent;
+  }
+  &__door {
+    position: absolute;
+    top: 70px;
+    left: -35px;
+    width: 60px;
+    border-bottom: 110px solid $green-6;
+    border-top: 0 solid transparent;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+  }
+}
+.tree {
+  &__item {
+    position: absolute;
+    &--1 {
+      bottom: -200px;
+      width: 200px;
+      height: 200px;
+      transform: rotateZ(49deg) skewX(35deg) skewY(35deg);
+      z-index: 150;
+      background-image: linear-gradient(45deg, $green-6 50%, $green-5 50%);
+    }
+    &--2 {
+      z-index: 50;
+      right: 80px;
+      bottom: 0;
+      width: 70px;
+      border-bottom: 260px solid $green-6;
+      border-top: 0 solid transparent;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+    }
+    &--3 {
+      z-index: 50;
+      right: 500px;
+      bottom: 0;
+      width: 60px;
+      border-bottom: 260px solid $green-6;
+      border-top: 0 solid transparent;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+    }
+    &--4 {
+      z-index: 50;
+      right: 0px;
+      bottom: 0;
+      width: 60px;
+      border-bottom: 400px solid $green-6;
+      border-top: 0 solid transparent;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+    }
+  }
+}
+.rock {
+  &__item {
+    position: absolute;
+    left: 110px;
+    bottom: -15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    z-index: 200;
+    background-color: $green-6;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      bottom: 2px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: $green-6;
+    }
+
+    &--2 {
+      left: 10px;
+      transform: rotateY(180deg);
+    }
+    &--3 {
+      left: calc(100% - 40px);
+    }
+  }
+}
+.cloud {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  overflow: hidden;
+  animation: cloud 4s infinite alternate;
+
+  &--1 {
+    top: 320px;
+    left: 50px;
+    animation-delay: 0.5s;
+  }
+  &--2 {
+    top: 340px;
+    left: calc(100% - 140px);
+    transform: rotateY(180deg);
+  }
+  &--3 {
+    top: 360px;
+    left: calc(100% - 300px);
+    transform: rotateY(180deg);
+  }
+  &__item {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: $cloud;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 35px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: $cloud;
+    }
+  }
+}
+
+.fire {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: -40px;
+  right: 400px;
+  z-index: 200;
+
+  &__ax {
+    position: absolute;
+    top: 17px;
+    left: -30px;
+    width: 50px;
+    height: 20px;
+    transform: rotateZ(-15deg);
+    border-top: 5px solid $green-6;
+    border-left: 5px solid transparent;
+    background-image: linear-gradient(to right, $green-2 40%, transparent 40%);
+    z-index: -2;
+  }
+
+  &__base {
+    position: absolute;
+    bottom: 40px;
+    left: -35px;
+    width: 50px;
+    border-bottom: 25px solid $green-6;
+    border-top: 20px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    z-index: -1;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: opty 1s infinite alternate;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      animation: opty 1s infinite alternate 0.1s;
+    }
+    &::after {
+      width: 50%;
+      height: 50%;
+      animation-delay: 0.2s;
+    }
+  }
+  &__trunk {
+    position: absolute;
+    bottom: 40px;
+    width: 70px;
+    height: 12px;
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom, $green-4, $green-6 40%);
+    &--1 {
+      left: 20px;
+      transform: rotateZ(-10deg);
+    }
+    &--2 {
+      left: 20px;
+      transform: rotateZ(15deg);
+    }
+  }
+  &__light {
+    height: 40px;
+    width: 20px;
+    background: $fire;
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 10px);
+    border-radius: 50%;
+    z-index: -1;
+    animation: light 0.05s infinite alternate;
+  }
+}
+/**/
+@keyframes opty {
+  0% {
+    background-color: rgba($cloud, 0.1);
+  }
+  100% {
+    background-color: rgba($cloud, 0.3);
+  }
+}
+@keyframes light {
+  0% {
+    left: calc(50% - 9px);
+    bottom: 25px;
+  }
+  100% {
+    left: calc(50% - 11px);
+    bottom: 24px;
+  }
+}
+@keyframes cloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
