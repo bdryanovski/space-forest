@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/space-forest/html.worker.js"
   },
   {
-    "revision": "5bde0b2ac80aba74bdfe59546e23435a",
+    "revision": "0109c4305515cb008610622a171eb506",
     "url": "/space-forest/index.html"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/space-forest/static/css/2.9492d0f6.chunk.css"
   },
   {
-    "revision": "1392e9d04498f1ebfbf5",
+    "revision": "cfc4de4cfdfd209b5452",
     "url": "/space-forest/static/css/main.516ca103.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/space-forest/static/js/5.484becae.chunk.js"
   },
   {
-    "revision": "1392e9d04498f1ebfbf5",
-    "url": "/space-forest/static/js/main.15cde4b9.chunk.js"
+    "revision": "cfc4de4cfdfd209b5452",
+    "url": "/space-forest/static/js/main.28df7ba3.chunk.js"
   },
   {
     "revision": "8294f85995dd5777308a",
