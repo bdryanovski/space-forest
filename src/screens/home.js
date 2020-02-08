@@ -96,6 +96,9 @@ export default class Home extends React.Component {
             <Link to="/documentation" className="btn primary">Getting Started</Link>
           </div>
 
+          <div className="frame padding-1 sp-up-down-1">
+          </div>
+
         </div>
 
       </>
