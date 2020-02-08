@@ -2,6 +2,10 @@
   "name": "spaceforestbeta",
   "version": "0.1.20",
   "main": "./dist/index.js",
+  "author": {
+    "name": "Bozhidar Dryanovski"
+  },
+  "homepage": "https://github.com/bdryanovski/space-forest",
   "dependencies": {
     "buble": "0.19.8",
     "core-js": "3.5.0",
@@ -44,6 +48,7 @@
     "eslint-plugin-react": "7.16.0",
     "file-loader": "4.3.0",
     "fs-extra": "8.1.0",
+    "gh-pages": "^2.2.0",
     "hookrouter": "1.2.3",
     "html-webpack-plugin": "4.0.0-beta.5",
     "husky": "3.1.0",
@@ -91,7 +96,9 @@
     "build:website": "npm run build",
     "preversion": "npm run transpile & npm run compile:styles",
     "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
-    "prepublishOnly": "npm run transpile"
+    "prepublishOnly": "npm run transpile",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
