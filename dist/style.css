@@ -1,12 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
 @import-normalize;
 :root {
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 4%);
   --color-body-background: hsl(215, 24%, 90%);
   --color-light: #dddddd;
-  --color-dark: hsl(0, 0%, 21%);
-  --color-gray: #aaaaaa;
+  --color-dark: hsl(0, 0%, 0%, 71%);
+  --color-gray: hsl(0, 0%, 0%, 13%);
   --color-primary: #001f3f;
   --color-info: #7fdbff;
   --color-success: #2ecc40;
@@ -47,6 +46,94 @@
   --color-link-active: #3d9970;
   --color-border: var(--color-gray);
   --color-icon-default: white;
+}
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  color: var(--color-dark);
+  background-color: var(--color-body-background);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+h3,
+.h3 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+h4,
+.h4 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h6,
+.h6 {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+p {
+  margin-top: 0;
+}
+
+code {
+  font-size: 87.5%;
+  color: #e83e8c;
+  word-wrap: break-word;
+}
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  font-size: 87.5%;
+  color: #fff;
+  background-color: #212529;
+  border-radius: 0.2rem;
 }
 
 .container {
@@ -1510,80 +1597,6 @@
   margin: auto !important;
 }
 
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-html {
-  font-size: 100%;
-}
-
-body {
-  font-size: 1rem;
-  /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
-  color: var(--color-dark);
-  background-color: var(--color-body-background);
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 300;
-}
-
-h1,
-.h1 {
-  font-size: 2rem;
-  line-height: 1.2;
-}
-
-h2,
-.h2 {
-  font-size: 1.6rem;
-  line-height: 1.25;
-}
-
-h3,
-.h3 {
-  font-size: 1.4rem;
-  line-height: 1.3;
-}
-
-h4,
-.h4 {
-  font-size: 1.2rem;
-  line-height: 1.35;
-}
-
-h5,
-.h5 {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-h6,
-.h6 {
-  font-size: 0.8rem;
-  line-height: 1.6;
-}
-
-p {
-  margin-top: 0;
-}
-
 .btn {
   border-radius: 0.25rem;
   padding: 5px 10px 5px 10px;
@@ -1642,13 +1655,20 @@ a.active {
 
 .card {
   border-radius: 0.35rem;
-  border: 1px solid #aaaaaa;
-  padding: 0.75rem;
+  border: 1px solid var(--color-border);
 }
-.card .card-title {
+.card .card-header {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   line-height: 1.35;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card .card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
 }
 .card .card-line {
   border: 0.03rem solid #c4c4c4;
@@ -1722,116 +1742,8 @@ nav .horizontal .right {
   float: right;
 }
 
-.spacer {
-  margin-bottom: 1rem;
-}
-
-.list-group {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-dl, ol, ul {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.list-group-item:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
-
-.list-group-item:last-child {
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 0.75rem 1.25rem;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-top: none;
-}
-
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-
-ul {
-  display: block;
-  list-style-type: disc;
-}
-
-.sp-1 {
-  padding: 1rem 0;
-}
-
 .pagination .pagination-item:last-child {
   text-align: right;
-}
-
-.window {
-  width: 100%;
-  background: GhostWhite;
-  margin-bottom: 1rem;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: block;
-}
-.window .window-header {
-  height: 37px;
-  background: Gainsboro;
-  position: relative;
-}
-.window .window-header .action-buttons {
-  position: absolute;
-  display: block;
-  top: 15%;
-  left: 1rem;
-  width: 0.6rem;
-  height: 0.6rem;
-}
-.window .window-header .title {
-  position: absolute;
-  top: 20%;
-  left: 5rem;
-}
-.window .window-header .language {
-  display: inline-block;
-  position: absolute;
-  right: 2rem;
-  top: 15%;
-  text-align: right;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  background: transparent;
-  font-family: Lato, sans-serif;
-  color: DimGrey;
-}
-.window .window-body {
-  position: relative;
-  height: 100%;
-}
-
-:not(pre) > code[class*=language-],
-pre[class*=language-] {
-  background: none;
-}
-
-pre[class*=language-] {
-  padding: 1rem;
-  margin: 0 0;
-  overflow: auto;
 }
 
 .modal-window {
@@ -2059,6 +1971,12 @@ pre[class*=language-] {
 .icon .transparent-fill-stroke {
   stroke: var(--color-icon-default);
 }
+.icon.light {
+  fill: var(--color-light);
+}
+.icon.light .transparent-fill-stroke {
+  stroke: var(--color-light);
+}
 .icon.primary {
   fill: var(--color-primary);
 }
@@ -2094,6 +2012,54 @@ pre[class*=language-] {
 }
 .icon > svg title {
   display: none;
+}
+
+.spacer {
+  margin-bottom: 1rem;
+}
+
+.list-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.list-group-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: none;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
 }
 
 /*# sourceMappingURL=style.css.map */
