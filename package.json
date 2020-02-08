@@ -5,7 +5,7 @@
   "author": {
     "name": "Bozhidar Dryanovski"
   },
-  "homepage": "https://github.com/bdryanovski/space-forest",
+  "homepage": "http://bdryanovski.github.io/space-forest",
   "dependencies": {
     "buble": "0.19.8",
     "core-js": "3.5.0",
