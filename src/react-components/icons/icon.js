@@ -5,7 +5,7 @@ let iconCounter = 0
 
 const DEFAULT_SIZE = 16
 
-const KNOWN_COLORS = ['primary', 'success', 'info', 'warning', 'danger']
+const KNOWN_COLORS = ['light', 'primary', 'success', 'info', 'warning', 'danger']
 
 export const SIZES = {
   'xs': 8,
@@ -76,22 +76,23 @@ export function IconWrapper(props) {
   )
 }
 
+export class Icon extends React.Component {
+  render() {
+    if (!this.props.name) {
+      throw new Error('Icon require icon name to know what to render')
+    }
+    if (!isValidIconName(this.props.name)) {
+      console.error(`Unknown icon name (${this.props.name}) used inside <Icon />`)
+      return (<></>)
+    }
 
-export function Icon(props) {
-  if (!props.name) {
-    throw new Error('Icon require icon name to know what to render')
+    return (
+      <IconWrapper {...this.props}>
+        {REGISTER[this.props.name]}
+        {this.props.children}
+      </IconWrapper>
+    )
   }
-  if (!isValidIconName(props.name)) {
-    console.error(`Unknown icon name (${props.name}) used inside <Icon />`)
-    return (<></>)
-  }
-
-  return (
-    <IconWrapper {...props}>
-      {REGISTER[props.name]}
-      {props.children}
-    </IconWrapper>
-  )
 }
 
 export function AvailableIcons() {

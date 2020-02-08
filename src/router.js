@@ -22,9 +22,11 @@ import PlaceholderDemo from './screens/documentation/placeholder-demo'
 import LayoutDemo from './screens/documentation/layouts/layouts-demo'
 import EditorDemo from './screens/documentation/editor'
 import FormsDocumentation from './screens/documentation/forms'
+import TableDocs from './screens/documentation/table-docs'
 
 export const routes = [
   {name: 'Home', path: '/', exact: true, component: Home},
+  {name: 'ghPage', path: '/space-forest/', exact: true, component: Home, hide: true},
   {
     name: 'Documentation',
     path: '/documentation',
@@ -54,6 +56,7 @@ export const routes = [
       {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
       {name: 'Cards', path: '/documentation/cards', component: CardsDemo},
       {name: 'Article', path: '/documentation/article', component: ArticlesDemo},
+      {name: 'Tables', path: '/documentation/tables', component: TableDocs },
       {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},
       {name: 'Pagination', path: '/documentation/pagination', component: Pagination},
       {name: 'Modal', path: '/documentation/modal', component: ModalDemo},
@@ -66,7 +69,7 @@ export class SiteNavigation extends React.Component {
   render() {
     return (
       <Navigation>
-        {routes.map((route, index) => (
+        {routes.filter(r => r.hide !== true).map((route, index) => (
           <NavigationItem key={index}>
             <Link to={route.path}>
               {route.name}

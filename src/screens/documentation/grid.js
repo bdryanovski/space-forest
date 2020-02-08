@@ -23,7 +23,7 @@ export default class GridDemo extends React.Component {
       <>
         <h1>Grid</h1>
         <p>
-            Adding &apos;.full-width&apos; will make the content expand the how view port
+          Adding <code>.full-width</code> will make the content expand the how view port
         </p>
 
         <div className="grid grid-gap-xs">

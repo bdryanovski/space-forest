@@ -1,6 +1,8 @@
 import React from 'react'
 import {Icon} from '../../react-components'
 
+/** NOTE don't include by itself no styles for it will be injected */
+
 export default class OSXWindow extends React.Component {
   copy = () => {
     if (this.props.onCopy && typeof this.props.onCopy === 'function') {

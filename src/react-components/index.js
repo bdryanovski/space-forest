@@ -1,4 +1,3 @@
-export {default as Card} from './card'
 export {default as Article} from './article'
 export {
   Header1, Header2, Header3, Header4, Header5, Header6
@@ -12,6 +11,12 @@ export {default as ThemeSwitcher} from './theme/theme-switcher'
 export {default as Modal} from './modal/modal'
 export {default as PlaceholderPost} from './placeholder/placeholder-post'
 
+// Cards
+export {
+  Card,
+  CardBody,
+  CardHeader
+} from './cards'
 
 // Experimental Icons
 export {

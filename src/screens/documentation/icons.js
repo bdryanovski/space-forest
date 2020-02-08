@@ -4,6 +4,8 @@ import Code from '../components/code'
 import {Icon, AvailableIcons, ICON_SIZES, BASIC_ICONS} from 'react-components'
 import PKG from '../../../package.json'
 
+const defaultIcon = 'compass'
+
 export default class IconsDemo extends Component {
   render() {
     const ICONS = AvailableIcons()
@@ -17,33 +19,32 @@ export default class IconsDemo extends Component {
         <Code language="html">
           {
             Object.keys(ICON_SIZES).map((name) => {
-              return `<Icon name="apple" size="${name}" />\n`
+              return `<Icon name="${defaultIcon}" size="${name}" />\n`
             }).join('')
           }
         </Code>
         {
           Object.keys(ICON_SIZES).map((size, index) => {
-            return (<Icon key={index} name="app-store" size={size}/>)
+            return (<Icon key={index} name={defaultIcon} size={size}/>)
           })
         }
 
         <h3>Colors</h3>
         <p>Icon have color property to change the internal path color</p>
 
-        <Icon color="primary" name="app-store" size="xl" />
-        <Icon color="success" name="app-store" size="xl" />
-        <Icon color="info" name="app-store" size="xl" />
-        <Icon color="warning" name="app-store" size="xl" />
-        <Icon color="danger" name="app-store" size="xl" />
+        <Icon color="primary" name={defaultIcon} size="xl" />
+        <Icon color="success" name={defaultIcon} size="xl" />
+        <Icon color="info" name={defaultIcon} size="xl" />
+        <Icon color="warning" name={defaultIcon} size="xl" />
+        <Icon color="danger" name={defaultIcon} size="xl" />
 
-        <Icon color="#c4c4c4" name="app-store" size="xl" />
+        <Icon color="#c4c4c4" name={defaultIcon} size="xl" />
 
         <Code language="javascript">
           {
             `
-<Icon color="danger" name="app-store" size="xl" />
-
-<Icon color="#c4c4c4" name="app-store" size="xl" />
+<Icon color="danger" name="${defaultIcon}" size="xl" />
+<Icon color="#c4c4c4" name="${defaultIcon}" size="xl" />
             `
           }
         </Code>

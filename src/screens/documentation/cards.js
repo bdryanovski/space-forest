@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
-import {Card} from '../../react-components'
+import {Card, CardBody, CardHeader} from '../../react-components'
 import DemoPlayground from '../../react-components/playground/demo-playground'
 
 const EXAMPLE_CARD = `
 <Card>
-  <h1 className="card-title">Example card</h1>
-  <div className="card-line"></div>
-  <p className="card-body">
-    Content
-  </p>
-  <div className="card-line"></div>
-  <div className="footer">
+  <CardHeader>Example card</CardHeader>
+  <CardBody>
+    <p>Body</p>
     <a href="#n" className="btn primary">Submit</a>
     <a href="#n" className="btn primary">Cancel</a>
-  </div>
+  </CardBody>
 </Card>
 `.trim()
 
@@ -24,7 +20,7 @@ export default class CardsDocumentation extends Component {
         <h1>Cards</h1>
         <p>Cards are simple way to group content</p>
 
-        <DemoPlayground code={ EXAMPLE_CARD } scope={{ Card }} language="html"/>
+        <DemoPlayground code={ EXAMPLE_CARD } scope={{ Card, CardBody, CardHeader }} language="html"/>
 
 
       </div>

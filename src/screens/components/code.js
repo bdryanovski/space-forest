@@ -5,6 +5,7 @@ import {CopyToClipboard} from '../../react-components'
 
 import 'prismjs'
 import 'prismjs/themes/prism.css'
+import './code-window.scss'
 
 export default class Code extends React.Component {
   copy = () => {

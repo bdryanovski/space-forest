@@ -1,6 +1,7 @@
 import React from 'react'
 import {Header1, Header2, Header3, Header4, Header5, Header6} from '../../react-components'
 import DemoPlayground from '../../react-components/playground/demo-playground'
+import Code from '../components/code'
 
 const HEADER_EXAMPLE = `
 <h1>H1 headline</h1>
@@ -24,8 +25,10 @@ const RANDOM_EXAMPLE = `
 <p>The base type is 15px over 1.6 line height (24px)</p>
 <strong>Bolded</strong> <br/>
 <em>Italicized</em> <br/>
-<a href="#">Colored</a> <br />
-<u>Underlined</u>
+<a href="#">Link</a> <br />
+<u>Underlined</u> <br/>
+<code>Code</code> <br/>
+<kbd>Ctrl + R</kbd>
 `.trim()
 
 const REACT_HEADER = `
@@ -43,24 +46,25 @@ export default class TypographyDemo extends React.Component {
     return (
       <>
         <h1>Typography</h1>
-        <h2>Headers</h2>
-        <div className="spacer">
-          <DemoPlayground code={HEADER_EXAMPLE} language="html" />
-        </div>
-        <div className="spacer">
-          <DemoPlayground code={HEADER_P_EXAMPLE} language="html" />
-        </div>
-        <h2>Text tags</h2>
-        <div className="spacer">
-          <DemoPlayground code={RANDOM_EXAMPLE} language="html" />
-        </div>
-        <h2>React</h2>
-        <p>
-          There React component to wrap arround headers to provide semantic markup
-        </p>
-        <div className="spacer">
-          <DemoPlayground code={REACT_HEADER} scope={REACT_HEADER_SCOPE} language="html" />
-        </div>
+        <p>Basic tags and styles</p>
+
+        <DemoPlayground scope={REACT_HEADER_SCOPE} code={`
+${HEADER_EXAMPLE}
+
+<hr />
+
+${HEADER_P_EXAMPLE}
+
+<hr />
+
+<p> There React component to wrap arround headers to provide semantic markup </p>
+${REACT_HEADER}
+
+<hr />
+
+${RANDOM_EXAMPLE}
+            `} language="html" />
+
       </>
     )
   }

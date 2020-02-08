@@ -14,7 +14,7 @@ function App() {
         <RenderSwitchSubRoutes routes={routes} />
       </Router>
       <Footer>
-        {PKG.name} v{PKG.version} Copyright 2019-{(new Date().getFullYear())}
+        <code>npm install --save {PKG.name}</code>@<kbd>v{PKG.version}</kbd> <br/> Copyright 2019-{(new Date().getFullYear())}
       </Footer>
     </div>
   )

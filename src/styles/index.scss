@@ -6,19 +6,22 @@
 @import "./light-theme.scss";
 @import "./dark-theme.scss";
 
+@import "./typography.scss";
+
 @import "./grid.scss";
 @import "./grid2.scss";
-@import "./typography.scss";
+
 @import "./buttons-links.scss";
 @import "./cards.scss";
 @import "./banner.scss";
 @import "./navigation.scss";
-@import "./utils.scss";
-@import "./spacers.scss";
 @import "./pagination.scss";
-@import "./code.scss";
 @import "./modal.scss";
 @import "./placeholder.scss";
 @import "./forms.scss";
 
+@import "./tables.scss";
+
 @import "./icons.scss";
+
+@import "./utils.scss";

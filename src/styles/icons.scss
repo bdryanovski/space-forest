@@ -11,6 +11,9 @@
   vertical-align: middle;
   @include setIconColor(var(--color-icon-default));
 
+  &.light {
+    @include setIconColor(var(--color-light));
+  }
   &.primary {
     @include setIconColor(var(--color-primary));
   }

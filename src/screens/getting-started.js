@@ -25,7 +25,7 @@ export default class GettingStarted extends React.Component {
       <>
         <h1>Getting started</h1>
 
-        <h2>{PKG.name} current version {PKG.version}</h2>
+        <h2>{PKG.name} current version <code>{PKG.version}</code></h2>
         <Code language="bash">
           {`npm install --save ${pkg_name}`}
         </Code>
@@ -66,7 +66,7 @@ import { ${component.name} } from '${pkg_name}'
           {Object.keys(PKG.dependencies).sort().map((dep, index) => {
             return (
               <li key={index}>
-                <a href={`https://www.npmjs.com/package/${dep}`}>{dep}</a> : <strong>{PKG.dependencies[dep]}</strong></li>
+                <a href={`https://www.npmjs.com/package/${dep}`}>{dep}</a> : <code>{PKG.dependencies[dep]}</code></li>
             )
           })}
         </ul>
