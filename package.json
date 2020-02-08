@@ -48,6 +48,7 @@
     "eslint-plugin-react": "7.16.0",
     "file-loader": "4.3.0",
     "fs-extra": "8.1.0",
+    "generate-changelog": "^1.8.0",
     "gh-pages": "^2.2.0",
     "hookrouter": "1.2.3",
     "html-webpack-plugin": "4.0.0-beta.5",
@@ -98,6 +99,9 @@
     "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
     "predeploy": "npm run build:website",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
