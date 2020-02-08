@@ -97,7 +97,7 @@
     "preversion": "npm run transpile & npm run compile:styles",
     "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:website",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {

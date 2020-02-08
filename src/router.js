@@ -1,6 +1,8 @@
 import React from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
 
+import { Icon } from './react-components'
+
 import Navigation from './react-components/navigation'
 import NavigationItem from './react-components/navigation-item'
 import ThemeSwitcher from './react-components/theme/theme-switcher'
@@ -92,7 +94,7 @@ export function SideNavigation({routes}) {
     <Navigation type="vertical">
       {routes.map((route, index) => (
         <NavigationItem key={index}>
-          <Link to={route.path}>{route.name}</Link>
+          <Link to={route.path}><Icon name="text-document" /> {route.name}</Link>
         </NavigationItem>
       ))}
     </Navigation>

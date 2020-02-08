@@ -1,18 +1,47 @@
 import React, { Component } from 'react'
 import Code from '../components/code'
 
-import {Icon, AvailableIcons, ICON_SIZES, BASIC_ICONS} from 'react-components'
+import {Icon, AvailableIcons, ICON_SIZES, BASIC_ICONS, CopyToClipboard} from 'react-components'
 import PKG from '../../../package.json'
 
 const defaultIcon = 'compass'
 
 export default class IconsDemo extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      internalIcons: AvailableIcons()
+    }
+  }
+
+
+  searchIcon = (e) => {
+    const term = e.target.value
+
+    if (term === '' || term === undefined) {
+      this.setState({ internalIcons: AvailableIcons()})
+      return
+    } else {
+      console.log('searching ...')
+      this.setState({
+        internalIcons: AvailableIcons().filter((name) => {
+          return name.includes(term)
+        })
+      })
+    }
+  }
+
+  copyIcon = (icon) => {
+    CopyToClipboard(`<Icon name="${icon}" />`)
+  }
+
   render() {
-    const ICONS = AvailableIcons()
 
     return (
       <div>
-        <h1>Internal Icons ({ICONS.length})</h1>
+        <h1>Internal Icons</h1>
         <p>Iternal Icons accessibile only with React component</p>
 
         <h3>Sizes</h3>
@@ -89,17 +118,28 @@ IconRegister('address2', '<path d="M19.799,5.165l224...,8.776,1,8.5,1z"/>')
         </Code>
 
 
-        <h3>Catalog</h3>
-        <div className="grid">
+        <h3>Catalog ({this.state.internalIcons.length})</h3>
+        <p>Click on the icons to copy to clipboard</p>
+
+        <div className="form-row">
+          <input onChange={this.searchIcon} placeholder="Search icon by name ..." />
+        </div>
+
+        <div className="grid-auto-cols">
           {
-            ICONS.map((name, index) => {
+            this.state.internalIcons.map((name, index) => {
               return (
-                <div key={index} className="icon-demo col-2">
-                  <Icon name={name} size="m"/>
+                <div key={index} className="icon-demo col-4 pointer-pointer" onClick={() => this.copyIcon(name)}>
+                  <Icon name={name} size="m" />
                   <small>{name}</small>
                 </div>
               )
             })
+          }
+          {
+            this.state.internalIcons.length === 0
+              ? <p>No icons found</p>
+              : <></>
           }
         </div>
 
