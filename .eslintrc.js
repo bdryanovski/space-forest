@@ -3,12 +3,14 @@ const restrictedGlobals = require("confusing-browser-globals");
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    "jest/globals": true
   },
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jest/all"
   ],
   globals: {
     Atomics: "readonly",
@@ -22,8 +24,19 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["import", "react", "jsx-a11y", "@typescript-eslint"],
+  plugins: ["import", "react", "jsx-a11y", "@typescript-eslint", "jest"],
   rules: {
+    // Jest
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "jest/prefer-expect-assertions": 0,
+    "jest/expect-expect": 0,
+    "jest/lowercase-name": 0,
+    "jest/prefer-inline-snapshots": 0,
+
     "no-restricted-globals": ["error"].concat(restrictedGlobals),
     "react/prop-types": 0,
     indent: ["error", 2],
