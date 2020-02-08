@@ -1707,7 +1707,7 @@ nav .vertical ul {
 }
 nav .vertical li a {
   display: block;
-  padding: 0.2rem 1.75rem;
+  padding: 0.2rem 0rem;
 }
 nav .horizontal li {
   display: inline;
@@ -1960,6 +1960,22 @@ nav .horizontal .right {
   padding-left: 1rem;
   color: red;
   flex-basis: 100%;
+}
+
+.pointer-pointer {
+  cursor: pointer;
+}
+
+.pointer-pointer {
+  cursor: pointer;
+}
+
+.pointer-pointer {
+  cursor: pointer;
+}
+
+.pointer-pointer {
+  cursor: pointer;
 }
 
 .icon {
