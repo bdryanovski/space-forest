@@ -3,12 +3,6 @@ import {Alert, ALERT_TYPES} from '../../react-components'
 import DemoPlayground from '../../react-components/playground/demo-playground'
 import Code from '../components/code'
 
-/**
- * META
- * from version: 0.1.26
- * last updated: 0.1.26
- */
-
 const EXAMPLE_ALERTS = `
 <Alert>
   Normal alert text

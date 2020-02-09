@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 
+/**
+ * META
+ * from version: 0.1.26
+ * last updated: 0.1.27
+ */
+
 export const ALERT_TYPES = [
   'primary',
   'info',
@@ -22,8 +28,11 @@ export default class Alert extends Component {
       classes.push(this.props.type)
     }
 
+    /**
+     * No need to hide it .. destroy it!
+     */
     if (this.state.hide) {
-      classes.push('display-none')
+      return <></>
     }
 
     return (
