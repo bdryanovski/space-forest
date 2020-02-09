@@ -26,6 +26,7 @@ import EditorDemo from './screens/documentation/editor'
 import FormsDocumentation from './screens/documentation/forms'
 import TableDocs from './screens/documentation/table-docs'
 import ChangelogDocs from './screens/documentation/changelog-docs'
+import AlertDocs from './screens/documentation/alerts-docs'
 
 export const routes = [
   {name: 'Home', path: '/', exact: true, component: Home},
@@ -56,6 +57,7 @@ export const routes = [
         path: '/documentation/links-buttons',
         component: LinksButtonsDemo
       },
+      {name: 'Alerts', path: '/documentation/alerts', component: AlertDocs },
       {name: 'Editor', path: '/documentation/editor', component: EditorDemo },
       {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
       {name: 'Cards', path: '/documentation/cards', component: CardsDemo},

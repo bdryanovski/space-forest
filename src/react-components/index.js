@@ -11,6 +11,9 @@ export {default as ThemeSwitcher} from './theme/theme-switcher'
 export {default as Modal} from './modal/modal'
 export {default as PlaceholderPost} from './placeholder/placeholder-post'
 
+// Alerts
+export {default as Alert, ALERT_TYPES} from './alerts/alert'
+
 // Cards
 export {
   Card,

@@ -1,0 +1,50 @@
+.alert {
+  min-width: 150px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 4px rgba(#000, 0.12), 0 1px 2px rgba(#000, 0.24);
+
+  .alert-close {
+    -webkit-appearance: none;
+    position: relative;
+    float: right;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    color: inherit;
+    background: 0 0;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 300;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    filter: alpha(opacity=40);
+    opacity: 0.5;
+    &:hover {
+      filter: alpha(opacity=70);
+      opacity: 0.8;
+    }
+  }
+
+  &.primary {
+    color: var(--color-primary-text);
+    background-color: var(--color-primary-bg);
+  }
+  &.info {
+    color: var(--color-info-text);
+    background-color: var(--color-info-bg);
+  }
+  &.success {
+    color: var(--color-success-text);
+    background-color: var(--color-success-bg);
+  }
+  &.warning {
+    color: var(--color-warning-text);
+    background-color: var(--color-warning-bg);
+  }
+  &.danger {
+    color: var(--color-danger-text);
+    background-color: var(--color-danger-bg);
+  }
+}

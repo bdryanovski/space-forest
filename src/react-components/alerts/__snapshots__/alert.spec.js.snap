@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert should match default snapshot 1`] = `
+<div
+  className="alert"
+  role="alert"
+>
+  <div
+    className="alert-close"
+    onClick={[Function]}
+  >
+    ×
+  </div>
+  Hello
+</div>
+`;
