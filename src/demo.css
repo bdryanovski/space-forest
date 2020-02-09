@@ -1,6 +1,9 @@
 .documentation-layout {
   padding: 0 2rem;
 }
+.documentation-logo {
+  font-weight: 800;
+}
 .demo-column {
   display: block;
   background-color: hsl(327, 100%, 30%);

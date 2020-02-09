@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Link, Switch} from 'react-router-dom'
+import {Route, NavLink, Link, Switch} from 'react-router-dom'
 
 import { Icon } from './react-components'
 
@@ -73,6 +73,7 @@ export class SiteNavigation extends React.Component {
   render() {
     return (
       <Navigation>
+        <NavigationItem className="documentation-logo">SpaceForest UI Framework</NavigationItem>
         {routes.filter(r => r.hide !== true).map((route, index) => (
           <NavigationItem key={index}>
             <Link to={route.path}>
@@ -96,7 +97,7 @@ export function SideNavigation({routes}) {
     <Navigation type="vertical">
       {routes.map((route, index) => (
         <NavigationItem key={index}>
-          <Link to={route.path}><Icon name="text-document" /> {route.name}</Link>
+          <NavLink exact={true} to={route.path} activeClassName="active"><Icon name="text-document" /> {route.name}</NavLink>
         </NavigationItem>
       ))}
     </Navigation>

@@ -35,6 +35,7 @@ export default class ChangelogDocs extends Component {
       <div>
         <h1>Changelog</h1>
         <p>Latest version <kbd>{PKG.version}</kbd></p>
+        <br />
         <ReactMarkdown source={this.state.changelog} />
       </div>
     )

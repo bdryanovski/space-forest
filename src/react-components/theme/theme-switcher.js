@@ -30,8 +30,8 @@ export default class ThemeSwitcher extends Component {
       <>
         {
           !this.state.dark
-            ? <div onClick={this.setDark}><Icon name="moon" size="lg"/></div>
-            : <div onClick={this.setLight}><Icon name="light-up" size="lg"/></div>
+            ? <div onClick={this.setDark}><Icon title="Switch to dark mode" name="moon" size="lg"/></div>
+            : <div onClick={this.setLight}><Icon title="Switch to light mode" name="light-up" size="lg"/></div>
         }
       </>
     )

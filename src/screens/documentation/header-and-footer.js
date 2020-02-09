@@ -7,6 +7,7 @@ const FOOTER_SCOPE = {Footer}
 
 const NAV_HORIZONTAL = `
 <Navigation>
+  <NavigationItem>Logo</NavigationItem>
   <NavigationItem><a>Home</a></NavigationItem>
   <NavigationItem><a>Posts</a></NavigationItem>
   <NavigationItem className="active"><a>Pages</a></NavigationItem>
