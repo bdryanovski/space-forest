@@ -101,11 +101,12 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js;",
     "test": "node scripts/test.js",
+    "test:prebuild": "jest --",
     "compile:styles": "sass ./src/styles/index.scss ./dist/style.css",
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint --fix ./src/**/*.js",
     "build:website": "npm run build",
-    "preversion": "npm run transpile & npm run compile:styles",
+    "preversion": "npm run test:prebuild & npm run transpile & npm run compile:styles",
     "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major",
@@ -202,7 +203,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run test:prebuild; lint-staged"
     }
   },
   "lint-staged": {
