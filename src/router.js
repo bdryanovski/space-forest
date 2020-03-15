@@ -27,6 +27,7 @@ import FormsDocumentation from './screens/documentation/forms'
 import TableDocs from './screens/documentation/table-docs'
 import ChangelogDocs from './screens/documentation/changelog-docs'
 import AlertDocs from './screens/documentation/alerts-docs'
+import UIDemo from './screens/documentation/ui/ui-docs'
 
 export const routes = [
   {name: 'Home', path: '/', exact: true, component: Home},
@@ -44,8 +45,9 @@ export const routes = [
       },
       {name: 'Changelog', path: '/documentation/changelog', component: ChangelogDocs },
       {name: 'Theme', path: '/documentation/theme', component: ThemeDemo},
-      {name: 'Layout', path: '/documentation/layout', component: LayoutDemo},
+      {name: 'UI', path: '/documentation/ui', component: UIDemo },
       {name: 'Grid', path: '/documentation/grid', component: GridDemo},
+      {name: 'Layout', path: '/documentation/layout', component: LayoutDemo},
       {
         name: 'Typography',
         path: '/documentation/typography',
