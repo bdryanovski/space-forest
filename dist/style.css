@@ -143,7 +143,6 @@ p {
 }
 
 code {
-  font-size: 87.5%;
   color: #e83e8c;
   word-wrap: break-word;
 }
@@ -2004,6 +2003,7 @@ nav .horizontal .right {
 
 .article {
   padding: 1rem 0 0 0;
+  margin-bottom: 3rem;
 }
 .article .byline {
   font-size: 0.75rem;
