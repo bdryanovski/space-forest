@@ -7,7 +7,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <>
-        <div className="container">
+        <div className="content-center">
 
           <div className="bg">
             <div className="sky">
