@@ -109,9 +109,9 @@
     "preversion": "npm run transpile & npm run compile:styles",
     "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
-    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major",
-    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit --amend && npm version major",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit --amend && npm version minor",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit --amend && npm version patch",
     "predeploy": "npm run build:website",
     "deploy": "gh-pages -d build"
   },
