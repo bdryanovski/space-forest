@@ -11,7 +11,6 @@ import Home from './screens/home.js'
 import GettingStarted from './screens/getting-started'
 import Documentation from './screens/documentation'
 import GridDemo from './screens/documentation/grid'
-import TypographyDemo from './screens/documentation/typography'
 import LinksButtonsDemo from './screens/documentation/links-buttons'
 import IconsDemo from './screens/documentation/icons'
 import CardsDemo from './screens/documentation/cards'
@@ -48,11 +47,6 @@ export const routes = [
       {name: 'UI', path: '/documentation/ui', component: UIDemo },
       {name: 'Grid', path: '/documentation/grid', component: GridDemo},
       {name: 'Layout', path: '/documentation/layout', component: LayoutDemo},
-      {
-        name: 'Typography',
-        path: '/documentation/typography',
-        component: TypographyDemo
-      },
       { name: 'Forms', path: '/documentation/forms', component: FormsDocumentation },
       {
         name: 'Links & Buttons',
