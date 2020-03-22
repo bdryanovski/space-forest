@@ -1,25 +1,24 @@
-.list {
-}
+.sp {
+  .list-horizontal {
+    list-style: none;
+    padding: 0;
 
-.list-horizontal {
-  list-style: none;
-  padding: 0;
+    li {
+      display: inline;
+    }
 
-  li {
-    display: inline;
-  }
+    li + li:before {
+      padding: 0.5rem;
+      color: black;
+      content: "|";
+    }
 
-  li + li:before {
-    padding: 0.5rem;
-    color: black;
-    content: "|";
-  }
+    li a {
+      text-decoration: none;
+    }
 
-  li a {
-    text-decoration: none;
-  }
-
-  li a:hover {
-    text-decoration: underline;
+    li a:hover {
+      text-decoration: underline;
+    }
   }
 }

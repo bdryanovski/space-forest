@@ -2,7 +2,7 @@
   // Colors https://clrs.cc/
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 4%);
-  --color-body-background: hsl(215, 24%, 90%);
+  --color-body-background: #fff;
 
   --color-light: #dddddd;
   --color-dark: hsl(0, 0%, 0%, 71%);
@@ -25,6 +25,8 @@
   --color-success-bg: #2ecc40;
   --color-warning-bg: #ffdc00;
   --color-danger-bg: #85144b;
+  // Typography
+  --color-text: #000;
 
   // LINKs
   --color-link: #0074d9;

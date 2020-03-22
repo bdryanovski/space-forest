@@ -1,479 +1,481 @@
 $grid-columns: 12 !default;
 $grid-spacing: 2%;
 
-.grid {
-  --grid-cols: #{$grid-columns};
-  display: grid;
-  // default no gap
-  grid-gap: var(--grid-gap, 0);
-  // grid of 12 columns
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
+.sp {
+  .grid {
+    --grid-cols: #{$grid-columns};
+    display: grid;
+    // default no gap
+    grid-gap: var(--grid-gap, 0);
+    // grid of 12 columns
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
 
-  > * {
-    // each grid item takes full width by default
-    grid-column-end: span var(--grid-cols);
-  }
-}
-
-.grid-gap-null {
-  --grid-gap: 0rem;
-}
-.grid-gap-xxxxs {
-  --grid-gap: var(--space-xxxxs, 0.125rem);
-}
-.grid-gap-xxxs {
-  --grid-gap: var(--space-xxxs, 0.25rem);
-}
-.grid-gap-xxs {
-  --grid-gap: var(--space-xxs, 0.375rem);
-}
-.grid-gap-xs {
-  --grid-gap: var(--space-xs, 0.5rem);
-}
-.grid-gap-sm {
-  --grid-gap: var(--space-sm, 0.75rem);
-}
-.grid-gap-md {
-  --grid-gap: var(--space-md, 1.25rem);
-}
-.grid-gap-lg {
-  --grid-gap: var(--space-lg, 2rem);
-}
-.grid-gap-xl {
-  --grid-gap: var(--space-xl, 3.25rem);
-}
-.grid-gap-xxl {
-  --grid-gap: var(--space-xxl, 5.25rem);
-}
-.grid-gap-xxxl {
-  --grid-gap: var(--space-xxxl, 8.5rem);
-}
-.grid-gap-xxxxl {
-  --grid-gap: var(--space-xxxxl, 13.75rem);
-}
-
-@for $i from 1 through $grid-columns {
-  .col-#{$i} {
-    grid-column-end: span #{$i};
-  }
-}
-
-.grid-auto-cols {
-  display: grid;
-  grid-gap: var(--grid-gap, 0);
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-}
-
-.grid-auto-xs,
-.grid-auto-sm,
-.grid-auto-md,
-.grid-auto-lg,
-.grid-auto-xl {
-  display: grid;
-  grid-gap: var(-grid-gap, 0);
-  grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
-}
-
-.grid-auto-xs {
-  --col-min-width: 8rem;
-}
-.grid-auto-sm {
-  --col-min-width: 10rem;
-}
-.grid-auto-md {
-  --col-min-width: 15rem;
-}
-.grid-auto-lg {
-  --col-min-width: 20rem;
-}
-.grid-auto-xl {
-  --col-min-wdith: 25rem;
-}
-
-@for $i from 1 through $grid-columns {
-  .col-start-#{$i} {
-    grid-column-start: #{$i};
-  }
-  .col-end-#{$i} {
-    grid-column-end: #{$i + 1};
-  }
-}
-
-.col-end {
-  grid-column-end: -1;
-}
-
-// breakpoints
-$breakpoints: (
-  xs: 32rem,
-  sm: 48rem,
-  md: 64rem,
-  lg: 80rem,
-  xl: 90rem
-) !default;
-
-@mixin breakpoint($breakpoint) {
-  @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
-    @content;
-  }
-}
-
-@include breakpoint(xs) {
-  .grid-auto-xs\@xs {
-    --col-min-width: 8rem;
-  }
-  .grid-auto-sm\@xs {
-    --col-min-width: 10rem;
-  }
-  .grid-auto-md\@xs {
-    --col-min-width: 15rem;
-  }
-  .grid-auto-lg\@xs {
-    --col-min-width: 20rem;
-  }
-  .grid-auto-xl\@xs {
-    --col-min-width: 25rem;
+    > * {
+      // each grid item takes full width by default
+      grid-column-end: span var(--grid-cols);
+    }
   }
 
-  .grid-auto-cols\@xs {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  .grid-gap-null {
+    --grid-gap: 0rem;
+  }
+  .grid-gap-xxxxs {
+    --grid-gap: var(--space-xxxxs, 0.125rem);
+  }
+  .grid-gap-xxxs {
+    --grid-gap: var(--space-xxxs, 0.25rem);
+  }
+  .grid-gap-xxs {
+    --grid-gap: var(--space-xxs, 0.375rem);
+  }
+  .grid-gap-xs {
+    --grid-gap: var(--space-xs, 0.5rem);
+  }
+  .grid-gap-sm {
+    --grid-gap: var(--space-sm, 0.75rem);
+  }
+  .grid-gap-md {
+    --grid-gap: var(--space-md, 1.25rem);
+  }
+  .grid-gap-lg {
+    --grid-gap: var(--space-lg, 2rem);
+  }
+  .grid-gap-xl {
+    --grid-gap: var(--space-xl, 3.25rem);
+  }
+  .grid-gap-xxl {
+    --grid-gap: var(--space-xxl, 5.25rem);
+  }
+  .grid-gap-xxxl {
+    --grid-gap: var(--space-xxxl, 8.5rem);
+  }
+  .grid-gap-xxxxl {
+    --grid-gap: var(--space-xxxxl, 13.75rem);
   }
 
   @for $i from 1 through $grid-columns {
-    .col-#{$i}\@xs {
+    .col-#{$i} {
       grid-column-end: span #{$i};
     }
-    .col-start-#{$i}\@xs {
+  }
+
+  .grid-auto-cols {
+    display: grid;
+    grid-gap: var(--grid-gap, 0);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+
+  .grid-auto-xs,
+  .grid-auto-sm,
+  .grid-auto-md,
+  .grid-auto-lg,
+  .grid-auto-xl {
+    display: grid;
+    grid-gap: var(-grid-gap, 0);
+    grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+  }
+
+  .grid-auto-xs {
+    --col-min-width: 8rem;
+  }
+  .grid-auto-sm {
+    --col-min-width: 10rem;
+  }
+  .grid-auto-md {
+    --col-min-width: 15rem;
+  }
+  .grid-auto-lg {
+    --col-min-width: 20rem;
+  }
+  .grid-auto-xl {
+    --col-min-wdith: 25rem;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-start-#{$i} {
       grid-column-start: #{$i};
     }
-    .col-end-#{$i + 1}\@xs {
+    .col-end-#{$i} {
       grid-column-end: #{$i + 1};
     }
   }
 
-  .col-start-auto\@xs {
-    grid-column-start: auto;
-  }
-  .col-end-auto\@xs {
-    grid-column-end: auto;
-  }
-}
-
-@include breakpoint(sm) {
-  .grid-auto-xs\@sm {
-    --col-min-width: 8rem;
-  }
-  .grid-auto-sm\@sm {
-    --col-min-width: 10rem;
-  }
-  .grid-auto-md\@sm {
-    --col-min-width: 15rem;
-  }
-  .grid-auto-lg\@sm {
-    --col-min-width: 20rem;
-  }
-  .grid-auto-xl\@sm {
-    --col-min-width: 25rem;
+  .col-end {
+    grid-column-end: -1;
   }
 
-  .grid-auto-cols\@sm {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  }
+  // breakpoints
+  $breakpoints: (
+    xs: 32rem,
+    sm: 48rem,
+    md: 64rem,
+    lg: 80rem,
+    xl: 90rem
+  ) !default;
 
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@sm {
-      grid-column-end: span #{$i};
-    }
-    .col-start-#{$i}\@sm {
-      grid-column-start: #{$i};
-    }
-    .col-end-#{$i + 1}\@sm {
-      grid-column-end: #{$i + 1};
+  @mixin breakpoint($breakpoint) {
+    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+      @content;
     }
   }
 
-  .col-start-auto\@sm {
-    grid-column-start: auto;
-  }
-  .col-end-auto\@sm {
-    grid-column-end: auto;
-  }
-}
-
-@include breakpoint(md) {
-  .grid-auto-xs\@md {
-    --col-min-width: 8rem;
-  }
-  .grid-auto-sm\@md {
-    --col-min-width: 10rem;
-  }
-  .grid-auto-md\@md {
-    --col-min-width: 15rem;
-  }
-  .grid-auto-lg\@md {
-    --col-min-width: 20rem;
-  }
-  .grid-auto-xl\@md {
-    --col-min-width: 25rem;
-  }
-
-  .grid-auto-cols\@md {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@md {
-      grid-column-end: span #{$i};
+  @include breakpoint(xs) {
+    .grid-auto-xs\@xs {
+      --col-min-width: 8rem;
     }
-    .col-start-#{$i}\@md {
-      grid-column-start: #{$i};
+    .grid-auto-sm\@xs {
+      --col-min-width: 10rem;
     }
-    .col-end-#{$i + 1}\@md {
-      grid-column-end: #{$i + 1};
+    .grid-auto-md\@xs {
+      --col-min-width: 15rem;
     }
-  }
-
-  .col-start-auto\@md {
-    grid-column-start: auto;
-  }
-  .col-end-auto\@md {
-    grid-column-end: auto;
-  }
-}
-
-@include breakpoint(lg) {
-  .grid-auto-xs\@lg {
-    --col-min-width: 8rem;
-  }
-  .grid-auto-sm\@lg {
-    --col-min-width: 10rem;
-  }
-  .grid-auto-md\@lg {
-    --col-min-width: 15rem;
-  }
-  .grid-auto-lg\@lg {
-    --col-min-width: 20rem;
-  }
-  .grid-auto-xl\@lg {
-    --col-min-width: 25rem;
-  }
-
-  .grid-auto-cols\@lg {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@lg {
-      grid-column-end: span #{$i};
+    .grid-auto-lg\@xs {
+      --col-min-width: 20rem;
     }
-    .col-start-#{$i}\@lg {
-      grid-column-start: #{$i};
+    .grid-auto-xl\@xs {
+      --col-min-width: 25rem;
     }
-    .col-end-#{$i + 1}\@lg {
-      grid-column-end: #{$i + 1};
+
+    .grid-auto-cols\@xs {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}\@xs {
+        grid-column-end: span #{$i};
+      }
+      .col-start-#{$i}\@xs {
+        grid-column-start: #{$i};
+      }
+      .col-end-#{$i + 1}\@xs {
+        grid-column-end: #{$i + 1};
+      }
+    }
+
+    .col-start-auto\@xs {
+      grid-column-start: auto;
+    }
+    .col-end-auto\@xs {
+      grid-column-end: auto;
     }
   }
 
-  .col-start-auto\@lg {
-    grid-column-start: auto;
-  }
-  .col-end-auto\@lg {
-    grid-column-end: auto;
-  }
-}
-
-@include breakpoint(xl) {
-  .grid-auto-xs\@xl {
-    --col-min-width: 8rem;
-  }
-  .grid-auto-sm\@xl {
-    --col-min-width: 10rem;
-  }
-  .grid-auto-md\@xl {
-    --col-min-width: 15rem;
-  }
-  .grid-auto-lg\@xl {
-    --col-min-width: 20rem;
-  }
-  .grid-auto-xl\@xl {
-    --col-min-width: 25rem;
-  }
-
-  .grid-auto-cols\@xl {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@xl {
-      grid-column-end: span #{$i};
+  @include breakpoint(sm) {
+    .grid-auto-xs\@sm {
+      --col-min-width: 8rem;
     }
-    .col-start-#{$i}\@xl {
-      grid-column-start: #{$i};
+    .grid-auto-sm\@sm {
+      --col-min-width: 10rem;
     }
-    .col-end-#{$i + 1}\@xl {
-      grid-column-end: #{$i + 1};
+    .grid-auto-md\@sm {
+      --col-min-width: 15rem;
+    }
+    .grid-auto-lg\@sm {
+      --col-min-width: 20rem;
+    }
+    .grid-auto-xl\@sm {
+      --col-min-width: 25rem;
+    }
+
+    .grid-auto-cols\@sm {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}\@sm {
+        grid-column-end: span #{$i};
+      }
+      .col-start-#{$i}\@sm {
+        grid-column-start: #{$i};
+      }
+      .col-end-#{$i + 1}\@sm {
+        grid-column-end: #{$i + 1};
+      }
+    }
+
+    .col-start-auto\@sm {
+      grid-column-start: auto;
+    }
+    .col-end-auto\@sm {
+      grid-column-end: auto;
     }
   }
 
-  .col-start-auto\@xl {
-    grid-column-start: auto;
+  @include breakpoint(md) {
+    .grid-auto-xs\@md {
+      --col-min-width: 8rem;
+    }
+    .grid-auto-sm\@md {
+      --col-min-width: 10rem;
+    }
+    .grid-auto-md\@md {
+      --col-min-width: 15rem;
+    }
+    .grid-auto-lg\@md {
+      --col-min-width: 20rem;
+    }
+    .grid-auto-xl\@md {
+      --col-min-width: 25rem;
+    }
+
+    .grid-auto-cols\@md {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}\@md {
+        grid-column-end: span #{$i};
+      }
+      .col-start-#{$i}\@md {
+        grid-column-start: #{$i};
+      }
+      .col-end-#{$i + 1}\@md {
+        grid-column-end: #{$i + 1};
+      }
+    }
+
+    .col-start-auto\@md {
+      grid-column-start: auto;
+    }
+    .col-end-auto\@md {
+      grid-column-end: auto;
+    }
   }
-  .col-end-auto\@xl {
-    grid-column-end: auto;
+
+  @include breakpoint(lg) {
+    .grid-auto-xs\@lg {
+      --col-min-width: 8rem;
+    }
+    .grid-auto-sm\@lg {
+      --col-min-width: 10rem;
+    }
+    .grid-auto-md\@lg {
+      --col-min-width: 15rem;
+    }
+    .grid-auto-lg\@lg {
+      --col-min-width: 20rem;
+    }
+    .grid-auto-xl\@lg {
+      --col-min-width: 25rem;
+    }
+
+    .grid-auto-cols\@lg {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}\@lg {
+        grid-column-end: span #{$i};
+      }
+      .col-start-#{$i}\@lg {
+        grid-column-start: #{$i};
+      }
+      .col-end-#{$i + 1}\@lg {
+        grid-column-end: #{$i + 1};
+      }
+    }
+
+    .col-start-auto\@lg {
+      grid-column-start: auto;
+    }
+    .col-end-auto\@lg {
+      grid-column-end: auto;
+    }
   }
-}
 
-//
-@function grid-width($cols, $has-gutter: true) {
-  @if $has-gutter {
-    @return calc(((100% / #{$grid-columns}) * #{$cols}) - #{$grid-spacing});
-  } @else {
-    @return calc((100% / #{$grid-columns}) * #{$cols});
+  @include breakpoint(xl) {
+    .grid-auto-xs\@xl {
+      --col-min-width: 8rem;
+    }
+    .grid-auto-sm\@xl {
+      --col-min-width: 10rem;
+    }
+    .grid-auto-md\@xl {
+      --col-min-width: 15rem;
+    }
+    .grid-auto-lg\@xl {
+      --col-min-width: 20rem;
+    }
+    .grid-auto-xl\@xl {
+      --col-min-width: 25rem;
+    }
+
+    .grid-auto-cols\@xl {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}\@xl {
+        grid-column-end: span #{$i};
+      }
+      .col-start-#{$i}\@xl {
+        grid-column-start: #{$i};
+      }
+      .col-end-#{$i + 1}\@xl {
+        grid-column-end: #{$i + 1};
+      }
+    }
+
+    .col-start-auto\@xl {
+      grid-column-start: auto;
+    }
+    .col-end-auto\@xl {
+      grid-column-end: auto;
+    }
   }
-}
 
-// Helper classes
-.grid-align-center {
-  align-items: center;
-}
+  //
+  @function grid-width($cols, $has-gutter: true) {
+    @if $has-gutter {
+      @return calc(((100% / #{$grid-columns}) * #{$cols}) - #{$grid-spacing});
+    } @else {
+      @return calc((100% / #{$grid-columns}) * #{$cols});
+    }
+  }
 
-.grid-justify-right {
-  justify-self: right;
-}
+  // Helper classes
+  .grid-align-center {
+    align-items: center;
+  }
 
-.grid-justify-left {
-  justify-self: left;
-}
+  .grid-justify-right {
+    justify-self: right;
+  }
 
-.display-none {
-  display: none !important;
-}
+  .grid-justify-left {
+    justify-self: left;
+  }
 
-.display-block {
-  display: block !important;
-}
-.display-flex {
-  display: flex !important;
-}
+  .display-none {
+    display: none !important;
+  }
 
-.flex-fill {
-  flex: 1 1 auto !important;
-}
+  .display-block {
+    display: block !important;
+  }
+  .display-flex {
+    display: flex !important;
+  }
 
-.flex-row {
-  flex-direction: row !important;
-}
-.flex-column {
-  flex-direction: column !important;
-}
+  .flex-fill {
+    flex: 1 1 auto !important;
+  }
 
-.justify-content-start {
-  justify-content: flex-start !important;
-}
-.justify-content-end {
-  justify-content: flex-end !important;
-}
+  .flex-row {
+    flex-direction: row !important;
+  }
+  .flex-column {
+    flex-direction: column !important;
+  }
 
-.justify-content-center {
-  justify-content: center !important;
-}
+  .justify-content-start {
+    justify-content: flex-start !important;
+  }
+  .justify-content-end {
+    justify-content: flex-end !important;
+  }
 
-.justify-content-between {
-  justify-content: space-between !important;
-}
+  .justify-content-center {
+    justify-content: center !important;
+  }
 
-.justify-content-around {
-  justify-content: space-around !important;
-}
+  .justify-content-between {
+    justify-content: space-between !important;
+  }
 
-.align-items-start {
-  align-items: flex-start !important;
-}
+  .justify-content-around {
+    justify-content: space-around !important;
+  }
 
-.align-items-end {
-  align-items: flex-end !important;
-}
+  .align-items-start {
+    align-items: flex-start !important;
+  }
 
-.align-items-center {
-  align-items: center !important;
-}
+  .align-items-end {
+    align-items: flex-end !important;
+  }
 
-.align-items-baseline {
-  align-items: baseline !important;
-}
+  .align-items-center {
+    align-items: center !important;
+  }
 
-.align-items-stretch {
-  align-items: stretch !important;
-}
+  .align-items-baseline {
+    align-items: baseline !important;
+  }
 
-.align-content-start {
-  align-content: flex-start !important;
-}
+  .align-items-stretch {
+    align-items: stretch !important;
+  }
 
-.align-content-end {
-  align-content: flex-end !important;
-}
+  .align-content-start {
+    align-content: flex-start !important;
+  }
 
-.align-content-center {
-  align-content: center !important;
-}
+  .align-content-end {
+    align-content: flex-end !important;
+  }
 
-.align-content-between {
-  align-content: space-between !important;
-}
+  .align-content-center {
+    align-content: center !important;
+  }
 
-.align-content-around {
-  align-content: space-around !important;
-}
+  .align-content-between {
+    align-content: space-between !important;
+  }
 
-.align-content-stretch {
-  align-content: stretch !important;
-}
+  .align-content-around {
+    align-content: space-around !important;
+  }
 
-.align-self-auto {
-  align-self: auto !important;
-}
+  .align-content-stretch {
+    align-content: stretch !important;
+  }
 
-.align-self-start {
-  align-self: flex-start !important;
-}
+  .align-self-auto {
+    align-self: auto !important;
+  }
 
-.align-self-end {
-  align-self: flex-end !important;
-}
+  .align-self-start {
+    align-self: flex-start !important;
+  }
 
-.align-self-center {
-  align-self: center !important;
-}
+  .align-self-end {
+    align-self: flex-end !important;
+  }
 
-.align-self-baseline {
-  align-self: baseline !important;
-}
+  .align-self-center {
+    align-self: center !important;
+  }
 
-.align-self-stretch {
-  align-self: stretch !important;
-}
+  .align-self-baseline {
+    align-self: baseline !important;
+  }
 
-.margin-1 {
-  margin: 0.25rem !important;
-}
+  .align-self-stretch {
+    align-self: stretch !important;
+  }
 
-.margin-2 {
-  margin: 0.5rem !important;
-}
+  .margin-1 {
+    margin: 0.25rem !important;
+  }
 
-.margin-3 {
-  margin: 1rem !important;
-}
+  .margin-2 {
+    margin: 0.5rem !important;
+  }
 
-.margin-4 {
-  margin: 1.5rem !important;
-}
+  .margin-3 {
+    margin: 1rem !important;
+  }
 
-.margin-5 {
-  margin: 3rem !important;
-}
+  .margin-4 {
+    margin: 1.5rem !important;
+  }
 
-.margin-auto {
-  margin: auto !important;
+  .margin-5 {
+    margin: 3rem !important;
+  }
+
+  .margin-auto {
+    margin: auto !important;
+  }
 }

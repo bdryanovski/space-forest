@@ -1,65 +1,67 @@
-.post {
-  display: inline-block;
-  width: 600px;
-  height: 200px;
-  background-color: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-  border-radius: 0.2rem;
-}
-
-.post .post-place {
-  background-color: #f2f2f2;
-  min-height: 4px;
-  min-width: 4px;
-  border-radius: 3px;
-  animation-name: AnimPlace;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes AnimPlace {
-  0% {
-    opacity: 1;
+.sp {
+  .post {
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    border-radius: 0.2rem;
   }
-  50% {
-    opacity: 0.5;
+
+  .post .post-place {
+    background-color: #f2f2f2;
+    min-height: 4px;
+    min-width: 4px;
+    border-radius: 3px;
+    animation-name: AnimPlace;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
   }
-  100% {
-    opacity: 1;
+
+  @keyframes AnimPlace {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-}
 
-.post .post-info {
-  display: flex;
-  margin: 20px;
-}
+  .post .post-info {
+    display: flex;
+    margin: 20px;
+  }
 
-.post .post-info .post-img {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
+  .post .post-info .post-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
 
-.post .post-info .post-name {
-  width: 200px;
-  margin-bottom: 10px;
-  height: 20px;
-}
+  .post .post-info .post-name {
+    width: 200px;
+    margin-bottom: 10px;
+    height: 20px;
+  }
 
-.post .post-info .post-time {
-  height: 10px;
-  width: 60px;
-}
+  .post .post-info .post-time {
+    height: 10px;
+    width: 60px;
+  }
 
-.post .post-description {
-  margin: 20px;
-}
+  .post .post-description {
+    margin: 20px;
+  }
 
-.post .post-description .post-text {
-  height: 15px;
-  margin-bottom: 15px;
-}
+  .post .post-description .post-text {
+    height: 15px;
+    margin-bottom: 15px;
+  }
 
-.post .post-description .post-text:last-child {
-  width: 100px;
+  .post .post-description .post-text:last-child {
+    width: 100px;
+  }
 }

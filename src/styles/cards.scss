@@ -1,32 +1,34 @@
-.card {
-  border-radius: 0.35rem;
-  border: 1px solid var(--color-border);
+.sp {
+  .card {
+    border-radius: 0.35rem;
+    border: 1px solid var(--color-border);
 
-  // like h4
-  .card-header {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    line-height: 1.35;
-    padding: 0.75rem 1.25rem;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    // like h4
+    .card-header {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      padding: 0.75rem 1.25rem;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .card-body {
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 1.25rem;
+    }
+
+    .card-line {
+      border: 0.03rem solid #c4c4c4;
+      margin-left: -0.5rem;
+      width: calc(100% + 0.75rem);
+      margin-bottom: 1rem;
+    }
   }
 
-  .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
+  .frame {
+    border-radius: 0.35rem;
+    border: 1px solid var(--color-border);
   }
-
-  .card-line {
-    border: 0.03rem solid #c4c4c4;
-    margin-left: -0.5rem;
-    width: calc(100% + 0.75rem);
-    margin-bottom: 1rem;
-  }
-}
-
-.frame {
-  border-radius: 0.35rem;
-  border: 1px solid var(--color-border);
 }

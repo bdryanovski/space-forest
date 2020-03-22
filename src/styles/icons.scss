@@ -5,35 +5,37 @@
   }
 }
 
-.icon {
-  display: inline-block;
-  margin: 0;
-  vertical-align: middle;
-  @include setIconColor(var(--color-icon-default));
+.sp {
+  .icon {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    @include setIconColor(var(--color-icon-default));
 
-  &.light {
-    @include setIconColor(var(--color-light));
-  }
-  &.primary {
-    @include setIconColor(var(--color-primary));
-  }
-  &.success {
-    @include setIconColor(var(--color-success));
-  }
-  &.info {
-    @include setIconColor(var(--color-info));
-  }
-  &.warning {
-    @include setIconColor(var(--color-warning));
-  }
-  &.danger {
-    @include setIconColor(var(--color-danger));
-  }
+    &.light {
+      @include setIconColor(var(--color-light));
+    }
+    &.primary {
+      @include setIconColor(var(--color-primary));
+    }
+    &.success {
+      @include setIconColor(var(--color-success));
+    }
+    &.info {
+      @include setIconColor(var(--color-info));
+    }
+    &.warning {
+      @include setIconColor(var(--color-warning));
+    }
+    &.danger {
+      @include setIconColor(var(--color-danger));
+    }
 
-  & > svg {
-    transition: inherit;
-    title {
-      display: none;
+    & > svg {
+      transition: inherit;
+      title {
+        display: none;
+      }
     }
   }
 }

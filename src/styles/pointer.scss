@@ -1,7 +1,9 @@
 $pointers: "default", "help", "pointer", "grab";
 
 @each $pointer in $pointers {
-  .pointer-#{pointer} {
-    cursor: #{pointer};
+  .sp {
+    .pointer-#{pointer} {
+      cursor: #{pointer};
+    }
   }
 }

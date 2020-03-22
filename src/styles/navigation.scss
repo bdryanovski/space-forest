@@ -1,75 +1,77 @@
-// https://www.w3schools.com/css/css_navbar.asp
-nav {
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  li {
-    display: block;
-    width: auto;
-    text-decoration: none;
-  }
-
-  li a:hover {
-    text-decoration: underline;
-  }
-
-  .vertical {
+.sp {
+  // https://www.w3schools.com/css/css_navbar.asp
+  nav {
     ul {
-      min-width: 10rem;
-      text-align: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
     }
 
     li {
       display: block;
-      padding: 0.2rem 0rem;
-    }
-  }
-
-  .horizontal {
-    li {
-      display: inline;
-      float: left;
-      text-align: center;
-    }
-
-    li {
-      display: block;
+      width: auto;
       text-decoration: none;
-      padding: 0.5rem 1.75rem;
     }
 
-    .fix-top {
+    li a:hover {
+      text-decoration: underline;
+    }
+
+    .vertical {
       ul {
-        position: fixed;
+        min-width: 10rem;
+        text-align: left;
+      }
+
+      li {
+        display: block;
+        padding: 0.2rem 0rem;
+      }
+    }
+
+    .horizontal {
+      li {
+        display: inline;
+        float: left;
+        text-align: center;
+      }
+
+      li {
+        display: block;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+      }
+
+      .fix-top {
+        ul {
+          position: fixed;
+          top: 0;
+          width: 100%;
+        }
+      }
+
+      .fix-bottom {
+        ul {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+      }
+
+      .sticky {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
         top: 0;
-        width: 100%;
       }
-    }
 
-    .fix-bottom {
-      ul {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+      .active {
+        font-weight: 600;
       }
-    }
 
-    .sticky {
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-    }
-
-    .active {
-      font-weight: 600;
-    }
-
-    .right {
-      float: right;
+      .right {
+        float: right;
+      }
     }
   }
 }
