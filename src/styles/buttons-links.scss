@@ -2,7 +2,6 @@
   .btn {
     border-radius: 0.25rem;
     padding: 5px 10px 5px 10px;
-    //margin-right: 0.5rem;
 
     display: inline-block;
     font-weight: 400;
@@ -18,22 +17,38 @@
 
     &.primary {
       color: $color-white;
+      border-color: $color-primary;
       background-color: $color-primary;
     }
 
     &.success {
       color: $color-white;
+      border-color: $color-success;
       background-color: $color-success;
     }
 
     &.warning {
       color: $color-white;
+      border-color: $color-warning;
       background-color: $color-warning;
     }
 
     &.danger {
       color: $color-white;
+      border-color: $color-danger;
       background-color: $color-danger;
+    }
+
+    &.link {
+      background-color: transparent;
+      color: $color-link;
+      box-shadow: none;
+      border: none;
+    }
+
+    &.outline {
+      color: $color-link;
+      background-color: transparent;
     }
   }
 

@@ -1,4 +1,5 @@
 @mixin form_styles {
+  height: 2rem;
   color: var(--input-color);
   border: 1px solid var(--input-border);
   background: var(--input-background);
@@ -15,52 +16,10 @@
 .sp {
   .form-row {
     position: relative;
-    display: flex;
+    display: block;
     width: 100%;
     margin: 0 0 1rem 0;
-
-    & > span,
-    input {
-      white-space: nowrap;
-      display: block;
-      &:not(:first-child):not(:last-child) {
-        border-radius: 0;
-      }
-      &:first-child {
-        border-radius: 0.2rem 0 0 0.2rem;
-      }
-      &:last-child {
-        border-radius: 0 0.2rem 0.2rem 0;
-      }
-      &:not(:first-child) {
-        margin-left: -1px;
-      }
-    }
-
-    input {
-      position: relative;
-      z-index: 1;
-      flex: 1 1 auto;
-      width: 1%;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    & > span {
-      text-align: center;
-      padding: 0px 12px;
-      line-height: 1.75rem;
-      color: var(--group-color);
-      background: var(--group-background);
-      border: 1px solid var(--group-border);
-      transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
-    }
-    &:focus-within {
-      & > span {
-        color: var(--group-color-focus);
-        background: var(--group-background-focus);
-        border-color: var(--group-border-focus);
-      }
-    }
+    line-height: 2rem;
 
     input {
       display: block;
@@ -78,28 +37,85 @@
       display: block;
       border-radius: 0.2rem;
       padding: 0.5rem;
+      height: auto !important;
       @include form_styles();
+    }
+
+    select {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      line-height: 2rem;
+      height: 2rem;
+      @include form_styles();
+    }
+
+    select[multiple] {
+      height: auto !important;
     }
 
     label {
       display: block;
       padding-right: 1rem;
-      line-height: 2rem;
       font-weight: 500;
     }
 
     .input-helper-text {
       display: block;
-      padding-left: 1rem;
+      padding-left: 0rem;
       color: #c6c6c6;
       flex-basis: 100%;
     }
 
     .input-error-text {
       display: block;
-      padding-left: 1rem;
+      padding-left: 0rem;
       color: red;
       flex-basis: 100%;
+    }
+
+    .form-group {
+      display: flex;
+      height: 2rem;
+      input {
+        &:last-child {
+          border-radius: 0 0.2rem 0.2rem 0;
+        }
+
+        &:first-child {
+          border-radius: 0.2rem 0 0 0.2rem;
+        }
+      }
+
+      .form-input-addon:last-child {
+        border-radius: 0 0.2rem 0.2rem 0;
+      }
+
+      .form-input-addon:first-child {
+        border-radius: 0.2rem 0 0 0.2rem;
+      }
+    }
+
+    .form-input-addon {
+      align-items: center;
+      line-height: 2rem;
+      background-color: #c4c4c4;
+      font-size: 0.75rem;
+      padding: 0rem 0.5rem;
+    }
+
+    &.form-horizontal {
+      display: flex;
+      label {
+        display: inline-block;
+      }
+
+      .input-helper-text {
+        padding-left: 1rem;
+      }
+      .input-error-text {
+        padding-left: 1rem;
+      }
     }
   }
 }

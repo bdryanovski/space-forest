@@ -4,6 +4,35 @@ title: Forms
 
 ## Basic
 
+Unstyled input.
+
+```html live
+<div class="sp">
+  <form>
+    <input  placeholder="Random input inside form" />
+  </form>
+
+  <input placeholder="Stand alone input ..."/>
+
+  <textarea placeholder="Write message ..." cols="100" rows="5"></textarea>
+
+  <select id="option">
+    <option>One</option>
+    <option>Two</option>
+  </select>
+
+  <br />
+
+  <select multiple id="option">
+    <option>One</option>
+    <option>Two</option>
+  </select>
+
+</div>
+```
+
+All styles are attached to the `.form-row` class.
+
 ```html live
 <div class="sp">
   <form>
@@ -28,10 +57,29 @@ title: Forms
 </div>
 ```
 
+```html live
+<div class="sp">
+  <div class="form-row form-horizontal">
+    <label htmlFor="username">Username</label>
+    <input id="username" placeholder="Enter username" />
+  </div>
+</div>
+```
+
 ## With helper text
 ```html live
 <div class="sp">
   <div class="form-row">
+    <label htmlFor="monkey">Monkey</label>
+    <input id="monkey" placeholder="Enter monkey name" />
+    <div class="input-helper-text">Short name for that monkey!</div>
+  </div>
+</div>
+```
+
+```html live
+<div class="sp">
+  <div class="form-row form-horizontal">
     <label htmlFor="monkey">Monkey</label>
     <input id="monkey" placeholder="Enter monkey name" />
     <div class="input-helper-text">Short name for that monkey!</div>
@@ -60,8 +108,10 @@ title: Forms
 <div class="sp">
   <div class="form-row">
     <label htmlFor="website">Url</label>
-    <span>http://</span>
-    <input id="website" placeholder="Enter website address" />
+    <div class="form-group">
+      <span class="form-input-addon">http://</span>
+      <input id="website" placeholder="Enter website address" />
+    </div>
   </div>
 </div>
 ```
@@ -71,8 +121,10 @@ title: Forms
 <div class="sp">
   <div class="form-row">
     <label htmlFor="google-account">Register</label>
-    <input id="google-acount" placeholder="Google account" />
-    <span>@gmail.com</span>
+    <div class="form-group">
+      <input id="google-acount" placeholder="Google account" />
+      <span class="form-input-addon">@gmail.com</span>
+    </div>
   </div>
 </div>
 ```
@@ -94,6 +146,20 @@ title: Forms
   <div class="form-row">
     <label htmlFor="option">Select one of two option</label>
     <select id="option">
+      <option>One</option>
+      <option>Two</option>
+    </select>
+  </div>
+</div>
+```
+
+Multiselect
+
+```html live
+<div class="sp">
+  <div class="form-row">
+    <label htmlFor="option">Select one of two option</label>
+    <select multiple id="option">
       <option>One</option>
       <option>Two</option>
     </select>
