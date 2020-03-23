@@ -5,7 +5,7 @@ module.exports = {
       {
         'type': 'link',
         'label': 'Changelog',
-        'href': '/documentation/changelog'
+        'href': '/documentation/changelog',
       }
     ],
     Features: ['not-ready'],
@@ -15,11 +15,12 @@ module.exports = {
       'styles/typography',
       'styles/grid',
       'styles/buttons',
-      'styles/forms'
+      'styles/forms',
+      'styles/cards',
     ],
     Components: [
       'components/buttons',
-      'components/inputs'
+      'components/inputs',
     ],
 
   },

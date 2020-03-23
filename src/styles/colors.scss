@@ -1,0 +1,168 @@
+// https://sass-lang.com/documentation/at-rules/control/each
+// https://sass-lang.com/documentation/at-rules/mixin
+// https://dev.to/meduzen/write-css-variables-faster-in-scss-1mon
+// https://www.sitepoint.com/using-sass-build-color-palettes/
+// https://javisperez.github.io/tailwindcolorshades/#/?cyprus=0a4043&shark=202020&toledo=430a24&scooter=2bbbd6&earls-green=d0bb2b&malachite=32c849&Flush%20Mahogany=d34344&tv=1
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #202020;
+
+  --color-gray-light: #d0d0d0;
+  --color-gray: #bdbebe;
+  --color-gray-dark: #969696;
+  --color-gray-100: #f8f9f9;
+  --color-gray-200: #efefef;
+  --color-gray-300: #e5e5e5;
+  --color-gray-400: #d1d2d2;
+  --color-gray-500: #bdbebe;
+  --color-gray-600: #aaabab;
+  --color-gray-700: #717272;
+  --color-gray-800: #555656;
+  --color-gray-900: #393939;
+
+  --color-brand-light: #c0cccc;
+  --color-brand: #0a4043;
+  --color-brand-dark: #0f2324;
+  --color-brand-100: #e7ecec;
+  --color-brand-200: #c2cfd0;
+  --color-brand-300: #9db3b4;
+  --color-brand-400: #54797b;
+  --color-brand-500: #0a4043;
+  --color-brand-600: #093a3c;
+  --color-brand-700: #062628;
+  --color-brand-800: #051d1e;
+  --color-brand-900: #031314;
+
+  --color-cta-light: #cfbdc2;
+  --color-cta: #430a24;
+  --color-cta-dark: #250c16;
+  --color-cta-100: #ece7e9;
+  --color-cta-200: #d0c2c8;
+  --color-cta-300: #b49da7;
+  --color-cta-400: #7b5466;
+  --color-cta-500: #430a24;
+  --color-cta-600: #3c0920;
+  --color-cta-700: #280616;
+  --color-cta-800: #1e0510;
+  --color-cta-900: #14030b;
+
+  --color-info-light: #d5eef5;
+  --color-info: #2bbbd6;
+  --color-info-dark: #245965;
+  --color-info-100: #eaf8fb;
+  --color-info-200: #caeef5;
+  --color-info-300: #aae4ef;
+  --color-info-400: #6bcfe2;
+  --color-info-500: #2bbbd6;
+  --color-info-600: #27a8c1;
+  --color-info-700: #1a7080;
+  --color-info-800: #135460;
+  --color-info-900: #0d3840;
+
+  --color-warning-light: #f8edcc;
+  --color-warning: #d0bb2b;
+  --color-warning-dark: #64591e;
+  --color-warning-100: #faf8ea;
+  --color-warning-200: #f3eeca;
+  --color-warning-300: #ece4aa;
+  --color-warning-400: #decf6b;
+  --color-warning-500: #d0bb2b;
+  --color-warning-600: #bba827;
+  --color-warning-700: #7d701a;
+  --color-warning-800: #5e5413;
+  --color-warning-900: #3e380d;
+
+  --color-success-light: #d4f3d1;
+  --color-success: #32c849;
+  --color-success-dark: #256028;
+  --color-success-100: #ebfaed;
+  --color-success-200: #ccf1d2;
+  --color-success-300: #ade9b6;
+  --color-success-400: #70d980;
+  --color-success-500: #32c849;
+  --color-success-600: #2db442;
+  --color-success-700: #1e782c;
+  --color-success-800: #175a21;
+  --color-success-900: #0f3c16;
+
+  --color-danger-light: #fcd1cd;
+  --color-danger: #d34344;
+  --color-danger-dark: #662725;
+  --color-danger-100: #fbecec;
+  --color-danger-200: #f4d0d0;
+  --color-danger-300: #edb4b4;
+  --color-danger-400: #e07b7c;
+  --color-danger-500: #d34344;
+  --color-danger-600: #be3c3d;
+  --color-danger-700: #7f2829;
+  --color-danger-800: #5f1e1f;
+  --color-danger-900: #3f1414;
+}
+
+@function v($var, $fallback: null) {
+  @if ($fallback) {
+    @return var(--#{$var}, #{$fallback});
+  } @else {
+    @return var(--#{$var});
+  }
+}
+
+@mixin create-color-classes($name) {
+  $grade: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+  // color
+  .color-#{$name}-light {
+    color: var(--color-#{$name}-light);
+  }
+  .color-#{$name} {
+    color: var(--color-#{$name});
+  }
+  .color-#{$name}-dark {
+    color: var(--color-#{$name}-dark);
+  }
+  @each $g in $grade {
+    .color-#{$name}-#{$g} {
+      color: var(--color-#{$name}-#{$g});
+    }
+  }
+  // background
+  .color-#{$name}-bg-light {
+    background-color: var(--color-#{$name}-light);
+  }
+  .color-#{$name}-bg {
+    background-color: var(--color-#{$name});
+  }
+  .color-#{$name}-bg-dark {
+    background-color: var(--color-#{$name}-dark);
+  }
+  @each $g in $grade {
+    .color-#{$name}-bg-#{$g} {
+      background-color: var(--color-#{$name}-#{$g});
+    }
+  }
+}
+
+.sp {
+  .color-white {
+    color: var(--color-white);
+  }
+  .color-white-bg {
+    background-color: var(--color-white);
+  }
+
+  .color-black {
+    color: var(--color-black);
+  }
+  .color-black-bg {
+    background-color: var(--color-black);
+  }
+
+  @include create-color-classes("gray");
+  @include create-color-classes("brand");
+  @include create-color-classes("cta");
+  @include create-color-classes("info");
+  @include create-color-classes("success");
+  @include create-color-classes("warning");
+  @include create-color-classes("danger");
+}
