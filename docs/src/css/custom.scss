@@ -30,14 +30,17 @@
 /* Demo */
 .demo-column {
   display: block;
-  background-color: hsl(327, 100%, 30%);
-  border-radius: 6px;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 0.3rem;
   text-align: center;
-  text-transform: uppercase;
-  padding: 5px 0px 5px 0px;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 10px;
   color: white;
+}
+
+.prism-code {
+  border-radius: 0.4rem;
+}
+
+.playgroundEditorHeader_node_modules-\@docusaurus-theme-live-codeblock-src-theme-Playground- {
+  border-radius: 0.4rem 0.4rem 0 0;
 }

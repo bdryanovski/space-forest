@@ -113,7 +113,8 @@
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit --amend && npm version minor",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit --amend && npm version patch",
     "predeploy": "npm run build:website",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "docs": "cd $(pwd)/docs; npm start"
   },
   "browserslist": {
     "production": [

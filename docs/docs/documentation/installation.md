@@ -5,6 +5,9 @@ sidebar_label: Installation
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { PackageVersion, PackageName } from '../../src/components/package-version.js';
+
+Current package version is <code><PackageName/>@<PackageVersion /></code>
 
 <Tabs
   defaultValue="npm"

@@ -11,6 +11,7 @@ module.exports = {
     Features: ['not-ready'],
     Styles: [
       'styles/intro',
+      'styles/colors',
       'styles/typography',
       'styles/grid',
       'styles/buttons',

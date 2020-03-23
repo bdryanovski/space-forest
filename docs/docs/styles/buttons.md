@@ -5,7 +5,12 @@ title: Buttons
 
 ## Default styles
 
-Buttons and links without additional classes
+Native styles
+<button>Login Button</button>
+<br />
+<a href="#">Link</a>
+
+Button and link without additional classes inside `.sp`
 
 <div className="sp">
   <button>Login Button</button>

@@ -1,0 +1,5 @@
+---
+title: Colors
+---
+
+## Basic colors
