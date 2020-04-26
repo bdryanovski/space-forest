@@ -7,12 +7,10 @@ import Navigation from './react-components/navigation'
 import NavigationItem from './react-components/navigation-item'
 import ThemeSwitcher from './react-components/theme/theme-switcher'
 
-import Home from './screens/home.js'
 import GettingStarted from './screens/getting-started'
 import Documentation from './screens/documentation'
 import LinksButtonsDemo from './screens/documentation/links-buttons'
 import IconsDemo from './screens/documentation/icons'
-import CardsDemo from './screens/documentation/cards'
 import ArticlesDemo from './screens/documentation/article'
 import HeaderFooter from './screens/documentation/header-and-footer'
 import Pagination from './screens/documentation/pagination'
@@ -27,11 +25,9 @@ import AlertDocs from './screens/documentation/alerts-docs'
 import UIDemo from './screens/documentation/ui/ui-docs'
 
 export const routes = [
-  {name: 'Home', path: '/', exact: true, component: Home},
-  {name: 'ghPage', path: '/space-forest/', exact: true, component: Home, hide: true},
   {
     name: 'Documentation',
-    path: '/documentation',
+    path: '/',
     component: Documentation,
     routes: [
       {
@@ -52,7 +48,6 @@ export const routes = [
       {name: 'Alerts', path: '/documentation/alerts', component: AlertDocs },
       {name: 'Editor', path: '/documentation/editor', component: EditorDemo },
       {name: 'Icons', path: '/documentation/icons', component: IconsDemo},
-      {name: 'Cards', path: '/documentation/cards', component: CardsDemo},
       {name: 'Article', path: '/documentation/article', component: ArticlesDemo},
       {name: 'Tables', path: '/documentation/tables', component: TableDocs },
       {name: 'Header & Footer', path: '/documentation/header-and-footer', component: HeaderFooter},

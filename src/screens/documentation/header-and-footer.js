@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import {Navigation, NavigationItem, Footer} from '../../react-components'
+import {Navigation, NavigationItem} from '../../react-components'
 import DemoPlayground from '../../react-components/playground/demo-playground'
 import Code from '../components/code'
 
 const NAV_SCOPE = {Navigation, NavigationItem}
-const FOOTER_SCOPE = {Footer}
+const FOOTER_SCOPE = {}
 
 const NAV_HORIZONTAL = `
 <Navigation>
@@ -25,7 +25,7 @@ const NAV_VERTICAL = `
   <NavigationItem><a>Categories</a></NavigationItem>
 </Navigation>
 `
-const FOOTER = '<Footer>Copyright { (new Date().getFullYear()) }</Footer>'
+const FOOTER = '<div className="footer">Copyright { (new Date().getFullYear()) }</div>'
 
 export default class HeaderFooter extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Modal, Article} from '../../react-components'
+import {Modal} from '../../react-components'
 
 import DemoPlayground from '../../react-components/playground/demo-playground'
 
@@ -19,7 +19,7 @@ const MODAL_DEMO_2 = `
 <>
   <a href="#open-modal-2">Open Article inside a modal</a>
   <Modal name="open-modal-2">
-    <Article>
+    <div>
       <h1>Nulla varius, augue a ornare feugiat</h1>
 
       <p>
@@ -128,11 +128,11 @@ const MODAL_DEMO_2 = `
         Cras aliquam felis in dapibus scelerisque.
       </p>
 
-    </Article>
+    </div>
   </Modal>
 </>
 `
-const MODAL_SCOPE = {Modal, Article}
+const MODAL_SCOPE = {Modal}
 
 export default class ModalDemo extends Component {
   render() {
