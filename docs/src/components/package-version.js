@@ -1,10 +1,10 @@
 import React from 'react'
-import PKG from './../package'
+import PKG from './../../../package.json'
 
 export function PackageVersion() {
-  return (<span>{PKG.getVersion()}</span>)
+  return (<span>{PKG.version}</span>)
 }
 
 export function PackageName() {
-  return (<span>{PKG.getName()}</span>)
+  return (<span>{PKG.name}</span>)
 }

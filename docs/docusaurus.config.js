@@ -1,4 +1,4 @@
-var PKG = require('./src/package')
+var PKG = require('./../package.json')
 
 module.exports = {
   title: 'SpaceForest',
@@ -75,7 +75,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} SpaceForest.  v${PKG.getVersion()}`,
+      copyright: `Copyright © ${new Date().getFullYear()} SpaceForest.  v${PKG.version}`,
     },
   },
   presets: [
