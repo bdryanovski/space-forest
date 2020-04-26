@@ -3,7 +3,29 @@
 
 Need to write something here!
 
+#### Build React components
 
+```bash
+npm run compile:components
+```
+
+#### Build Styles
+
+```bash
+npm run compile:styles
+```
+
+#### Create Production Package
+
+```bash
+npm run compile
+```
+
+#### Generate and run Documentation
+
+```bash
+npm run docs
+```
 
 # Release
 

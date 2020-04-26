@@ -55,7 +55,6 @@
     "eslint-plugin-react": "7.16.0",
     "file-loader": "4.3.0",
     "fs-extra": "8.1.0",
-    "generate-changelog": "^1.8.0",
     "gh-pages": "^2.2.0",
     "hookrouter": "1.2.3",
     "html-webpack-plugin": "4.0.0-beta.5",
@@ -67,6 +66,7 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "lint-staged": "9.5.0",
+    "logchanges": "^1.0.2",
     "mini-css-extract-plugin": "0.8.0",
     "node-sass": "4.13.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
@@ -102,19 +102,21 @@
     "build": "node scripts/build.js;",
     "test": "node scripts/test.js",
     "test:prebuild": "jest --",
+    "precompile": "npm run test:prebuild",
+    "compile": "npm run compile:components && npm run compile:styles",
+    "compile:components": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "compile:styles": "sass ./src/styles/index.scss ./dist/style.css",
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint --fix ./src/**/*.js",
-    "build:website": "npm run build",
-    "preversion": "npm run transpile & npm run compile:styles",
-    "transpile": "NODE_ENV=production babel src/react-components -d dist --copy-files",
-    "prepublishOnly": "npm run transpile",
-    "release:major": "changelog -M && git add CHANGELOG.md && git commit --amend && npm version major",
-    "release:minor": "changelog -m && git add CHANGELOG.md && git commit --amend && npm version minor",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit --amend && npm version patch",
-    "predeploy": "npm run build:website",
-    "deploy": "gh-pages -d build",
-    "docs": "cd $(pwd)/docs; npm start"
+    "docs": "cd $(pwd)/docs; npm start",
+    "changelog": "npm run changelog:markdown && npm run changelog:json",
+    "changelog:markdown": "logchanges",
+    "changelog:json": "logchanges --format=json --nobody --output=./docs",
+    "preversion": "npm run compile && npm run changelog && git add CHANGELOG.md && git commit -s -S -m 'chore: update CHANGELOG.md'"
+  },
+  "changelog": {
+    "nobody": true,
+    "allowUnknown": true
   },
   "browserslist": {
     "production": [

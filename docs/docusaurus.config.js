@@ -3,7 +3,7 @@ var PKG = require('./src/package')
 module.exports = {
   title: 'SpaceForest',
   tagline: 'Static Styles and React components',
-  url: 'https://bdryanovski.github.io/space-forest',
+  url: 'https://space-forest.netlify.app',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'bdryanovski', // Usually your GitHub org/user name.
