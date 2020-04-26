@@ -7,15 +7,19 @@ title: Colors
 There this basic colors from witch all other colors will be bild.
 
 <div class="sp">
-  <div class="grid-auto-cols">
-    <div class="color-box color-white-bg color-black">White</div>
-    <div class="color-box color-black-bg color-white">Black</div>
-    <div class="color-box color-gray-bg">Gray</div>
-    <div class="color-box color-brand-bg">Brand</div>
-    <div class="color-box color-cta-bg">CTA</div>
-    <div class="color-box color-info-bg">Info</div>
-    <div class="color-box color-warning-bg">Warning</div>
-    <div class="color-box color-danger-bg">Danger</div>
+  <div class="container">
+    <div class="row">
+      <div class="color-box color-white-bg color-black">White</div>
+      <div class="color-box color-black-bg color-white">Black</div>
+      <div class="color-box color-gray-bg">Gray</div>
+      <div class="color-box color-brand-bg">Brand</div>
+    </div>
+    <div class="row">
+      <div class="color-box color-cta-bg">CTA</div>
+      <div class="color-box color-info-bg">Info</div>
+      <div class="color-box color-warning-bg">Warning</div>
+      <div class="color-box color-danger-bg">Danger</div>
+    </div>
   </div>
 </div>
 

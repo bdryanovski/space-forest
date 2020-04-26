@@ -7,7 +7,10 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
   font-weight: 400;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   color: var(--color-text);
-  background-color: var(--color-body-background);
+
+  .bg-color {
+    background-color: var(--color-body-background);
+  }
 
   h1,
   .h1,
