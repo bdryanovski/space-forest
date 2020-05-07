@@ -1,83 +1,82 @@
 .sp {
   .btn {
     border-radius: 0.25rem;
-    padding: 5px 10px 5px 10px;
 
     display: inline-block;
     font-weight: 400;
     text-align: center;
     vertical-align: center;
     font-size: 1rem;
-    line-height: 1.5;
-    padding: 0.375rem 0.75rem;
+    line-height: 1.5rem;
+    padding: 0.15rem 0.5rem;
     cursor: pointer;
-    color: $color-white;
+    color: var(--btn-text-normal);
 
-    background-color: $color-light;
+    background-color: var(--btn-bg-normal);
 
     &.primary {
-      color: $color-white;
-      border-color: $color-primary;
-      background-color: $color-primary;
+      color: var(--btn-text-primary);
+      border-color: var(--btn-border-primary);
+      background-color: var(--btn-bg-primary);
     }
 
     &.success {
-      color: $color-white;
-      border-color: $color-success;
-      background-color: $color-success;
+      color: var(--btn-text-success);
+      border-color: var(--btn-border-success);
+      background-color: var(--btn-bg-success);
     }
 
     &.warning {
-      color: $color-white;
-      border-color: $color-warning;
-      background-color: $color-warning;
+      color: var(--btn-text-warning);
+      border-color: var(--btn-border-warning);
+      background-color: var(--btn-bg-warning);
     }
 
     &.danger {
-      color: $color-white;
-      border-color: $color-danger;
-      background-color: $color-danger;
+      color: var(--btn-text-danger);
+      border-color: var(--btn-border-danger);
+      background-color: var(--btn-bg-danger);
     }
 
     &.link {
-      background-color: transparent;
-      color: $color-link;
+      background-color: var(--btn-bg-link);
+      color: var(--btn-text-link);
       box-shadow: none;
       border: none;
     }
 
     &.outline {
-      color: $color-link;
-      background-color: transparent;
+      color: var(--btn-text-outline);
+      background-color: var(--btn-bg-outline);
     }
   }
 
   a:hover {
-    color: $color-link-hover;
+    color: var(--btn-hover-normal);
   }
 
   a {
-    color: $color-link;
+    color: var(--btn-text-normal);
     text-decoration: none;
 
     &.primary {
-      color: $color-primary;
+      color: var(--btn-text-primary);
     }
 
     &.success {
-      color: $color-success;
+      color: var(--btn-text-success);
     }
 
     &.warning {
-      color: $color-warning;
+      color: var(--btn-text-warning);
     }
 
     &.danger {
-      color: $color-danger;
+      color: var(--btn-text-danger);
     }
   }
 
   a.active {
-    color: $color-success;
+    color: var(--btn-active-normal);
   }
 }

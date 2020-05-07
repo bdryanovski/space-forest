@@ -1,23 +1,141 @@
-// Colors https://clrs.cc/
-$color-white: hsl(0, 0%, 100%);
-$color-black: hsl(0, 0%, 4%);
+:root {
+  --color-white: #ffffff;
+  --color-black: #202020;
+  --color-transparent: transparent;
 
-$color-light: #dddddd;
-$color-dark: hsl(0, 0%, 21%);
-$color-gray: #aaaaaa;
+  --color-gray-light: #d0d0d0;
+  --color-gray: #bdbebe;
+  --color-gray-dark: #969696;
+  --color-gray-100: #f8f9f9;
+  --color-gray-200: #efefef;
+  --color-gray-300: #e5e5e5;
+  --color-gray-400: #d1d2d2;
+  --color-gray-500: #bdbebe;
+  --color-gray-600: #aaabab;
+  --color-gray-700: #717272;
+  --color-gray-800: #555656;
+  --color-gray-900: #393939;
 
-$color-primary: #001f3f;
-$color-info: #7fdbff;
-$color-success: #2ecc40;
-$color-warning: #ffdc00;
-$color-danger: #85144b;
+  --color-brand-light: #c0cccc;
+  --color-brand: #0a4043;
+  --color-brand-dark: #0f2324;
+  --color-brand-100: #e7ecec;
+  --color-brand-200: #c2cfd0;
+  --color-brand-300: #9db3b4;
+  --color-brand-400: #54797b;
+  --color-brand-500: #0a4043;
+  --color-brand-600: #093a3c;
+  --color-brand-700: #062628;
+  --color-brand-800: #051d1e;
+  --color-brand-900: #031314;
 
-// LINKs
-$color-link: #0074d9;
-$color-link-hover: #39cccc;
-$color-link-active: #3d9970;
+  --color-cta-light: #cfbdc2;
+  --color-cta: #430a24;
+  --color-cta-dark: #250c16;
+  --color-cta-100: #ece7e9;
+  --color-cta-200: #d0c2c8;
+  --color-cta-300: #b49da7;
+  --color-cta-400: #7b5466;
+  --color-cta-500: #430a24;
+  --color-cta-600: #3c0920;
+  --color-cta-700: #280616;
+  --color-cta-800: #1e0510;
+  --color-cta-900: #14030b;
 
-// Cards
-$color-border: $color-gray;
+  --color-info-light: #d5eef5;
+  --color-info: #2bbbd6;
+  --color-info-dark: #245965;
+  --color-info-100: #eaf8fb;
+  --color-info-200: #caeef5;
+  --color-info-300: #aae4ef;
+  --color-info-400: #6bcfe2;
+  --color-info-500: #2bbbd6;
+  --color-info-600: #27a8c1;
+  --color-info-700: #1a7080;
+  --color-info-800: #135460;
+  --color-info-900: #0d3840;
 
-// forms
+  --color-warning-light: #f8edcc;
+  --color-warning: #d0bb2b;
+  --color-warning-dark: #64591e;
+  --color-warning-100: #faf8ea;
+  --color-warning-200: #f3eeca;
+  --color-warning-300: #ece4aa;
+  --color-warning-400: #decf6b;
+  --color-warning-500: #d0bb2b;
+  --color-warning-600: #bba827;
+  --color-warning-700: #7d701a;
+  --color-warning-800: #5e5413;
+  --color-warning-900: #3e380d;
+
+  --color-success-light: #d4f3d1;
+  --color-success: #32c849;
+  --color-success-dark: #256028;
+  --color-success-100: #ebfaed;
+  --color-success-200: #ccf1d2;
+  --color-success-300: #ade9b6;
+  --color-success-400: #70d980;
+  --color-success-500: #32c849;
+  --color-success-600: #2db442;
+  --color-success-700: #1e782c;
+  --color-success-800: #175a21;
+  --color-success-900: #0f3c16;
+
+  --color-danger-light: #fcd1cd;
+  --color-danger: #d34344;
+  --color-danger-dark: #662725;
+  --color-danger-100: #fbecec;
+  --color-danger-200: #f4d0d0;
+  --color-danger-300: #edb4b4;
+  --color-danger-400: #e07b7c;
+  --color-danger-500: #d34344;
+  --color-danger-600: #be3c3d;
+  --color-danger-700: #7f2829;
+  --color-danger-800: #5f1e1f;
+  --color-danger-900: #3f1414;
+
+  --default-color-text: var(--color-gray-800);
+  --kbd-text-color: var(--color-gray-light);
+  --kbd-bg-color: var(--color-black);
+
+  // BTN
+  --btn-text-normal: var(--color-white);
+  --btn-bg-normal: var(--color-brand-600);
+  --btn-hover-normal: var(--color-brand-700);
+  --btn-active-normal: var(--color-brand-800);
+
+  // Primary
+  --btn-text-primary: var(--color-gray-300);
+  --btn-bg-primary: var(--color-brand-600);
+  --btn-border-primary: var(--color-brand-800);
+
+  --btn-text-success: var(--color-gray-300);
+  --btn-bg-success: var(--color-success-600);
+  --btn-border-success: var(--color-success-800);
+
+  --btn-text-warning: var(--color-gray-300);
+  --btn-bg-warning: var(--color-warning-600);
+  --btn-border-warning: var(--color-warning-800);
+
+  --btn-text-danger: var(--color-gray-300);
+  --btn-bg-danger: var(--color-danger-600);
+  --btn-border-danger: var(--color-danger-800);
+
+  --btn-text-link: var(--color-gray-800);
+  --btn-bg-link: var(--color-transparent);
+
+  --btn-text-outline: var(--color-gray-900);
+  --btn-bg-outline: var(--color-transparent);
+
+  // Forms
+  --form-text-color: var(--color-gray-900);
+  --form-border-color: var(--color-gray-500);
+  --form-bg-color: var(--color-transparent);
+  --form-placeholder-color: var(--color-gray-300);
+  --form-border-focus-color: var(--color-gray-800);
+  --form-helper-text-color: var(--color-gray-600);
+  --form-label-color: var(--color-gray-800);
+  --form-addon-text-color: var(--color-gray-900);
+
+  --form-error-text-color: var(--color-danger-600);
+}

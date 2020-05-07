@@ -1,15 +1,15 @@
 @mixin form_styles {
   height: 2rem;
-  color: var(--input-color);
-  border: 1px solid var(--input-border);
-  background: var(--input-background);
+  color: var(--form-text-color);
+  border: 1px solid var(--form-border-color);
+  background: var(--form-bg-color);
   transition: border 0.3s ease;
   &::placeholder {
-    color: var(--input-placeholder);
+    color: var(--form-placeholder-color);
   }
   &:focus {
     outline: none;
-    border-color: var(--input-border-focus);
+    border-color: var(--form-border-focus-color);
   }
 }
 
@@ -55,6 +55,7 @@
     }
 
     label {
+      color: var(--form-label-color);
       display: block;
       padding-right: 1rem;
       font-weight: 500;
@@ -63,14 +64,14 @@
     .input-helper-text {
       display: block;
       padding-left: 0rem;
-      color: #c6c6c6;
+      color: var(--form-helper-text-color);
       flex-basis: 100%;
     }
 
     .input-error-text {
       display: block;
       padding-left: 0rem;
-      color: red;
+      color: var(--form-error-text-color);
       flex-basis: 100%;
     }
 
@@ -87,12 +88,15 @@
         }
       }
 
-      .form-input-addon:last-child {
-        border-radius: 0 0.2rem 0.2rem 0;
-      }
+      .form-input-addon {
+        color: var(--form-addon-text-color);
 
-      .form-input-addon:first-child {
-        border-radius: 0.2rem 0 0 0.2rem;
+        &:first-child {
+          border-radius: 0.2rem 0 0 0.2rem;
+        }
+        &:last-child {
+          border-radius: 0 0.2rem 0.2rem 0;
+        }
       }
     }
 

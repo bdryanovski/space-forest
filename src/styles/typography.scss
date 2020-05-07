@@ -6,11 +6,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
   line-height: 1.6;
   font-weight: 400;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
-  color: var(--color-text);
-
-  .bg-color {
-    background-color: var(--color-body-background);
-  }
+  color: var(--default-color-text);
 
   h1,
   .h1,
@@ -71,8 +67,8 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
   kbd {
     padding: 0.2rem 0.4rem;
     font-size: 87.5%;
-    color: #fff;
-    background-color: #212529;
+    color: var(--kbd-text-color);
+    background-color: var(--kbd-bg-color);
     border-radius: 0.2rem;
   }
 }

@@ -4,15 +4,12 @@
 @import "./colors.scss";
 
 // Themes
-@import "./theme-light.scss";
 @import "./theme-dark.scss";
 
 @import "./typography.scss";
-
-// @import "./grid.scss";
-@import "./grid2.scss";
-
+@import "./grid.scss";
 @import "./buttons-links.scss";
+
 @import "./cards.scss";
 @import "./navigation.scss";
 @import "./pagination.scss";
