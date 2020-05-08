@@ -12,6 +12,7 @@ module.exports = {
     Styles: [
       'styles/intro',
       'styles/colors',
+      'styles/spaces',
       'styles/typography',
       'styles/grid',
       'styles/buttons',

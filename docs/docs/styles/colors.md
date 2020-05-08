@@ -13,9 +13,10 @@ There this basic colors from witch all other colors will be bild.
       <div class="color-box color-black-bg color-white">Black</div>
       <div class="color-box color-gray-bg">Gray</div>
       <div class="color-box color-brand-bg">Brand</div>
+      <div class="color-box color-cta-bg">CTA</div>
     </div>
     <div class="row">
-      <div class="color-box color-cta-bg">CTA</div>
+      <div class="color-box color-success-bg">Success</div>
       <div class="color-box color-info-bg">Info</div>
       <div class="color-box color-warning-bg">Warning</div>
       <div class="color-box color-danger-bg">Danger</div>
@@ -97,6 +98,25 @@ Color are bild in this pattern
     <div class="color-scale color-cta-bg-900">900</div>
     <div class="color-scale color-cta-bg-light">light</div>
     <div class="color-scale color-cta-bg-dark">dark</div>
+  </div>
+</div>
+
+### Success
+
+<div class="sp">
+  <div class="color-scale-wrapper">
+    <div class="color-scale color-success-bg">Color</div>
+    <div class="color-scale color-success-bg-100">100</div>
+    <div class="color-scale color-success-bg-200">200</div>
+    <div class="color-scale color-success-bg-300">300</div>
+    <div class="color-scale color-success-bg-400">400</div>
+    <div class="color-scale color-success-bg-500">500</div>
+    <div class="color-scale color-success-bg-600">600</div>
+    <div class="color-scale color-success-bg-700">700</div>
+    <div class="color-scale color-success-bg-800">800</div>
+    <div class="color-scale color-success-bg-900">900</div>
+    <div class="color-scale color-success-bg-light">light</div>
+    <div class="color-scale color-success-bg-dark">dark</div>
   </div>
 </div>
 
