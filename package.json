@@ -1,6 +1,6 @@
 {
   "name": "spaceforestbeta",
-  "version": "0.1.27",
+  "version": "1.0.0",
   "main": "./dist/index.js",
   "author": {
     "name": "Bozhidar Dryanovski"
@@ -10,9 +10,7 @@
     "url": "https://github.com/bdryanovski/space-forest.git"
   },
   "homepage": "http://bdryanovski.github.io/space-forest",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "monaco-editor": "0.18.1",
     "monaco-editor-webpack-plugin": "1.7.0",
