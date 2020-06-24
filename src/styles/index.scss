@@ -6,27 +6,34 @@
 // Themes
 @import "./theme-dark.scss";
 
+// Styles
 @import "./typography.scss";
 @import "./grid.scss";
 @import "./spaces.scss";
 @import "./buttons-links.scss";
 
 @import "./cards.scss";
-@import "./navigation.scss";
-@import "./pagination.scss";
-@import "./modal.scss";
-@import "./placeholder.scss";
+
 @import "./forms.scss";
 @import "./pointer.scss";
 @import "./images.scss";
+@import "./tabs.scss";
 
-@import "./tables.scss";
-@import "./alerts.scss";
-@import "./lists.scss";
-
-@import "./icons.scss";
+@import "./navigation.scss";
 
 @import "./utils.scss";
 
+// Experimental
+@import "./placeholder.scss";
+
+
+// @import "./tables.scss";
+// @import "./alerts.scss";
+// @import "./lists.scss";
+// @import "./pagination.scss";
+// @import "./modal.scss";
+// @import "./icons.scss";
+
+
 // This file is for quick testing is not met to hold anything
-@import "./play.scss";
+// @import "./play.scss";

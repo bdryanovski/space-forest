@@ -17,65 +17,63 @@ $sizes: (
   48: 12rem,
   56: 14rem,
   64: 16rem,
-  "px": 1px
+  "px": 1px,
 );
 
-.sp {
-  @each $name, $size in $sizes {
-    .space-x-#{$name} {
-      margin-left: $size;
-    }
-    .space-y-#{$name} {
-      margin-top: $size;
-    }
-    // Padding
-    .p-#{$name} {
-      padding: $size;
-    }
-    .py-#{$name} {
-      padding-top: $size;
-      padding-bottom: $size;
-    }
-    .px-#{$name} {
-      padding-left: $size;
-      padding-right: $size;
-    }
-    .pt-#{$name} {
-      padding-top: $size;
-    }
-    .pl-#{$name} {
-      padding-left: $size;
-    }
-    .pr-#{$name} {
-      padding-right: $size;
-    }
-    .pb-#{$name} {
-      padding-bottom: $size;
-    }
+@each $name, $size in $sizes {
+  .space-x-#{$name} {
+    margin-left: $size;
+  }
+  .space-y-#{$name} {
+    margin-top: $size;
+  }
+  // Padding
+  .p-#{$name} {
+    padding: $size;
+  }
+  .py-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+  .px-#{$name} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+  .pt-#{$name} {
+    padding-top: $size;
+  }
+  .pl-#{$name} {
+    padding-left: $size;
+  }
+  .pr-#{$name} {
+    padding-right: $size;
+  }
+  .pb-#{$name} {
+    padding-bottom: $size;
+  }
 
-    // margin
-    .m-#{$name} {
-      margin: $size;
-    }
-    .my-#{$name} {
-      margin-top: $size;
-      margin-bottom: $size;
-    }
-    .mx-#{$name} {
-      margin-left: $size;
-      margin-right: $size;
-    }
-    .mt-#{$name} {
-      margin-top: $size;
-    }
-    .ml-#{$name} {
-      margin-left: $size;
-    }
-    .mr-#{$name} {
-      margin-right: $size;
-    }
-    .mb-#{$name} {
-      margin-bottom: $size;
-    }
+  // margin
+  .m-#{$name} {
+    margin: $size;
+  }
+  .my-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  .mx-#{$name} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+  .mt-#{$name} {
+    margin-top: $size;
+  }
+  .ml-#{$name} {
+    margin-left: $size;
+  }
+  .mr-#{$name} {
+    margin-right: $size;
+  }
+  .mb-#{$name} {
+    margin-bottom: $size;
   }
 }

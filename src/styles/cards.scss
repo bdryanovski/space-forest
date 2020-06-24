@@ -10,28 +10,27 @@
   border-width: 1px;
 }
 
-.sp {
+.card {
+  @include card_basic();
+  min-height: auto;
+  width: auto;
+  padding: 15px;
+}
+
+.card-group {
+  @include card_basic();
+  min-height: 20px;
+
   .card {
-    @include card_basic();
-    min-height: auto;
-    padding: 15px;
-  }
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
 
-  .card-group {
-    @include card_basic();
-    min-height: 20px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 
-    .card {
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-
-      border-bottom: 1px solid rgb(232, 232, 232);
-      transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
-      &:last-child {
-        border-bottom: 0;
-      }
+    &:last-child {
+      border-bottom: 0;
     }
   }
 }

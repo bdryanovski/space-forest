@@ -1,14 +1,6 @@
-// Icons don't need to be exported yet.
-*.svg
-
-// Not needed
-./scripts/*
-README.md
-
 jsconfig.json
 .eslintrc.js
 scripts/*
 config/*
-public/*
 public/*
 docs/*

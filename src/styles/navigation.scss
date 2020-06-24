@@ -1,82 +1,86 @@
-.sp {
-  // https://www.w3schools.com/css/css_navbar.asp
-  nav {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  background-color: var(--color-primary-600);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    li {
-      display: block;
-      width: auto;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      text-decoration: underline;
-    }
-
-    .vertical {
-      ul {
-        min-width: 10rem;
-        text-align: left;
-      }
-
-      li {
-        display: block;
-        padding: 0.2rem 0rem;
-      }
-    }
-
-    .horizontal {
-      li {
-        display: inline;
-        float: left;
-        text-align: center;
-      }
-
-      li {
-        display: block;
-        text-decoration: none;
-        padding: 0.5rem 1.75rem;
-      }
-
-      .fix-top {
-        ul {
-          position: fixed;
-          top: 0;
-          width: 100%;
-        }
-      }
-
-      .fix-bottom {
-        ul {
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-        }
-      }
-
-      .sticky {
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
-        top: 0;
-      }
-
-      .active {
-        font-weight: 600;
-      }
-
-      .right {
-        float: right;
-      }
-    }
-  }
-
-  .footer {
-    margin: 0 auto;
+  .navigation-logo {
+    display: inline-flex;
+    justify-content: center;
     text-align: center;
+    color: var(--color-white);
   }
+
+  .navigation-wrapper {
+    width: 100%;
+    @media (min-width: 1024px) {
+      display: inline-flex;
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+
+  .navigation-body {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    @media (min-width: 1024px) {
+      display: inline-flex;
+      width: auto;
+      margin-left: auto;
+      height: auto;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  .navigation-menu {
+    cursor: pointer;
+    color: var(--color-white);
+    padding: 0.75rem;
+    outline: 0;
+    margin-left: auto;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+
+    > div {
+      width: 21px;
+      height: 3px;
+      background-color: var(--color-white);
+      margin: 2px 0;
+    }
+  }
+
+  .navigation-item {
+    color: var(--color-gray-500);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    text-decoration: none;
+
+    @media (min-width: 1024px) {
+      width: auto;
+      display: inline-flex;
+
+    }
+
+    &:hover {
+      background-color: var(--color-primary-800);
+    }
+  }
+
 }

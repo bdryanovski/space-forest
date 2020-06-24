@@ -11,19 +11,26 @@
   },
   "homepage": "http://bdryanovski.github.io/space-forest",
   "dependencies": {
-    "buble": "0.19.8",
-    "core-js": "3.5.0",
+
+  },
+  "devDependencies": {
     "monaco-editor": "0.18.1",
     "monaco-editor-webpack-plugin": "1.7.0",
     "normalize.css": "8.0.1",
     "prismjs": "1.17.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-prism": "4.3.2"
-  },
-  "devDependencies": {
+    "react-prism": "4.3.2",
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.7.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "9.3.2",
@@ -99,16 +106,14 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "dev": "start-storybook -p 6006",
     "build": "node scripts/build.js;",
-    "test": "node scripts/test.js",
-    "test:prebuild": "jest --",
-    "precompile": "npm run test:prebuild",
+    "build:storybook": "build-storybook",
     "compile": "npm run compile:components && npm run compile:styles",
     "compile:components": "NODE_ENV=production babel src/react-components -d dist --copy-files",
     "compile:styles": "sass ./src/styles/index.scss ./dist/style.css",
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint --fix ./src/**/*.js",
-    "docs": "cd $(pwd)/docs; npm start",
     "changelog": "npm run changelog:markdown && npm run changelog:json",
     "changelog:markdown": "logchanges",
     "changelog:json": "logchanges --format=json --nobody --output=./docs",
@@ -206,7 +211,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:prebuild; lint-staged"
+      "pre-commit": "echo 'Go Boy go...'"
     }
   },
   "lint-staged": {

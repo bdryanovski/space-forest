@@ -47,26 +47,24 @@
   }
 }
 
-.sp {
-  .color-white {
-    color: var(--color-white);
-  }
-  .color-white-bg {
-    background-color: var(--color-white);
-  }
-
-  .color-black {
-    color: var(--color-black);
-  }
-  .color-black-bg {
-    background-color: var(--color-black);
-  }
-
-  @include create-color-classes("gray");
-  @include create-color-classes("brand");
-  @include create-color-classes("cta");
-  @include create-color-classes("info");
-  @include create-color-classes("success");
-  @include create-color-classes("warning");
-  @include create-color-classes("danger");
+.color-white {
+  color: var(--color-white);
 }
+.color-white-bg {
+  background-color: var(--color-white);
+}
+
+.color-black {
+  color: var(--color-black);
+}
+.color-black-bg {
+  background-color: var(--color-black);
+}
+
+@include create-color-classes("gray");
+@include create-color-classes("primary");
+@include create-color-classes("action");
+@include create-color-classes("info");
+@include create-color-classes("success");
+@include create-color-classes("warning");
+@include create-color-classes("danger");

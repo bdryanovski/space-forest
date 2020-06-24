@@ -1,0 +1,66 @@
+// Colors https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
+
+:root {
+  --box-color: #264653;
+  --box-color2: #2A9D8F;
+  --box-text-color: white;
+}
+
+.demo-bg {
+  background-color: var(--box-color);
+  display: block;
+  width: 100%;
+  min-height: 100px;
+
+  span {
+    color: var(--box-text-color);
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.demo-column {
+  background-color: var(--box-color);
+  color: var(--box-text-color);
+  height: 100px;
+  min-width: 100px;
+
+  &:nth-child(even) {
+    background-color: var(--box-color2);
+  }
+}
+
+.demo-cube {
+  background-color: var(--box-color);
+  color: var(--box-text-color);
+  height: auto;
+  width: auto;
+  padding: 15px;
+  &:nth-child(even) {
+    background-color: var(--box-color2);
+  }
+}
+
+.demo-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.color-box {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.color-scale {
+  width: 150px;
+  text-align: center;
+}
+
+.sb-show-main {
+   background      : radial-gradient(rgba(143, 130, 130, 0.219) 1px, transparent 1px);
+   background-size : 10px 10px;
+   background-color: #9999992b;
+   padding-top:20px;
+}

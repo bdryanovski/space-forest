@@ -16,31 +16,31 @@
   --color-gray-800: #555656;
   --color-gray-900: #393939;
 
-  --color-brand-light: #c0cccc;
-  --color-brand: #0a4043;
-  --color-brand-dark: #0f2324;
-  --color-brand-100: #e7ecec;
-  --color-brand-200: #c2cfd0;
-  --color-brand-300: #9db3b4;
-  --color-brand-400: #54797b;
-  --color-brand-500: #0a4043;
-  --color-brand-600: #093a3c;
-  --color-brand-700: #062628;
-  --color-brand-800: #051d1e;
-  --color-brand-900: #031314;
+  --color-primary-light: #c0cccc;
+  --color-primary: #0a4043;
+  --color-primary-dark: #0f2324;
+  --color-primary-100: #e7ecec;
+  --color-primary-200: #c2cfd0;
+  --color-primary-300: #9db3b4;
+  --color-primary-400: #54797b;
+  --color-primary-500: #0a4043;
+  --color-primary-600: #093a3c;
+  --color-primary-700: #062628;
+  --color-primary-800: #051d1e;
+  --color-primary-900: #031314;
 
-  --color-cta-light: #cfbdc2;
-  --color-cta: #430a24;
-  --color-cta-dark: #250c16;
-  --color-cta-100: #ece7e9;
-  --color-cta-200: #d0c2c8;
-  --color-cta-300: #b49da7;
-  --color-cta-400: #7b5466;
-  --color-cta-500: #430a24;
-  --color-cta-600: #3c0920;
-  --color-cta-700: #280616;
-  --color-cta-800: #1e0510;
-  --color-cta-900: #14030b;
+  --color-action-light: #cfbdc2;
+  --color-action: #430a24;
+  --color-action-dark: #250c16;
+  --color-action-100: #ece7e9;
+  --color-action-200: #d0c2c8;
+  --color-action-300: #b49da7;
+  --color-action-400: #7b5466;
+  --color-action-500: #430a24;
+  --color-action-600: #3c0920;
+  --color-action-700: #280616;
+  --color-action-800: #1e0510;
+  --color-action-900: #14030b;
 
   --color-info-light: #d5eef5;
   --color-info: #2bbbd6;
@@ -100,14 +100,14 @@
 
   // BTN
   --btn-text-normal: var(--color-white);
-  --btn-bg-normal: var(--color-brand-600);
-  --btn-hover-normal: var(--color-brand-700);
-  --btn-active-normal: var(--color-brand-800);
+  --btn-bg-normal: var(--color-primary-600);
+  --btn-hover-normal: var(--color-primary-700);
+  --btn-active-normal: var(--color-primary-800);
 
   // Primary
   --btn-text-primary: var(--color-gray-300);
-  --btn-bg-primary: var(--color-brand-600);
-  --btn-border-primary: var(--color-brand-800);
+  --btn-bg-primary: var(--color-primary-600);
+  --btn-border-primary: var(--color-primary-800);
 
   --btn-text-success: var(--color-gray-300);
   --btn-bg-success: var(--color-success-600);

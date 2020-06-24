@@ -1,11 +1,9 @@
-.sp {
+
   .post {
     display: inline-block;
-    width: 600px;
-    height: 200px;
+    min-width: 600px;
+    min-height: 200px;
     background-color: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-    border-radius: 0.2rem;
   }
 
   .post .post-place {
@@ -64,4 +62,3 @@
   .post .post-description .post-text:last-child {
     width: 100px;
   }
-}
