@@ -1,3 +1,49 @@
+##  0.1.27 (June 24, 2020)
+
+##### Breaking Changes
+
+*  *.next release - only breaking changes (684ed983)
+*  drop grid and grid 2 - to be replaced with flexbox, exteinding documentation and droping default background color of the document (135b80d0)
+*  dropping article/banner and some small scss files, removing unused files (1d0a5360)
+*  Droping Grid and Layout documentation page frm CRA (ed256ff8)
+*  Droping Header react components no - use of them, also droping documentation for them (236ea866)
+
+##### Build System / Dependencies
+
+*  update package.json scripts, add changelog.json|md files (13edaad7)
+*  start working on changelog page (19e02bfe)
+*  update package.json task on how to build CHANGELOG.md (55fe95f4)
+*  run jest test on every commit (30a89214)
+*  setup jest for writing tests, cover some of the small components with snapshots (9a80b8b5)
+
+##### Documentation Changes
+
+*  update how docusaurus get its package version numbers (e0fd30c7)
+*  updating documentation styles and content (99ab8320)
+*  start migration to docusaurus and replacing the create react app used for homepage (44fb244c)
+*  update navigation examples and styles (428409df)
+*  update theme and header/footer component small site tweeks (f9f68c24)
+*  small update on the landing page nothing important (e83c364d)
+*  update landing page and adding some animation to it (df185e53)
+
+##### New Features
+
+* **spacing:**  create spacing classes and documentation (985ce940)
+*  reworking colors and css/scss variables droping old grid (e3b319ac)
+*  updating input and forms - also adding new styles for buttons (4cb171ce)
+*  adding changelog page inside the documenation section (7bd78fd0)
+* **colors:**  initial commits on the new colors (e38d0bdc)
+* **styles:**
+  *  add new styles for article, images and list as part of new components comming soon (f2b23021)
+  *  add screen-reader only styles and grid helpers (9b14fc6f)
+* **alert:**  adding alerts as part of the static and react styles, rename some files for better file organization (c12f5aea)
+
+##### Bug Fixes
+
+* **website:**  small tweeks inside the documentation and landing page (965961d6)
+* **alert:**  update how alert are render, cover them with tests (c9a4b0ed)
+*  style regrasion related to the website was breaking the ul,li styles (0faea613)
+
 #### 0.1.27 (2020-03-15)
 
 ##### Build System / Dependencies
